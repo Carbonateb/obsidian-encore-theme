@@ -1,0 +1,12 @@
+body {
+	--highlight-colour: #ff9f0038;
+	--highlight-colour-outline: #ff9f00de;
+}
+
+.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight, .search-result-file-matched-text {
+	background-color: var(--highlight-colour);
+	outline: 1px solid var(--highlight-colour-outline);
+	padding: 0 0.15em;
+	border-radius: 3px;
+	box-shadow: 0 0 10px var(--highlight-colour-outline);
+}

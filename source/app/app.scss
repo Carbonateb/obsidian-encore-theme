@@ -1,0 +1,24 @@
+@use 'settings.scss';
+@use 'modal.scss';
+@use 'prompt.scss';
+@use 'suggestions.scss';
+@use 'notifications.scss';
+
+
+body {
+	background-color: var(--background-secondary);
+}
+
+.status-bar {
+	margin: 0 !important;
+	background-color: transparent;
+	border: none !important;
+}
+
+.titlebar {
+	background-color: transparent;
+}
+
+.titlebar-inner {
+	color: var(--text-normal);
+}

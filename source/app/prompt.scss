@@ -1,0 +1,48 @@
+.prompt {
+	border-radius: var(--big-border-radius);
+	border: 1px solid var(--background-modifier-border);
+	padding: 0;
+	background-color: var(--background-secondary-alt);
+	/* overflow: hidden; */
+}
+
+.prompt>.prompt-input {
+	background-color: var(--background-primary);
+	border-radius: 100px;
+	border: none;
+	/* outline: 1px solid var(--background-modifier-border); */
+	font-size: 1.5em;
+	height: auto;
+	padding: 0.8em 1.5rem;
+	margin: 1rem;
+	margin-bottom: 0;
+	width: auto;
+}
+.prompt>.prompt-input:focus, .prompt>.prompt-input:hover {
+	background-color: var(--background-primary-alt);
+}
+
+
+.prompt-results {
+	padding-top: 1em;
+	padding-bottom: 2rem;
+}
+
+
+.suggestion-item {
+	margin: 0 1rem;
+	padding: 0.45em 1.5rem;
+	border-radius: 100px;
+}
+:not(.mod-search-suggestion).suggestion-item.is-selected {
+	background-color: var(--interactive-accent);
+	background-color: var(--interactive-accent);
+	box-shadow: 0 0 8px var(--interactive-accent);
+}
+
+
+:not(.suggestion-container)>.prompt-instructions {
+	position: absolute;
+	bottom: -2.5em;
+	width: 100%;
+}

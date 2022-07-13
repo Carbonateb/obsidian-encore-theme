@@ -1,0 +1,130 @@
+@use 'tab-header.scss';
+@use 'nav-buttons.scss';
+@use 'resize-handle.scss';
+
+// Core workspace style
+
+.mod-root .workspace-leaf-content {
+	background-color: transparent;
+	border: 0px solid var(--background-primary);
+}
+
+body:not(.is-mobile) .mod-root .workspace-leaf-content {
+	border-radius: var(--big-border-radius) !important;
+}
+
+.mod-root .mod-active .workspace-leaf-content {
+	border: 0px solid var(--background-primary-alt);
+}
+
+.workspace-tabs {
+	border-radius: var(--big-border-radius) !important;
+}
+
+.workspace-tabs .workspace-leaf-content {
+	background-color: var(--background-primary);
+}
+
+/* Workspace header */
+body:not(.is-mobile) .view-header {
+	--header-color: var(--background-primary-alt);
+	background-color: var(--header-color) !important;
+	border: none;
+	height: var(--header-height);
+	align-items: center;
+	padding: 0 0.5em;
+	box-sizing: content-box;
+	border-bottom: 2px solid var(--background-primary);
+	transition: border-bottom-color var(--transition);
+}
+
+body:not(.is-mobile) .mod-active .view-header {
+	border-bottom: 2px solid var(--interactive-accent);
+}
+
+body:not(.is-mobile) .view-header .view-header-icon {
+	height: 18px;
+	padding: 4.5px 0px;
+	top: 0;
+	position: initial;
+	box-sizing: content-box;
+	width: var(--pill-size);
+	margin: 0 0.5em;
+	margin-top: 1px;
+	text-align: center;
+
+	background-color: var(--background-secondary);
+	border-radius: 100px;
+	/* transition: all var(--transition); */
+	outline: 0px solid var(--background-secondary);
+	outline-offset: -1px;
+}
+
+body:not(.is-mobile) .mod-active .view-header .view-header-icon {
+	background-color: var(--background-secondary);
+	/* box-shadow: 0 0 8px -4px var(--interactive-accent); */
+	/* color: var(--text-normal); */
+}
+
+body:not(.is-mobile) .view-header .view-header-title {
+	font-size: 1.4em;
+	font-weight: normal;
+}
+
+// Gradient that fades note title out when it's too long
+.workspace-leaf .view-header-title-container:after {
+	background: linear-gradient(to right, transparent, var(--header-color)) !important;
+}
+// Remove gradient when transparent mode is enabled
+.is-translucent .workspace-leaf .view-header-title-container:after {
+	display: none;
+}
+
+.workspace-tabs .workspace-leaf {
+	background-color: transparent;
+	border-radius: 0 !important;
+	border-bottom-left-radius: var(--big-border-radius) !important;
+	border-bottom-right-radius: var(--big-border-radius) !important;
+	/* background-color: var(--background-primary); */
+	margin: 0;
+}
+
+.workspace-tabs {
+	padding-right: 0;
+	background-color: transparent;
+}
+
+.workspace-split.mod-root {
+	background-color: transparent;
+}
+
+.workspace-split.mod-root>.workspace-leaf:first-of-type:last-of-type .view-header,
+.workspace-leaf.mod-active .view-header  {
+	border: none;
+}
+
+// Tighten up padding on md content are
+.markdown-source-view.mod-cm6 .cm-scroller {
+	padding: 0.5em;
+}
+
+
+
+// Side ribbons
+.side-dock-ribbon {
+	background-color: transparent !important;
+}
+.workspace-ribbon {
+	border: none !important;
+}
+
+// Scrollbar
+.cm-scroller::-webkit-scrollbar-track {
+	background: var(--background-primary);
+}
+
+
+// When no file is open in workspace
+.empty-state-title {
+	font-size: 3rem !important;
+}

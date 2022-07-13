@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "sass --watch --no-source-map source/main.scss themes/Encore.css",
+    "build": "sass --style=compressed --no-source-map source/main.scss obsidian.css"
+  },
+  "devDependencies": {
+    "sass": "^1.53.0"
+  }
+}

@@ -1,0 +1,24 @@
+.nav-file-title, .nav-folder-title {
+	transition: background-color 75ms;
+	border-radius: 100px;
+	padding-top: 1px;
+	width: fit-content;
+}
+
+.nav-file-title {
+	padding-top: 0;
+	padding-left: 15px;
+	margin-left: 10px;
+}
+
+:not(.mod-root)>.nav-folder-children {
+	border-left: 1px dashed var(--background-modifier-border);
+	padding-left: 0;
+	margin-left: 15px;
+}
+
+/* File picker highlighted item */
+// TODO not sure exactly what this targets anymore 😅
+.nav-file-title.is-active, .nav-folder-title.is-active, body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder-title:hover {
+	color: var(--text-normal);
+}

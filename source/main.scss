@@ -1,0 +1,60 @@
+@use 'workspace/workspace.scss';
+@use 'app/app.scss';
+@use 'md/md.scss';
+@use 'components/components.scss';
+
+body {
+	--font-default: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--big-border-radius: 1rem;
+	--header-height: 2.75rem;
+	--pill-size: 4em;
+	--transition: 200ms ease-in-out;
+}
+
+body.theme-dark {
+	--background-primary: #232229;
+	--background-primary-alt: #29282f;
+	--background-secondary: #1a1921;
+	--background-secondary-alt: #06060e;
+	
+	--background-modifier-border: #59576d; // For faint lines
+	--background-modifier-cover: #000000a8; // Modal background
+	--background-modifier-form-field: #0000004d;
+	--background-modifier-form-field-highlighted: #00000038;
+	--background-modifier-box-shadow: #0000004d;
+	--background-modifier-success: #197300;
+	--background-modifier-success-rgb: 25, 115, 0;
+	--background-modifier-error: #3d0000;
+	--background-modifier-error-rgb: 61, 0, 0;
+	--background-modifier-error-hover: #470000;
+
+	--text-normal: #ffffffe6;
+	--text-muted: #ffffffb3;
+	--text-muted-rgb: 153, 153, 153;
+	--text-faint: #ffffff80;
+	--text-accent: #9888ff;
+	--text-accent-hover: #8875ff;
+	--text-selection: #0f74ff;
+	--text-error: #ff3333;
+	--text-error-hover: #990000;
+	--text-highlight-bg: rgba(255, 255, 0, 0.4);
+	--text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+	--text-on-accent: #dcddde;
+	
+	--interactive-hover: #303030;
+	--interactive-accent: #7f6df2;
+	--interactive-normal: #3f3f44;
+	--interactive-accent-rgb: 72, 54, 153;
+	--interactive-accent-hover: #4d3ca6;
+	--interactive-success: #197300;
+	
+	--scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
+	--scrollbar-bg: rgba(255, 255, 255, 0.05);
+	--scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+	
+	--highlight-mix-blend-mode: lighten;
+}
+
+// TODO Light theme
+// body.theme-light {
+// }

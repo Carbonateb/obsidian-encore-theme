@@ -1,0 +1,27 @@
+// Controls the row of buttons that appear at the top of some workspaces,
+// Such as the file explorer
+// Design is based on M3 Chips https://m3.material.io/components/chips/overview
+
+.nav-header {
+	padding: 0.8rem 0.5rem;
+}
+
+.nav-action-button {
+	border-radius: 8px;
+	max-width: 6em;
+	flex-grow: 1;
+	text-align: center;
+	background-color: var(--background-secondary);
+}
+
+.nav-action-button:hover,
+.nav-action-button.is-active:hover {
+	background-color: var(--background-secondary-alt);
+}
+
+.nav-action-button.is-active {
+	background-color: var(--background-secondary);
+	border-color: var(--interactive-accent);
+	outline: 1px solid var(--interactive-accent);
+	color: var(--text-accent);
+}

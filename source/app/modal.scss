@@ -1,0 +1,9 @@
+.modal {
+	border-radius: var(--big-border-radius);
+	border: 1px solid var(--background-modifier-border);
+	background-color: var(--background-primary);
+}
+
+.modal-bg {
+	backdrop-filter: blur(10px);
+}
