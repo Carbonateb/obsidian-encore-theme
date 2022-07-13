@@ -85,8 +85,8 @@ body:not(.is-mobile) .view-header .view-header-title {
 	border-radius: 0 !important;
 	border-bottom-left-radius: var(--big-border-radius) !important;
 	border-bottom-right-radius: var(--big-border-radius) !important;
-	/* background-color: var(--background-primary); */
 	margin: 0;
+	border: none;
 }
 
 .workspace-tabs {
