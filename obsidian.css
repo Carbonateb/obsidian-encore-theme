@@ -653,3 +653,43 @@ body.theme-dark {
   --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
   --highlight-mix-blend-mode: lighten;
 }
+
+body.theme-light {
+  --background-primary: #fcfcfc;
+  --background-primary-rgb: 252, 252, 252;
+  --background-primary-alt: #ebedf1;
+  --background-secondary: #c8cdd8;
+  --background-secondary-alt: #e3e5e8;
+  --background-modifier-border: #0003;
+  --background-modifier-form-field: #fff;
+  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #A4E7C3;
+  --background-modifier-success-rgb: 164, 231, 195;
+  --background-modifier-error: #990000;
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: #bb0000;
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #000000;
+  --text-muted: rgba(0, 0, 0, 0.8);
+  --text-muted-rgb: 0, 0, 0;
+  --text-faint: #00000099;
+  --text-error: #800000;
+  --text-error-hover: #990000;
+  --text-highlight-bg: rgba(255, 255, 0, 0.4);
+  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --text-selection: rgba(204, 230, 255, 0.99);
+  --text-on-accent: #fcfcfc;
+  --interactive-normal: #f2f3f5;
+  --interactive-hover: #e9e9e9;
+  --interactive-accent: #7b6cd9;
+  --interactive-accent-rgb: 123, 108, 217;
+  --interactive-accent-hover: #8273e6;
+  --interactive-success: #197300;
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+  --scrollbar-bg: rgba(0, 0, 0, 0.05);
+  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
+  --highlight-mix-blend-mode: darken;
+}
