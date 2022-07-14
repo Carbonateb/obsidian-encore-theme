@@ -1,7 +1,8 @@
+![Promo image](images/promo-image.png)
 # Encore - An Obsidian Theme
 The Encore theme aims to freshen up the UI of Obsidian.md with modern design, **while staying true to the original feel of the app** (at least in my opinion lol). It's loosely based off Material 3.
 
-![Preview of theme](images/promo-image.png)
+![Preview of theme](images/overview.png)
 
 ## Design Philosophy
 The goal was to recreate the default theme, but with a more refined and modern look.
