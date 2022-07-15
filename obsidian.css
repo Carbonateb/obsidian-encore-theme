@@ -135,7 +135,7 @@
 }
 
 body:not(.is-mobile) .mod-root .workspace-leaf-content {
-  border-radius: var(--big-border-radius) !important;
+  border-radius: var(--big-border-radius);
 }
 
 .mod-root .mod-active .workspace-leaf-content {
@@ -244,6 +244,34 @@ body:not(.is-mobile) .view-header .view-header-title {
 
 .empty-state-title {
   font-size: 3rem !important;
+}
+
+.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon,
+.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split > .workspace-leaf-content > .view-header .view-header-icon {
+  height: 27px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+  background: none !important;
+}
+.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+  border: none !important;
+}
+.plugin-sliding-panes-rotate-header .workspace > .mod-root {
+  border-radius: var(--big-border-radius);
+  background-color: var(--background-primary);
+  padding-bottom: 0;
+}
+.plugin-sliding-panes-rotate-header .mod-root .workspace-leaf-content {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf, body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-split {
+  box-shadow: none !important;
 }
 
 .modal.mod-settings .vertical-tab-header {

@@ -10,7 +10,7 @@
 }
 
 body:not(.is-mobile) .mod-root .workspace-leaf-content {
-	border-radius: var(--big-border-radius) !important;
+	border-radius: var(--big-border-radius);
 }
 
 .mod-root .mod-active .workspace-leaf-content {
@@ -127,4 +127,48 @@ body:not(.is-mobile) .view-header .view-header-title {
 // When no file is open in workspace
 .empty-state-title {
 	font-size: 3rem !important;
+}
+
+
+
+// Sliding Panes workspace support
+
+
+.plugin-sliding-panes-rotate-header {
+	// Fix pill shaped icon
+	.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon,
+	.workspace > .mod-root > .workspace-split > .workspace-leaf-content > .view-header .view-header-icon {
+		height: 27px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	// Remove gradient before active pane title
+	.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+		background: none !important;
+	}
+	
+	// Remove borders on the side
+	.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+		border: none !important;
+	}
+	
+	// Container of the sliding workspaces
+	.workspace > .mod-root {
+		// Prevents corner becoming un-rounded on scroll
+		border-radius: var(--big-border-radius);
+		background-color: var(--background-primary);
+		padding-bottom: 0;
+	}
+	
+	.mod-root .workspace-leaf-content {
+		border-bottom-left-radius: 0 !important;
+		border-bottom-right-radius: 0 !important;
+	}
+}
+
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf, body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-split {
+	box-shadow: none !important;
 }
