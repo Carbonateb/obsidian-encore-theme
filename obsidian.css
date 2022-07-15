@@ -269,6 +269,9 @@ body:not(.is-mobile) .view-header .view-header-title {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
+.plugin-sliding-panes-rotate-header .view-header {
+  padding-bottom: 0.5em !important;
+}
 
 body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf, body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-split {
   box-shadow: none !important;
@@ -660,7 +663,7 @@ body.theme-dark {
   --text-faint: #ffffff80;
   --text-accent: #9888ff;
   --text-accent-hover: #8875ff;
-  --text-selection: #0f74ff;
+  --text-selection: #0e4696;
   --text-error: #ff3333;
   --text-error-hover: #990000;
   --text-highlight-bg: rgba(255, 255, 0, 0.4);

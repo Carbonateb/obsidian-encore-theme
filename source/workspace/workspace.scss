@@ -167,6 +167,10 @@ body:not(.is-mobile) .view-header .view-header-title {
 		border-bottom-left-radius: 0 !important;
 		border-bottom-right-radius: 0 !important;
 	}
+	
+	.view-header {
+		padding-bottom: 0.5em !important;
+	}
 }
 
 body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf, body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-split {
