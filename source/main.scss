@@ -1,101 +1,31 @@
-@use 'workspace/workspace.scss';
-@use 'app/app.scss';
-@use 'md/md.scss';
-@use 'components/components.scss';
+@use "resize-handle.scss";
+@use "markdown-embed.scss";
+@use "inline-title.scss";
+@use "translucent.scss";
+@use "highlight.scss";
+
+:root {
+	--corner-radius: 0.5rem;
+}
 
 body {
-	--font-default: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--big-border-radius: 1rem;
-	--header-height: 2.75rem;
-	--pill-size: 4em;
-	--transition: 200ms ease-in-out;
+	--checklist-done-decoration: none;
+	--checklist-done-color: #bababaa0;
 }
 
-body.theme-dark {
-	--background-primary: #232229;
-	--background-primary-alt: #29282f;
-	--background-secondary: #1a1921;
-	--background-secondary-alt: #06060e;
-	
-	--background-modifier-border: #59576d; // For faint lines
-	--background-modifier-cover: #000000a8; // Modal background
-	--background-modifier-form-field: #0000004d;
-	--background-modifier-form-field-highlighted: #00000038;
-	--background-modifier-box-shadow: #0000004d;
-	--background-modifier-success: #197300;
-	--background-modifier-success-rgb: 25, 115, 0;
-	--background-modifier-error: #3d0000;
-	--background-modifier-error-rgb: 61, 0, 0;
-	--background-modifier-error-hover: #470000;
 
-	--text-normal: #ffffffe6;
-	--text-muted: #ffffffb3;
-	--text-muted-rgb: 153, 153, 153;
-	--text-faint: #ffffff80;
-	--text-accent: #9888ff;
-	--text-accent-hover: #8875ff;
-	--text-selection: #0e4696;
-	--text-error: #ff3333;
-	--text-error-hover: #990000;
-	--text-highlight-bg: rgba(255, 255, 0, 0.4);
-	--text-highlight-bg-active: rgba(255, 128, 0, 0.4);
-	--text-on-accent: #dcddde;
-	
-	--interactive-hover: #303030;
-	--interactive-accent: #7f6df2;
-	--interactive-normal: #3f3f44;
-	--interactive-accent-rgb: 72, 54, 153;
-	--interactive-accent-hover: #4d3ca6;
-	--interactive-success: #197300;
-	
-	--scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
-	--scrollbar-bg: rgba(255, 255, 255, 0.05);
-	--scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
-	
-	--highlight-mix-blend-mode: lighten;
+// Side bar
+.workspace-ribbon {
+	transition: all 250ms ease-in-out !important;
+	&.mod-left {
+		background-color: transparent; // Colour when collapsed
+		&.is-collapsed {
+			background-color: transparent; // Colour when expanded
+		}
+	}
 }
 
-// Light theme
-body.theme-light {
-	--background-primary: #fcfcfc;
-	--background-primary-rgb: 252, 252, 252;
-	--background-primary-alt: #ebedf1;
-	--background-secondary: #c8cdd8;
-	--background-secondary-alt: #e3e5e8;
-	--background-modifier-border: #0003;
-	--background-modifier-form-field: #fff;
-	--background-modifier-form-field-highlighted: #fff;
-	--background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
-	--background-modifier-success: #A4E7C3;
-	--background-modifier-success-rgb: 164, 231, 195;
-	--background-modifier-error: #990000;
-	--background-modifier-error-rgb: 230, 135, 135;
-	--background-modifier-error-hover: #bb0000;
-	--background-modifier-cover: rgba(0, 0, 0, 0.8);
-	
-	--text-accent: #705dcf;
-	--text-accent-hover: #7a6ae6;
-	--text-normal: #000000;
-	--text-muted: rgba(0, 0, 0, 0.8);
-	--text-muted-rgb: 0, 0, 0;
-	--text-faint: #00000099;
-	--text-error: #800000;
-	--text-error-hover: #990000;
-	--text-highlight-bg: rgba(255, 255, 0, 0.4);
-	--text-highlight-bg-active: rgba(255, 128, 0, 0.4);
-	--text-selection: rgba(204, 230, 255, 0.99);
-	--text-on-accent: #fcfcfc;
-	
-	--interactive-normal: #f2f3f5;
-	--interactive-hover: #e9e9e9;
-	--interactive-accent: #7b6cd9;
-	--interactive-accent-rgb: 123, 108, 217;
-	--interactive-accent-hover: #8273e6;
-	--interactive-success: #197300;
-	
-	--scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
-	--scrollbar-bg: rgba(0, 0, 0, 0.05);
-	--scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
-	
-	--highlight-mix-blend-mode: darken;
+// Make sidebar toggles your chosen colour
+.sidebar-toggle-button>.clickable-icon {
+	color: var(--interactive-accent);
 }

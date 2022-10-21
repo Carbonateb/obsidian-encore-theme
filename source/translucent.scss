@@ -1,0 +1,49 @@
+// Translucent mode fixes
+.is-translucent:not(.is-fullscreen) {
+	--divider-color: #bdbdbd3b;
+	
+	
+	// Make the top thing transparent on the right side
+	.mod-right-split :not(.mod-top) .workspace-tab-header-container,
+	// Right side is not transparent
+	.mod-right-split .workspace-leaf {
+		background-color: var(--background-secondary);
+	}
+	
+	.mod-left-split {
+		--background-secondary: #2a2a2abe;
+		--background-modifier-form-field: #262626be;
+		--background-modifier-border: #363636be;
+		
+		:not(.mod-top) .workspace-tab-header-container,
+		.workspace-tab-container {
+			border-right: 1px solid var(--divider-color);
+		}
+	}
+	
+	// Try to fix the tiny issue with tab inner rounded corners
+	.workspace-split.mod-root .workspace-tab-header.is-active::before, .workspace-split.mod-root .workspace-tab-header.is-active::after {
+		--tab-outline-color: #bdbdbd15;
+		--tab-outline-width: 1px;
+	}
+}
+.is-translucent:not(.is-fullscreen) .titlebar, .is-translucent .app-container {
+	// Overall tint to the window
+	background-color: transparent !important;
+	
+	// Removes background from behind tabs
+	.workspace-split.mod-root {
+		background-color: transparent !important;
+	}
+}
+
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+	// Makes the minimise, maximise, close buttons transparent
+	background-color: transparent !important;
+}
+
+// Fixes a small leak on the view header
+.view-header {
+	margin: 0;
+	padding: 0 var(--size-4-3);;
+}

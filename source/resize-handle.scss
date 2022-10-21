@@ -1,0 +1,46 @@
+/* Increase space for resize handle */
+.workspace-split.mod-vertical>.workspace-leaf {
+	// padding-right: 8px;
+}
+
+.workspace-split.mod-horizontal>div:not(:last-child) {
+	// padding-bottom: 8px;
+}
+
+.workspace-split.mod-left-split {
+	// padding-right: 8px;
+}
+
+.workspace-split.mod-right-split {
+	// padding-left: 8px;
+}
+
+.workspace-leaf-resize-handle {
+	background-color: transparent;
+	border: none !important;
+}
+
+.workspace-leaf-resize-handle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent !important;
+	min-width: 8px;
+	min-height: 8px;
+}
+
+.workspace-leaf-resize-handle::after {
+	content: "";
+	/* background-color: var(--background-secondary-alt); */
+	background-color: transparent;
+	position: absolute;
+	border-radius: 3px;
+	width: 50%;
+	height: 50%;
+	transition: background-color 200ms ease-out;
+
+}
+
+.workspace-leaf-resize-handle:hover::after {
+	background-color: var(--interactive-accent) !important;
+}
