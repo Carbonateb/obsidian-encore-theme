@@ -1,7 +1,25 @@
-/* Increase space for resize handle */
+.mod-root .workspace-split.mod-horizontal > div:not(:first-of-type) {
+  background-color: var(--background-secondary-alt);
+  overflow: visible;
+}
+.mod-root .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  background-color: var(--background-secondary-alt);
+}
+
+.is-translucent:not(.is-fullscreen) .mod-root .workspace-split.mod-horizontal > div:not(:first-of-type) {
+  border-top: 1px solid var(--divider-color);
+  background-color: var(--divider-color) !important;
+  overflow: visible;
+}
+.is-translucent:not(.is-fullscreen) .mod-root .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  background-color: var(--divider-color);
+  --divider-color: transparent ;
+}
+
 .workspace-leaf-resize-handle {
   background-color: transparent;
   border: none !important;
+  overflow: visible;
 }
 
 .workspace-leaf-resize-handle {
@@ -15,13 +33,11 @@
 
 .workspace-leaf-resize-handle::after {
   content: "";
-  /* background-color: var(--background-secondary-alt); */
-  background-color: transparent;
   position: absolute;
   border-radius: 3px;
   width: 50%;
   height: 50%;
-  transition: background-color 200ms ease-out;
+  transition: background-color 150ms ease-out;
 }
 
 .workspace-leaf-resize-handle:hover::after {
@@ -92,6 +108,9 @@
   --tab-outline-color: #bdbdbd15;
   --tab-outline-width: 1px;
 }
+.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left.is-collapsed {
+  border-right-color: var(--divider-color);
+}
 
 .is-translucent:not(.is-fullscreen) .titlebar, .is-translucent .app-container {
   background-color: transparent !important;
@@ -107,6 +126,10 @@
 .view-header {
   margin: 0;
   padding: 0 var(--size-4-3);
+}
+
+.graph-view.color-line {
+  color: rgba(189, 189, 189, 0.1450980392);
 }
 
 body {
@@ -131,16 +154,34 @@ body {
   --checklist-done-color: #bababaa0;
 }
 
-.workspace-ribbon {
-  transition: all 250ms ease-in-out !important;
-}
 .workspace-ribbon.mod-left {
-  background-color: transparent;
+  transition: all 250ms ease-out !important;
 }
 .workspace-ribbon.mod-left.is-collapsed {
-  background-color: transparent;
+  border-right-color: transparent;
 }
 
 .sidebar-toggle-button > .clickable-icon {
   color: var(--interactive-accent);
+}
+
+.empty-state::before {
+  content: "";
+  width: 100%;
+  height: 30%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%23ffffff40' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.empty-state-title {
+  font-size: 2.5rem !important;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3137254902);
+  display: none;
+}
+
+.tree-item-children > div:not(.tree-item) {
+  display: none;
 }

@@ -1,23 +1,39 @@
-/* Increase space for resize handle */
-.workspace-split.mod-vertical>.workspace-leaf {
-	// padding-right: 8px;
+.mod-root {
+	.workspace-split.mod-horizontal>div:not(:first-of-type) {
+		// padding-top: 4px;
+		background-color: var(--background-secondary-alt);
+		overflow: visible;
+	}
+	
+
+	// For vertically split workspaces
+	.workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+		background-color: var(--background-secondary-alt);
+	}
 }
 
-.workspace-split.mod-horizontal>div:not(:last-child) {
-	// padding-bottom: 8px;
-}
+.is-translucent:not(.is-fullscreen) {
+	.mod-root {
+		.workspace-split.mod-horizontal>div:not(:first-of-type) {
+			border-top: 1px solid var(--divider-color);
+			background-color: var(--divider-color) !important;
+			overflow: visible;
+		}
+		
+	
 
-.workspace-split.mod-left-split {
-	// padding-right: 8px;
-}
-
-.workspace-split.mod-right-split {
-	// padding-left: 8px;
+		// For vertically split workspaces
+		.workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+			background-color: var(--divider-color);
+			--divider-color: transparent
+		}
+	}
 }
 
 .workspace-leaf-resize-handle {
 	background-color: transparent;
 	border: none !important;
+	overflow: visible;
 }
 
 .workspace-leaf-resize-handle {
@@ -31,14 +47,11 @@
 
 .workspace-leaf-resize-handle::after {
 	content: "";
-	/* background-color: var(--background-secondary-alt); */
-	background-color: transparent;
 	position: absolute;
 	border-radius: 3px;
 	width: 50%;
 	height: 50%;
-	transition: background-color 200ms ease-out;
-
+	transition: background-color 150ms ease-out;
 }
 
 .workspace-leaf-resize-handle:hover::after {

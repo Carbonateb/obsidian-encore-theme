@@ -26,6 +26,16 @@
 		--tab-outline-color: #bdbdbd15;
 		--tab-outline-width: 1px;
 	}
+	
+	
+	// Don't fade out border when transparent
+	.workspace-ribbon {
+		&.mod-left {
+			&.is-collapsed {
+				border-right-color: var(--divider-color);
+			}
+		}
+	}
 }
 .is-translucent:not(.is-fullscreen) .titlebar, .is-translucent .app-container {
 	// Overall tint to the window
@@ -46,4 +56,9 @@
 .view-header {
 	margin: 0;
 	padding: 0 var(--size-4-3);;
+}
+
+// Make graph view look better, especially with a translucent background
+.graph-view.color-line {
+	color: #bdbdbd25;
 }
