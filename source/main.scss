@@ -11,6 +11,12 @@
 body {
 	--checklist-done-decoration: none;
 	--checklist-done-color: #bababaa0;
+
+//  New suggested theme colour for dark theme
+.theme-dark {
+	--accent-h: 254;
+	--accent-s: 96%;
+	--accent-l: 82%;
 }
 
 
@@ -18,6 +24,7 @@ body {
 .workspace-ribbon {
 	&.mod-left {
 		transition: all 250ms ease-out !important;
+
 		&.is-collapsed {
 			border-right-color: transparent;
 		}
