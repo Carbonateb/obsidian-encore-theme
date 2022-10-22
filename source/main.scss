@@ -3,6 +3,8 @@
 @use "inline-title.scss";
 @use "translucent.scss";
 @use "highlight.scss";
+@use "titlebar.scss";
+@use "prompt.scss";
 
 :root {
 	--corner-radius: 0.5rem;
@@ -12,6 +14,8 @@ body {
 	--checklist-done-decoration: none;
 	--checklist-done-color: #bababaa0;
 	--text-on-accent: var(--color-base-00);
+	
+	text-underline-offset: 2px;
 }
 
 //  New suggested theme colour for dark theme
@@ -19,6 +23,11 @@ body {
 	--accent-h: 254;
 	--accent-s: 96%;
 	--accent-l: 82%;
+}
+.theme-light {
+	--accent-h: 254;
+	--accent-s: 40%;
+	--accent-l: 40%;
 }
 
 
@@ -48,6 +57,12 @@ body {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%23ffffff40' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
 }
 
+.theme-light {
+	.empty-state::before {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%2300000040' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+	}
+}
+
 .empty-state-title {
 	font-size: 2.5rem !important;
 	font-weight: 300;
@@ -59,4 +74,25 @@ body {
 // Fix for tree item dots
 .tree-item-children>div:not(.tree-item) {
 	display: none;
+}
+
+.modal.mod-settings .vertical-tab-header {
+	border-right: none;
+}
+
+:not(.is-translucent) {
+	// Blur modal background
+	.modal-bg {
+		backdrop-filter: brightness(0.5) blur(5px);
+		opacity: 1 !important;
+		background-color: transparent;
+	}
+}
+
+
+// Highlight button when in reading view
+.workspace-leaf-content[data-mode="preview"] {
+	.view-action:first-child {
+		color: var(--interactive-accent);
+	}
 }
