@@ -85,7 +85,7 @@
 }
 
 .inline-title {
-  --inline-title-color: var(--interactive-accent);
+  --inline-title-color: var(--color-accent);
 }
 
 .is-translucent:not(.is-fullscreen) {
@@ -145,6 +145,49 @@ body {
   box-shadow: 0 0 10px var(--highlight-colour-outline);
 }
 
+body {
+  --lucide-x: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+  --lucide-minus: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
+  --lucide-maximize: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 3H5a2 2 0 0 0-2 2v3'%3E%3C/path%3E%3Cpath d='M21 8V5a2 2 0 0 0-2-2h-3'%3E%3C/path%3E%3Cpath d='M3 16v3a2 2 0 0 0 2 2h3'%3E%3C/path%3E%3Cpath d='M16 21h3a2 2 0 0 0 2-2v-3'%3E%3C/path%3E%3C/svg%3E");
+}
+
+:is(.mod-linux, .mod-windows) .titlebar-button:not(.mod-logo) svg {
+  -webkit-mask-size: cover;
+  background-color: var(--icon-color);
+  color: transparent;
+  width: var(--icon-s);
+  height: var(--icon-s);
+}
+
+:is(.mod-linux, .mod-windows) .titlebar-button:not(.mod-logo) {
+  padding: 0 var(--size-4-3);
+}
+
+:is(.mod-linux, .mod-windows) .titlebar-button.mod-minimize svg {
+  -webkit-mask-image: var(--lucide-minus);
+}
+
+:is(.mod-linux, .mod-windows) .titlebar-button.mod-maximize svg {
+  -webkit-mask-image: var(--lucide-maximize);
+}
+
+:is(.mod-linux, .mod-windows) .titlebar-button.mod-close svg {
+  -webkit-mask-image: var(--lucide-x);
+}
+
+.prompt-input-container {
+  background-color: var(--background-secondary-alt);
+}
+
+input.prompt-input {
+  background-color: transparent;
+  font-size: larger;
+}
+
+.suggestion-item.is-selected {
+  color: var(--color-accent);
+}
+
 :root {
   --corner-radius: 0.5rem;
 }
@@ -152,6 +195,20 @@ body {
 body {
   --checklist-done-decoration: none;
   --checklist-done-color: #bababaa0;
+  --text-on-accent: var(--color-base-00);
+  text-underline-offset: 2px;
+}
+
+.theme-dark {
+  --accent-h: 254;
+  --accent-s: 96%;
+  --accent-l: 82%;
+}
+
+.theme-light {
+  --accent-h: 254;
+  --accent-s: 40%;
+  --accent-l: 40%;
 }
 
 .workspace-ribbon.mod-left {
@@ -175,6 +232,10 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%23ffffff40' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
 }
 
+.theme-light .empty-state::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%2300000040' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
 .empty-state-title {
   font-size: 2.5rem !important;
   font-weight: 300;
@@ -184,4 +245,18 @@ body {
 
 .tree-item-children > div:not(.tree-item) {
   display: none;
+}
+
+.modal.mod-settings .vertical-tab-header {
+  border-right: none;
+}
+
+:not(.is-translucent) .modal-bg {
+  backdrop-filter: brightness(0.5) blur(5px);
+  opacity: 1 !important;
+  background-color: transparent;
+}
+
+.workspace-leaf-content[data-mode=preview] .view-action:first-child {
+  color: var(--interactive-accent);
 }
