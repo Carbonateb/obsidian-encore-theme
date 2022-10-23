@@ -197,6 +197,40 @@ input.prompt-input {
   color: var(--color-accent);
 }
 
+.modal.mod-sidebar-layout .community-modal-sidebar .community-item {
+  border: none;
+  cursor: pointer;
+  transition: background-color 100ms ease-out;
+}
+.modal.mod-sidebar-layout .community-modal-sidebar .community-item:hover:not(.is-selected) {
+  background-color: var(--background-secondary-alt);
+}
+.modal.mod-sidebar-layout .community-modal-sidebar .community-item.mod-active {
+  outline: 1px solid var(--color-accent);
+}
+.modal.mod-sidebar-layout .community-modal-sidebar:not(:last-child) {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+}
+.modal.mod-sidebar-layout .community-modal-sidebar:last-child {
+  padding-top: 0;
+}
+.modal.mod-sidebar-layout .community-modal-sidebar:last-child .community-modal-controls {
+  padding-top: 1em;
+  background-color: var(--background-secondary-alt);
+}
+.modal.mod-sidebar-layout .community-modal-info {
+  margin-left: 287px;
+}
+.modal.mod-sidebar-layout .modal-setting-nav-bar {
+  background-color: var(--background-secondary-alt);
+  border: none;
+}
+.modal.mod-sidebar-layout .community-modal-details.is-loading::before {
+  top: 50px;
+}
+
 :root {
   --corner-radius: 0.5rem;
 }
@@ -260,7 +294,11 @@ body {
   border-right: none;
 }
 
-:not(.is-translucent) .modal-bg {
+body:not(.is-translucent) .modal-bg {
+  display: none;
+}
+body:not(.is-translucent) .modal-container.mod-dim .modal-bg {
+  display: block;
   backdrop-filter: brightness(0.5) blur(5px);
   opacity: 1 !important;
   background-color: transparent;

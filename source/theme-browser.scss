@@ -1,0 +1,48 @@
+.modal.mod-sidebar-layout {
+	.community-modal-sidebar {
+		
+		.community-item {
+			border: none;
+			cursor: pointer;
+			transition: background-color 100ms ease-out;
+			&:hover:not(.is-selected) {
+				background-color: var(--background-secondary-alt);
+			}
+			
+			&.mod-active {
+				outline: 1px solid var(--color-accent);
+			}
+		}
+		
+		// Only when a theme is selected
+		&:not(:last-child) {
+			position: absolute;
+			top: 50px;
+			bottom: 0;
+		}
+		
+		// Only when no themes are selected
+		&:last-child {
+			padding-top: 0;
+			.community-modal-controls {
+				padding-top: 1em;
+				background-color: var(--background-secondary-alt);
+			}
+		}
+	}
+	
+	.community-modal-info {
+		margin-left: 287px;
+	}
+	
+	// This could be applied to all sidebar-layouts
+	.modal-setting-nav-bar {
+		background-color: var(--background-secondary-alt);
+		border: none;
+	}
+	
+	// Move the loading indicator below the nav bar
+	.community-modal-details.is-loading::before {
+		top: 50px;
+	}
+}
