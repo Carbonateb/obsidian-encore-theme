@@ -109,6 +109,17 @@
 .is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left.is-collapsed {
   border-right-color: var(--divider-color);
 }
+.is-translucent:not(.is-fullscreen) .workspace-tabs:not(.mod-top):not(.mod-root) .workspace-tab-header-container {
+  background-color: transparent;
+  border-bottom: none;
+  border-radius: 0;
+  margin: 0;
+  background-color: var(--divider-color);
+  border-right: none;
+}
+.is-translucent:not(.is-fullscreen) .workspace-split {
+  background-color: transparent;
+}
 
 .is-translucent:not(.is-fullscreen) .titlebar, .is-translucent .app-container {
   background-color: transparent !important;
@@ -262,7 +273,6 @@ body {
 .workspace-tabs:not(.mod-top):not(.mod-root) .workspace-tab-header-container {
   background-color: var(--titlebar-background-focused);
   border-bottom: none;
-  -webkit-app-region: drag;
   border-radius: 4px;
   margin: 0 8px;
 }

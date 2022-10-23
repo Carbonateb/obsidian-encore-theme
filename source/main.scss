@@ -102,9 +102,7 @@ body {
 .workspace-tabs:not(.mod-top):not(.mod-root) .workspace-tab-header-container {
 	background-color: var(--titlebar-background-focused);
 	border-bottom: none;
-	-webkit-app-region: drag;
 	border-radius: 4px;
-	// border-radius: 4px;
 	margin: 0 8px;
 }
 
