@@ -45,28 +45,24 @@
 .markdown-source-view .markdown-embed,
 .markdown-embed {
   --border-color: var(--background-modifier-border);
-  border: 1px solid var(--border-color);
+  border: none;
   background-color: var(--background-secondary);
   margin-bottom: 0.75rem;
   border-radius: var(--corner-radius);
   padding: 0;
-}
-
-.markdown-embed {
-  margin-bottom: 0;
   overflow: hidden;
 }
 
 .markdown-embed-title {
-  font-weight: normal;
-  text-align: left;
-  padding-left: 1rem;
-  padding-right: 3rem;
-  font-size: 1.2em;
-  padding-bottom: 0;
-  line-height: 2em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px dashed var(--border-color);
+  font-weight: var(--inline-title-weight);
+  font-size: 1.75em;
+  font-style: var(--inline-title-style);
+  font-variant: var(--inline-title-variant);
+  font-family: var(--inline-title-font);
+  letter-spacing: -0.015em;
+  padding: 0.25em 1rem;
+  color: var(--color-accent);
+  background-color: var(--background-secondary-alt);
   white-space: break-spaces;
 }
 
@@ -79,7 +75,10 @@
 }
 
 .markdown-embed-content.markdown-embed-page {
-  padding: 0 1rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  max-height: 50vh;
+  overflow: auto;
 }
 
 .inline-title {
