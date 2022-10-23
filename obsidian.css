@@ -239,6 +239,8 @@ body {
   --checklist-done-decoration: none;
   --checklist-done-color: #bababaa0;
   --text-on-accent: var(--color-base-00);
+  --hr-color: #ffffff90;
+  --hr-thickness: 1px;
   text-underline-offset: 2px;
 }
 
@@ -317,4 +319,19 @@ body:not(.is-translucent) .modal-container.mod-dim .modal-bg {
 
 .workspace-split {
   background-color: var(--background-secondary);
+}
+
+.cm-line.hr hr::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: var(--background-primary);
+  margin: 0 46%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
 }
