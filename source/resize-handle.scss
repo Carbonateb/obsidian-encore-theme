@@ -1,8 +1,7 @@
 .mod-root {
 	.workspace-split.mod-horizontal>div:not(:first-of-type) {
 		// padding-top: 4px;
-		background-color: var(--background-secondary-alt);
-		overflow: visible;
+		background-color: var(--background-primary);
 	}
 	
 
@@ -17,7 +16,7 @@
 		.workspace-split.mod-horizontal>div:not(:first-of-type) {
 			border-top: 1px solid var(--divider-color);
 			background-color: var(--divider-color) !important;
-			overflow: visible;
+
 		}
 		
 	
