@@ -76,7 +76,7 @@ body {
 
 
 // Fix for tree item dots
-.tree-item-children>div:not(.tree-item .setting-item) {
+.tree-item-children>div:not([class]) {
 	display: none;
 }
 
