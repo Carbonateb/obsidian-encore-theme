@@ -1,6 +1,6 @@
 # Encore - A More Sleek Default Theme
 
-![Promo image](images/promo-image.png)
+![Preview Image 2](images/preview-2.png)
 
 ## Goals
 1. Stay true to the default theme
@@ -8,7 +8,7 @@
 3. Polish the interface
 4. A little bit of flair where appropriate :)
 
-![Preview image](images/preview-2.png)
+![Preview Image 1](images/preview-1.png)
 
 ### 1. Staying True
 **This is not a colour theme!**
