@@ -1,6 +1,35 @@
 # Encore - A More Sleek Default Theme
 
-![Preview Image 2](images/preview-2.png)
+Encore aims to keep the default feel of obsidian, while *polishing up the interface* and *adding a touch of style*.
+
+## How do I get different colours?
+
+Encore keeps Obsidian's colours by default, but you can use the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin to switch it up! You can find the plugin in the community plugins tab. Thanks to *mgmeyers* for creating it :)
+
+![Preview Image 2](images/preview-encore.webp)
+![Preview Image 2](images/preview-encore-light.webp)
+
+## One Dark (Atom)
+The legendary One Dark theme is here
+![Preview Image 2](images/preview-atom.webp)
+![Preview Image 2](images/preview-atom-light.webp)
+
+
+## Monochrome
+Same as default, but with reduced colours
+![Preview](images/preview-monochrome.webp)
+
+## Translucent
+The Translucent option has been given a bit of love. All dark themes support Translucency!
+
+![Preview Image](images/preview-translucent.webp)
+
+## Your favourite theme here?
+I'm always on the lookout for new awesome colour themes to add!
+
+
+
+---
 
 ## Goals
 1. Stay true to the default theme
@@ -8,11 +37,9 @@
 3. Polish the interface
 4. A little bit of flair where appropriate :)
 
-![Preview Image 1](images/preview-1.png)
-
-### 1. Staying True
-**This is not a colour theme!**
-The default palette has been kept. The only exception is a change to the default accent colour, over to `#BAA5FD`. It's the same shade as the default, but slightly lighter to make it easier to read on a dark background - see _Goal 2_.
+# 1. Staying True
+Obsidian is already a great looking app, this theme will only build upon it, without making any drastic changes.
+By default, the original colour palette has been kept. You can change this by using the **Style Settings Plugin** to use one of the popular colour palettes included with Encore.
 
 ### 2. Increasing Usability
 I recommend dark theme enjoyers use a lighter accent colour to make coloured text more readable on a dark background, and light theme users should use a darker accent colour. Text that appears on coloured backgrounds (like buttons) has been changed to be dark, for better contrast there.
@@ -21,6 +48,7 @@ I recommend dark theme enjoyers use a lighter accent colour to make coloured tex
 - The resize bars have been made bigger, easier to click on now. You'll also never try to resize a horizontal line again, as resize bars look different now (you can't see them lol)
 - The collapse and expand buttons have been coloured in, as they are different to the other buttons, makes them easier to find
 - While in reading mode, the button to edit is coloured, because understanding a colour is faster than an icon (easier to differentiate at a glance). I will find more ways to distinguish reading mode in the future.
+- The default accent colour has been changed to `#BAA5FD`. It's the same shade as the default, but slightly lighter to make it easier to read on a dark background
 
 ### 3. Polishing Things Up
 The default obsidian theme is already quite polished, so there's not much I can do here. The biggest changes can be found when translucency is enabled, I cleaned up that mode quite a bit. I think it's quite pleasant to use now!

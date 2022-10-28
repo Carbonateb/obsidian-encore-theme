@@ -1,0 +1,26 @@
+/* @settings
+
+name: Encore
+id: encore-settings
+settings:
+  - 
+    id: theme-colours
+    title: Colour Theme
+    description: Add a splash of colour to Encore
+    type: class-select
+    allowEmpty: false
+    default: encore-theme
+    options:
+      - 
+        label: Encore
+        value: encore-theme
+      - 
+        label: Monochrome
+        value: encore-theme-monochrome
+      - 
+        label: One Dark (Atom)
+        value: encore-theme-atom
+      - 
+        label: (Debug)
+        value: encore-theme-debug
+*/

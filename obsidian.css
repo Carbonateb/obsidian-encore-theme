@@ -1,3 +1,27 @@
+/* @settings
+
+name: Encore
+id: encore-settings
+settings:
+  - 
+    id: theme-colours
+    title: Colour Theme
+    description: Add a splash of colour to Encore
+    type: class-select
+    allowEmpty: false
+    default: encore-theme
+    options:
+      - 
+        label: Encore
+        value: encore-theme
+      - 
+        label: Monochrome
+        value: encore-theme-monochrome
+      - 
+        label: One Dark (Atom)
+        value: encore-theme-atom
+*/
+
 .mod-root .workspace-split.mod-horizontal > div:not(:first-of-type) {
   background-color: var(--background-primary);
 }
@@ -140,17 +164,15 @@
   color: rgba(189, 189, 189, 0.1450980392);
 }
 
-body {
-  --highlight-colour: #ff9f0038;
-  --highlight-colour-outline: #ff9f00de;
-}
-
-.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight, .search-result-file-matched-text {
-  background-color: var(--highlight-colour);
-  outline: 1px solid var(--highlight-colour-outline);
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight,
+.search-result-file-matched-text {
+  background-color: hsla(var(--highlight-hue), 100%, 50%, 0.2);
+  outline: 1px solid hsla(var(--highlight-hue), 90%, 50%, 0.85);
   padding: 0 0.15em;
   border-radius: 3px;
-  box-shadow: 0 0 10px var(--highlight-colour-outline);
+  box-shadow: 0 0 10px hsla(var(--highlight-hue), 90%, 50%, 0.75);
 }
 
 body {
@@ -230,29 +252,193 @@ body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-details.is-loadi
   top: 50px;
 }
 
+body.theme-dark {
+  --color-base-00: #1e1e1e;
+  --color-base-20: #262626;
+  --color-base-25: #2a2a2a;
+  --color-base-30: #363636;
+  --color-base-35: #3F3F3F;
+  --color-base-40: #555;
+  --color-base-50: #666;
+  --color-base-70: #bababa;
+  --color-base-100: #dadada;
+  --accent-h: 254;
+  --accent-s: 96%;
+  --accent-l: 82%;
+  --bold-color: hsl(36, 96%, 82%);
+  --italic-color: hsl(189, 96%, 82%);
+  --highlight-hue: 37;
+  --h1-color: hsl(calc(var(--accent-h) + 00), 25%, 80%);
+  --h2-color: hsl(calc(var(--accent-h) + 20), 35%, 85%);
+  --h3-color: hsl(calc(var(--accent-h) + 40), 40%, 88%);
+  --h4-color: hsl(calc(var(--accent-h) + 60), 50%, 90%);
+  --h5-color: hsl(calc(var(--accent-h) + 80), 80%, 93%);
+  --h6-color: hsl(calc(var(--accent-h) + 99), 95%, 95%);
+}
+body.theme-dark .cm-line.hr hr::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: var(--background-primary);
+  margin: 0 46%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+}
+body.theme-light {
+  --color-base-00: #ffffff;
+  --color-base-05: #e6e6e6;
+  --color-base-10: #fafafa;
+  --color-base-20: #f4f4f4;
+  --color-base-30: #e6e6e6;
+  --color-base-35: #b3b3b3;
+  --color-base-40: #bdbdbd;
+  --color-base-50: #ababab;
+  --color-base-70: #414141;
+  --color-base-100: #111111;
+  --accent-h: 254;
+  --accent-s: 40%;
+  --accent-l: 40%;
+  --bold-color: hsl(347, 80%, 40%);
+  --italic-color: hsl(207, 80%, 40%);
+  --highlight-hue: 37;
+  --h1-color: hsl(calc(var(--accent-h) + 00), 25%, 40%);
+  --h2-color: hsl(calc(var(--accent-h) + 20), 35%, 30%);
+  --h3-color: hsl(calc(var(--accent-h) + 40), 40%, 25%);
+  --h4-color: hsl(calc(var(--accent-h) + 60), 45%, 20%);
+  --h5-color: hsl(calc(var(--accent-h) + 80), 75%, 15%);
+  --h6-color: hsl(calc(var(--accent-h) + 99), 90%, 10%);
+}
+body.theme-light .cm-line.hr hr::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: var(--background-primary);
+  margin: 0 46%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%2300000090' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+}
+body.encore-theme-monochrome.theme-dark {
+  --bold-color: inherit;
+  --bold-weight: var(--font-bold);
+  --italic-color: inherit;
+  --h1-color: inherit;
+  --h2-color: inherit;
+  --h3-color: inherit;
+  --h4-color: inherit;
+  --h5-color: inherit;
+  --h6-color: inherit;
+}
+body.encore-theme-monochrome.theme-light {
+  --bold-color: inherit;
+  --bold-weight: var(--font-bold);
+  --italic-color: inherit;
+  --h1-color: inherit;
+  --h2-color: inherit;
+  --h3-color: inherit;
+  --h4-color: inherit;
+  --h5-color: inherit;
+  --h6-color: inherit;
+}
+body.encore-theme-atom.theme-dark {
+  --color-base-00: #272b34;
+  --color-base-20: #20242b;
+  --color-base-25: #272b34;
+  --color-base-30: #3d4453;
+  --color-base-35: #4f586b;
+  --color-base-40: #4f586b;
+  --color-base-50: #4f586b;
+  --color-base-70: #abb2bf;
+  --color-base-100: #ced2da;
+  --color-red: #e06c75;
+  --color-green-rgb: 224, 108, 117;
+  --color-green: #98c379;
+  --color-orange: #d19a66;
+  --color-yellow: #e5c07b;
+  --color-cyan: #56b6c2;
+  --color-blue: hsl(207, 82%, 66%);
+  --accent-h: 207;
+  --accent-s: 82%;
+  --accent-l: 66%;
+  --highlight-hue: 39;
+  --bold-color: var(--color-blue);
+  --italic-color: var(--color-green);
+  --h1-color: var(--color-orange);
+  --h2-color: var(--color-green);
+  --h3-color: var(--color-cyan);
+  --h4-color: var(--color-blue);
+  --h5-color: var(--color-red);
+  --h6-color: var(--color-yellow);
+}
+body.encore-theme-atom.theme-light {
+  --color-base-00: #fafafa;
+  --color-base-05: #ced2da;
+  --color-base-20: #eaebee;
+  --color-base-30: #ced2da;
+  --color-base-35: #4f586b;
+  --color-base-40: #4f586b;
+  --color-base-50: #272b34;
+  --color-base-70: #20242b;
+  --color-base-100: #272b34;
+  --color-red: #b95059;
+  --color-green-rgb: 224, 108, 117;
+  --color-green: #759c59;
+  --color-orange: #c78a51;
+  --color-yellow: #d3a95c;
+  --color-cyan: #42abb9;
+  --color-blue: #469de4;
+  --accent-h: 207;
+  --accent-s: 82%;
+  --accent-l: 56%;
+  --highlight-hue: 39;
+  --bold-color: var(--color-blue);
+  --italic-color: var(--color-green);
+  --h1-color: var(--color-orange);
+  --h2-color: var(--color-green);
+  --h3-color: var(--color-cyan);
+  --h4-color: var(--color-blue);
+  --h5-color: var(--color-red);
+  --h6-color: var(--color-yellow);
+}
+body.encore-theme-debug.theme-dark {
+  --color-base-10: #ff0000;
+  --color-base-60: #ff0000;
+}
+body.encore-theme-debug.theme-light {
+  --color-base-25: #fc0505;
+  --color-base-60: #fd0202;
+}
+
 :root {
   --corner-radius: 0.5rem;
 }
 
 body {
   --checklist-done-decoration: none;
-  --checklist-done-color: #bababaa0;
+  --checklist-done-color: var(--color-base-50);
   --text-on-accent: var(--color-base-00);
-  --hr-color: #ffffff90;
   --hr-thickness: 1px;
+  --highlight-hue: 37;
   text-underline-offset: 2px;
 }
-
-.theme-dark {
-  --accent-h: 254;
-  --accent-s: 96%;
-  --accent-l: 82%;
+body.theme-dark {
+  --hr-color: #ffffff90;
+}
+body.theme-light {
+  --hr-color: #00000090;
 }
 
-.theme-light {
-  --accent-h: 254;
-  --accent-s: 40%;
-  --accent-l: 40%;
+.cm-strikethrough {
+  color: var(--color-base-70);
 }
 
 .workspace-ribbon.mod-left {
@@ -318,19 +504,4 @@ body:not(.is-translucent) .modal-container.mod-dim .modal-bg {
 
 .workspace-split {
   background-color: var(--background-secondary);
-}
-
-.cm-line.hr hr::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background-color: var(--background-primary);
-  margin: 0 46%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
 }

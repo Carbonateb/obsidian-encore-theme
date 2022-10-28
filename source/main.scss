@@ -6,6 +6,7 @@
 @use "titlebar.scss";
 @use "prompt.scss";
 @use "theme-browser.scss";
+@use "themes.scss";
 
 :root {
 	--corner-radius: 0.5rem;
@@ -13,27 +14,25 @@
 
 body {
 	--checklist-done-decoration: none;
-	--checklist-done-color: #bababaa0;
+	--checklist-done-color: var(--color-base-50);
 	--text-on-accent: var(--color-base-00);
-	
-	--hr-color: #ffffff90;
 	--hr-thickness: 1px;
+	--highlight-hue: 37;
 	
 	text-underline-offset: 2px;
+	
+	// Don't change these theme colours
+	&.theme-dark {
+		--hr-color: #ffffff90;
+	}
+	&.theme-light {
+		--hr-color: #00000090;
+	}
 }
 
-//  New suggested theme colour for dark theme
-.theme-dark {
-	--accent-h: 254;
-	--accent-s: 96%;
-	--accent-l: 82%;
+.cm-strikethrough {
+	color: var(--color-base-70);
 }
-.theme-light {
-	--accent-h: 254;
-	--accent-s: 40%;
-	--accent-l: 40%;
-}
-
 
 // Side bar
 .workspace-ribbon {
@@ -117,19 +116,4 @@ body:not(.is-translucent) {
 
 .workspace-split {
 	background-color: var(--background-secondary);
-}
-
-.cm-line.hr hr::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	background-color: var(--background-primary);
-	margin: 0 46%;
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
 }
