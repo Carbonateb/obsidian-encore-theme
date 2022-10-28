@@ -196,37 +196,37 @@ input.prompt-input {
   color: var(--color-accent);
 }
 
-.modal.mod-sidebar-layout .community-modal-sidebar .community-item {
+body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-sidebar .community-item {
   border: none;
   cursor: pointer;
   transition: background-color 100ms ease-out;
 }
-.modal.mod-sidebar-layout .community-modal-sidebar .community-item:hover:not(.is-selected) {
+body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-sidebar .community-item:hover:not(.is-selected) {
   background-color: var(--background-secondary-alt);
 }
-.modal.mod-sidebar-layout .community-modal-sidebar .community-item.mod-active {
+body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-sidebar .community-item.mod-active {
   outline: 1px solid var(--color-accent);
 }
-.modal.mod-sidebar-layout .community-modal-sidebar:not(:last-child) {
+body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-sidebar:not(:last-child) {
   position: absolute;
   top: 50px;
   bottom: 0;
 }
-.modal.mod-sidebar-layout .community-modal-sidebar:last-child {
+body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-sidebar:last-child {
   padding-top: 0;
 }
-.modal.mod-sidebar-layout .community-modal-sidebar:last-child .community-modal-controls {
+body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-sidebar:last-child .community-modal-controls {
   padding-top: 1em;
   background-color: var(--background-secondary-alt);
 }
-.modal.mod-sidebar-layout .community-modal-info {
+body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-info {
   margin-left: 287px;
 }
-.modal.mod-sidebar-layout .modal-setting-nav-bar {
+body:not(.is-mobile) .modal.mod-sidebar-layout .modal-setting-nav-bar {
   background-color: var(--background-secondary-alt);
   border: none;
 }
-.modal.mod-sidebar-layout .community-modal-details.is-loading::before {
+body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-details.is-loading::before {
   top: 50px;
 }
 
