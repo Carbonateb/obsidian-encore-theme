@@ -20,6 +20,9 @@ settings:
       - 
         label: One Dark (Atom)
         value: encore-theme-atom
+      -
+        label: Dracula
+        value: encore-theme-dracula
       - 
         label: (Debug)
         value: encore-theme-debug
