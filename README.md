@@ -2,8 +2,6 @@
 
 Encore aims to keep the default feel of obsidian, while *polishing up the interface* and *adding a touch of style*.
 
-## How do I get different colours?
-
 Encore keeps Obsidian's colours by default, but you can use the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin to switch it up! You can find the plugin in the community plugins tab. Thanks to *mgmeyers* for creating it :)
 
 ![Preview Image 2](images/preview-encore.webp)
