@@ -61,6 +61,10 @@ A little bit of visual flair never hurts :)
 # Installation
 Copy `obsidian.css` into your themes folder (there's a link to it in the app), you might want to rename it to **Encore.css** so you can see it's name in the theme browser.
 
+# Known Issues
+- Stacked tabs mode is broken
+- Translucency while using light theme has bad text colours
+
 # How to Edit
 **Note to self in case I forgor**
 
