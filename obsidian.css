@@ -23,6 +23,11 @@ settings:
       -
         label: Dracula
         value: encore-theme-dracula
+  -
+    id: shaded-title
+    title: Shaded Title
+    description: Wraps the title of the note in a box. This will expand to contain any frontmatter in the note
+    type: class-toggle
 */
 
 .mod-root .workspace-split.mod-horizontal > div:not(:first-of-type) {
@@ -537,4 +542,39 @@ body:not(.is-translucent) .modal-container.mod-dim .modal-bg {
 
 .workspace-split {
   background-color: var(--background-secondary);
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+  max-width: unset;
+  margin-left: -24rem;
+  padding-left: 24rem;
+  margin-right: -24rem;
+  padding-right: 24rem;
+}
+
+body.shaded-title .markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child {
+  position: relative;
+}
+body.shaded-title .markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child::before {
+  content: "";
+  background-color: var(--background-secondary-alt);
+  display: block;
+  position: absolute;
+  top: -2rem;
+  transform: translateX(-1rem);
+  height: 3.25rem;
+  width: calc(var(--file-line-width) + 2rem);
+  z-index: -1;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+body.shaded-title .inline-title {
+  background-color: var(--background-secondary-alt);
+  border-radius: 8px;
+  padding-bottom: 0;
+  line-height: 1.5em;
+  margin-bottom: 0.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 1rem;
 }

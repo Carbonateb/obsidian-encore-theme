@@ -23,7 +23,9 @@ settings:
       -
         label: Dracula
         value: encore-theme-dracula
-      - 
-        label: (Debug)
-        value: encore-theme-debug
+  -
+    id: shaded-title
+    title: Shaded Title
+    description: Wraps the title of the note in a box. This will expand to contain any frontmatter in the note
+    type: class-toggle
 */
