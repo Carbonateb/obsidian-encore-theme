@@ -117,3 +117,15 @@ body:not(.is-translucent) {
 .workspace-split {
 	background-color: var(--background-secondary);
 }
+
+
+// Better clickability fix
+$oversize: 24rem;
+.inline-title,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+	max-width: unset;
+	margin-left: -$oversize;
+	padding-left: $oversize;
+	margin-right: -$oversize;
+	padding-right: $oversize;
+}

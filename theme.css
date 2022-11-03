@@ -538,3 +538,12 @@ body:not(.is-translucent) .modal-container.mod-dim .modal-bg {
 .workspace-split {
   background-color: var(--background-secondary);
 }
+
+.inline-title,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+  max-width: unset;
+  margin-left: -24rem;
+  padding-left: 24rem;
+  margin-right: -24rem;
+  padding-right: 24rem;
+}
