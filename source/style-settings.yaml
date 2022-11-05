@@ -28,4 +28,19 @@ settings:
     title: Shaded Title
     description: Wraps the title of the note in a box. This will expand to contain any frontmatter in the note
     type: class-toggle
+  -
+    id: encore-coloured-tooltip
+    title: Coloured Tooltip
+    description: Make tooltips stand out much more by applying your theme colour to the border
+    type: class-toggle
+  -
+    id: encore-no-calendar
+    title: Disable Calendar Integration
+    description: Encore makes some changes to Calendar. Turn this on to keep the default look
+    type: class-toggle
+  -
+    id: encore-no-excalidraw
+    title: Disable Excalidraw Integration
+    description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
+    type: class-toggle
 */

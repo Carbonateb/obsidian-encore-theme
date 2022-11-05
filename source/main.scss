@@ -6,6 +6,8 @@
 @use "titlebar.scss";
 @use "prompt.scss";
 @use "theme-browser.scss";
+@use "calendar.scss";
+@use "excalidraw.scss";
 @use "themes.scss";
 
 :root {
@@ -158,4 +160,41 @@ body.shaded-title {
 		margin-right: -1rem;
 		padding-left: 1rem;
 	}
+}
+
+
+// Minor tweak to padding (mostly affects plugins like calendar)
+.workspace-leaf-content .view-content {
+	padding: var(--size-4-3);
+}
+
+
+// Tooltip
+@keyframes tooltip-appear {
+	from {opacity: 0.0;}
+	to {opacity: 1.0;}
+}
+body>.tooltip {
+	--tooltip-edge-colour: var(--background-secondary-alt);
+	border: 1px solid var(--tooltip-edge-colour);
+	background-color: var(--background-primary);
+	color: var(--text-normal);
+	animation: tooltip-appear 150ms ease-out !important;
+	padding: 6px 8px;
+	border-radius: 8px;
+	>.tooltip-arrow {
+		border-bottom-color: var(--tooltip-edge-colour);
+	}
+	&.mod-right>.tooltip-arrow {
+		border-right-color: var(--tooltip-edge-colour);
+	}
+	&.mod-left>.tooltip-arrow {
+		border-left-color: var(--tooltip-edge-colour);
+	}
+	&.mod-top>.tooltip-arrow {
+		border-top-color: var(--tooltip-edge-colour);
+	}
+}
+body.encore-coloured-tooltip>.tooltip {
+	--tooltip-edge-colour: var(--color-accent);
 }
