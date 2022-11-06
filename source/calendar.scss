@@ -57,12 +57,15 @@ body:not(.encore-no-calendar) #calendar-container {
 	}
 	.day {
 		background-color: var(--background-primary);
-		
 	}
 	.day.has-note {
 		background-color: var(--background-secondary-alt);
 	}
 	.day.today {
+		color: var(--color-accent) !important;
+	}
+	.day.active {
 		background-color: var(--background-modifier-active-hover);
+		color: var(--text-normal);
 	}
 }

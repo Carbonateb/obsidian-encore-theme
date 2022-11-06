@@ -1,78 +1,67 @@
+
+.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left, .is-translucent:not(.is-fullscreen) .workspace-tabs, .is-translucent:not(.is-fullscreen) .workspace-split.mod-root, .is-translucent:not(.is-fullscreen) .sidebar-toggle-button, .is-translucent:not(.is-fullscreen) .mod-left-split .workspace-tab-header-container, .is-translucent:not(.is-fullscreen) .mod-right-split .workspace-tab-header-container, .is-translucent:not(.is-fullscreen) .mod-top .workspace-tab-header-container, .is-translucent:not(.is-fullscreen) .workspace-tabs .workspace-leaf, .is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left:before {
+	// background-color: greenyellow !important;
+}
+
 // Translucent mode fixes
 .is-translucent:not(.is-fullscreen) {
-	--divider-color: #bdbdbd3b;
-	
-	
-	// Make the top thing transparent on the right side
-	.mod-right-split :not(.mod-top) .workspace-tab-header-container,
-	// Right side is not transparent
-	.mod-right-split .workspace-leaf {
-		background-color: var(--background-secondary);
-	}
-	
-	.mod-left-split {
-		--background-secondary: #2a2a2abe;
-		--background-modifier-form-field: #262626be;
-		--background-modifier-border: #363636be;
-		
-		:not(.mod-top) .workspace-tab-header-container,
-		.workspace-tab-container {
-			border-right: 1px solid var(--divider-color);
-		}
-	}
+	--divider-color: transparent;
 	
 	// Try to fix the tiny issue with tab inner rounded corners
+	.view-header-title-container:not(.mod-at-end):after,
 	.workspace-split.mod-root .workspace-tab-header.is-active::before, .workspace-split.mod-root .workspace-tab-header.is-active::after {
-		--tab-outline-color: #bdbdbd15;
-		--tab-outline-width: 1px;
+		display: none;
+	}	
+	
+	.titlebar {
+		background-color: transparent !important;
+	}	
+	
+	.mod-root .workspace-tabs {
+		// background-color: var(--background-primary) !important;
 	}
 	
-	
-	// Don't fade out border when transparent
-	.workspace-ribbon {
-		&.mod-left {
-			&.is-collapsed {
-				border-right-color: var(--divider-color);
-			}
-		}
-	}
-	
-	// Fix header
-	.workspace-tabs:not(.mod-top):not(.mod-root) .workspace-tab-header-container {
-		background-color: transparent;
-		border-bottom: none;
-		border-radius: 0;
-		margin: 0;
-		background-color: var(--divider-color);
-		border-right: none;
-	}
-
-	.workspace-split {
+	.mod-right-split,
+	.mod-left-split,
+	.sidebar-toggle-button {
 		background-color: transparent;
 	}
-}
-.is-translucent:not(.is-fullscreen) .titlebar, .is-translucent .app-container {
-	// Overall tint to the window
-	background-color: transparent !important;
 	
-	// Removes background from behind tabs
-	.workspace-split.mod-root {
+	.mod-left-split :not(.mod-top) .workspace-tab-header-container,
+	.mod-right-split :not(.mod-top) .workspace-tab-header-container {
+		// Colour of splitters on the sidebar
+		background-color: var(--background-secondary-alt) !important;
+	}
+	
+	.workspace-tabs .workspace-leaf {
+		// Allows the main colour of the sidebar to be visible
 		background-color: transparent !important;
 	}
-}
+	
+	.workspace-tab-container {
+		border-radius: 8px;
+	}
+	
+	// Main page background
+	.workspace-split.mod-root .view-content {
+		background-color: var(--workspace-background-translucent);
+	}
+	
+	.view-header {
+		background-color: var(--workspace-background-translucent) !important;
+	}
+	
+	.workspace-tab-header.is-active {
+		background-color: var(--workspace-background-translucent) !important;
+	}
+}	
 
 .is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
 	// Makes the minimise, maximise, close buttons transparent
 	background-color: transparent !important;
 }
 
-// Fixes a small leak on the view header
-.view-header {
-	margin: 0;
-	padding: 0 var(--size-4-3);;
-}
-
 // Make graph view look better, especially with a translucent background
 .graph-view.color-line {
-	color: #bdbdbd25;
-}
+	// color: #bdbdbd25;
+}	

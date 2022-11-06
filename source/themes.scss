@@ -27,6 +27,8 @@ body {
 		--h5-color: hsl(calc(var(--accent-h) + 80), 80%, 93%);
 		--h6-color: hsl(calc(var(--accent-h) + 99), 95%, 95%);
 		
+		--workspace-background-translucent: #1e1e1ece;
+		
 		.cm-line.hr hr::after {
 			content: "";
 			position: absolute;
@@ -69,6 +71,8 @@ body {
 		--h4-color: hsl(calc(var(--accent-h) + 60), 45%, 20%);
 		--h5-color: hsl(calc(var(--accent-h) + 80), 75%, 15%);
 		--h6-color: hsl(calc(var(--accent-h) + 99), 90%, 10%);
+		
+		--workspace-background-translucent: #ffffff99;
 		
 		.cm-line.hr hr::after {
 			content: "";
@@ -155,6 +159,8 @@ body {
 			--h4-color: var(--color-blue);
 			--h5-color: var(--color-red);
 			--h6-color: var(--color-yellow);
+			
+			--workspace-background-translucent: #272b34ab;
 		}
 		
 		&.theme-light {
@@ -189,6 +195,8 @@ body {
 			--h4-color: var(--color-blue);
 			--h5-color: var(--color-red);
 			--h6-color: var(--color-yellow);
+			
+			--workspace-background-translucent: #fafafa99;
 		}
 	}
 

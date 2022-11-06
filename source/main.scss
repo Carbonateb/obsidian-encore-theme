@@ -89,11 +89,10 @@ body {
 body:not(.is-translucent) {
 	// Only one modal dimmer at once
 	.modal-bg {
-		display: none;
+		opacity: 0.0;
 	}
 	// Blur modal background
 	.modal-container.mod-dim .modal-bg {
-		display: block;
 		backdrop-filter: brightness(0.5) blur(5px);
 		opacity: 1 !important;
 		background-color: transparent;
