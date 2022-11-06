@@ -332,6 +332,45 @@ body:not(.encore-no-calendar) #calendar-container .day.today {
   background-color: var(--background-modifier-active-hover);
 }
 
+.kanban-plugin .kanban-plugin__lane {
+  border: none;
+  overflow: hidden;
+  background-color: var(--background-secondary);
+}
+.kanban-plugin .kanban-plugin__lane .kanban-plugin__lane-header-wrapper {
+  border: none;
+  background-color: var(--background-secondary-alt);
+}
+.kanban-plugin .kanban-plugin__lane .kanban-plugin__item-button-wrapper:nth-child(2) {
+  border: none;
+  background-color: var(--background-secondary-alt);
+}
+.kanban-plugin .kanban-plugin__lane .kanban-plugin__item-button-wrapper:nth-child(2) button.kanban-plugin__new-item-button:not(:hover) {
+  background-color: var(--background-secondary);
+}
+.kanban-plugin .kanban-plugin__lane .kanban-plugin__item {
+  border: none;
+}
+.kanban-plugin .kanban-plugin__lane .kanban-plugin__item:not(:hover) .kanban-plugin__item-postfix-button {
+  display: none;
+}
+.kanban-plugin .kanban-plugin__lane .kanban-plugin__item-content-wrapper {
+  background-color: var(--background-primary);
+}
+.kanban-plugin .kanban-plugin__lane > :last-child {
+  border: none;
+}
+.kanban-plugin .kanban-plugin__lane > :last-child.kanban-plugin__item-button-wrapper {
+  padding-top: 0;
+}
+.kanban-plugin .kanban-plugin__lane .kanban-plugin__grow-wrap > textarea, .kanban-plugin .kanban-plugin__lane .kanban-plugin__grow-wrap:after {
+  background-color: transparent !important;
+}
+.kanban-plugin .kanban-plugin__lane button.kanban-plugin__new-item-button:not(:hover) {
+  background-color: var(--background-secondary-alt);
+  box-shadow: unset;
+}
+
 body:not(.encore-no-excalidraw) .excalidraw-wrapper {
   background-color: transparent;
 }
@@ -720,10 +759,10 @@ body:not(.is-translucent) .modal-container.mod-dim .modal-bg {
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
   max-width: unset;
-  margin-left: -24rem;
-  padding-left: 24rem;
-  margin-right: -24rem;
-  padding-right: 24rem;
+  margin-left: -4rem;
+  padding-left: 4rem;
+  margin-right: -4rem;
+  padding-right: 4rem;
 }
 
 body.shaded-title .markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child {

@@ -7,6 +7,7 @@
 @use "prompt.scss";
 @use "theme-browser.scss";
 @use "calendar.scss";
+@use "kanban.scss";
 @use "excalidraw.scss";
 @use "themes.scss";
 
@@ -122,7 +123,7 @@ body:not(.is-translucent) {
 
 
 // Better clickability fix
-$oversize: 24rem;
+$oversize: 4rem;
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
 	max-width: unset;
 	margin-left: -$oversize;
