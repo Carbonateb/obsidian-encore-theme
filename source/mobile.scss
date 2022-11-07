@@ -1,8 +1,11 @@
-body.is-mobile.encore-mobile-testing {
+body.is-mobile {
 	// Drawer rework
 	.workspace-drawer {
 		background: none;
-		width: 100vw;
+		
+		.nav-header {
+			
+		}
 	}
 	
 	.workspace-drawer-inner {
@@ -26,7 +29,13 @@ body.is-mobile.encore-mobile-testing {
 	
 	// Style option list like desktop version
 	.workspace-drawer-tab-option-item {
+		background-color: var(--background-secondary-alt);
+		border-radius: 4px;
 		margin: 8px;
 		padding: var(--size-4-3);
+	}
+	
+	.workspace-drawer-header {
+		padding: 12px 12px 0;
 	}
 }

@@ -48,9 +48,4 @@ settings:
     title: Disable Excalidraw Integration
     description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
     type: class-toggle
-  -
-    id: encore-mobile-testing
-    title: Experimental Mobile Changes
-    description: I'm in the process of theming the mobile version, enable this to see the current WIP version.
-    type: class-toggle
 */

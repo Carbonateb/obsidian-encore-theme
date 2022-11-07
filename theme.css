@@ -48,11 +48,6 @@ settings:
     title: Disable Excalidraw Integration
     description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
     type: class-toggle
-  -
-    id: encore-mobile-testing
-    title: Experimental Mobile Changes
-    description: I'm in the process of theming the mobile version, enable this to see the current WIP version.
-    type: class-toggle
 */
 
 @charset "UTF-8";
@@ -261,27 +256,31 @@ body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-details.is-loadi
   top: 50px;
 }
 
-body.is-mobile.encore-mobile-testing .workspace-drawer {
+body.is-mobile .workspace-drawer {
   background: none;
-  width: 100vw;
 }
-body.is-mobile.encore-mobile-testing .workspace-drawer-inner {
+body.is-mobile .workspace-drawer-inner {
   background-color: var(--background-secondary);
   margin: 8px;
   border-radius: 8px;
 }
-body.is-mobile.encore-mobile-testing .workspace-drawer-backdrop {
+body.is-mobile .workspace-drawer-backdrop {
   backdrop-filter: brightness(0.3);
   background: none;
 }
-body.is-mobile.encore-mobile-testing .workspace-drawer-active-tab-header {
+body.is-mobile .workspace-drawer-active-tab-header {
   background-color: var(--background-secondary-alt);
   border-radius: 4px;
   margin: 0 8px;
 }
-body.is-mobile.encore-mobile-testing .workspace-drawer-tab-option-item {
+body.is-mobile .workspace-drawer-tab-option-item {
+  background-color: var(--background-secondary-alt);
+  border-radius: 4px;
   margin: 8px;
   padding: var(--size-4-3);
+}
+body.is-mobile .workspace-drawer-header {
+  padding: 12px 12px 0;
 }
 
 body:not(.encore-no-calendar) #calendar-container {
