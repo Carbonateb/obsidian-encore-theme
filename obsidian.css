@@ -34,6 +34,11 @@ settings:
     description: Make tooltips stand out much more by applying your theme colour to the border
     type: class-toggle
   -
+    id: encore-disable-clickability-fix
+    title: Disable Clickability Fix
+    description: Encore makes it easier to click the edge of a document by adding some invisible padding. May cause issues if you have content that exceeds the width of your page. No effect on mobile version.
+    type: class-toggle
+  -
     id: encore-no-calendar
     title: Disable Calendar Integration
     description: Encore makes some changes to Calendar. Turn this on to keep the default look
@@ -45,6 +50,7 @@ settings:
     type: class-toggle
 */
 
+@charset "UTF-8";
 .mod-root .workspace-split.mod-horizontal > div:not(:first-of-type) {
   background-color: var(--background-primary);
 }
@@ -739,12 +745,15 @@ body:not(.is-translucent) .modal-container.mod-dim .modal-bg {
   background-color: var(--background-secondary);
 }
 
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+body:not(.is-mobile):not(.encore-disable-clickability-fix) .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
   max-width: unset;
   margin-left: -4rem;
   padding-left: 4rem;
   margin-right: -4rem;
   padding-right: 4rem;
+}
+body:not(.is-mobile):not(.encore-disable-clickability-fix) .ͼ1 .cm-scroller {
+  overflow-x: hidden;
 }
 
 body.shaded-title .markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child {

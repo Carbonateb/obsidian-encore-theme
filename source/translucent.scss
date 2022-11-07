@@ -1,8 +1,3 @@
-
-.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left, .is-translucent:not(.is-fullscreen) .workspace-tabs, .is-translucent:not(.is-fullscreen) .workspace-split.mod-root, .is-translucent:not(.is-fullscreen) .sidebar-toggle-button, .is-translucent:not(.is-fullscreen) .mod-left-split .workspace-tab-header-container, .is-translucent:not(.is-fullscreen) .mod-right-split .workspace-tab-header-container, .is-translucent:not(.is-fullscreen) .mod-top .workspace-tab-header-container, .is-translucent:not(.is-fullscreen) .workspace-tabs .workspace-leaf, .is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left:before {
-	// background-color: greenyellow !important;
-}
-
 // Translucent mode fixes
 .is-translucent:not(.is-fullscreen) {
 	--divider-color: transparent;

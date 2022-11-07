@@ -122,13 +122,19 @@ body:not(.is-translucent) {
 
 
 // Better clickability fix
-$oversize: 4rem;
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
-	max-width: unset;
-	margin-left: -$oversize;
-	padding-left: $oversize;
-	margin-right: -$oversize;
-	padding-right: $oversize;
+body:not(.is-mobile):not(.encore-disable-clickability-fix) {
+	$oversize: 4rem;
+	.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+		max-width: unset;
+		margin-left: -$oversize;
+		padding-left: $oversize;
+		margin-right: -$oversize;
+		padding-right: $oversize;
+	}
+	
+	.ͼ1 .cm-scroller {
+		overflow-x: hidden;
+	}
 }
 
 
