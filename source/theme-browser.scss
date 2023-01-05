@@ -1,6 +1,6 @@
 body:not(.is-mobile) .modal.mod-sidebar-layout {
 	.community-modal-sidebar {
-		
+
 		.community-item {
 			border: none;
 			cursor: pointer;
@@ -8,19 +8,19 @@ body:not(.is-mobile) .modal.mod-sidebar-layout {
 			&:hover:not(.is-selected) {
 				background-color: var(--background-secondary-alt);
 			}
-			
+
 			&.mod-active {
 				outline: 1px solid var(--color-accent);
 			}
 		}
-		
+
 		// Only when a theme is selected
 		&:not(:last-child) {
 			position: absolute;
 			top: 50px;
 			bottom: 0;
 		}
-		
+
 		// Only when no themes are selected
 		&:last-child {
 			padding-top: 0;
@@ -30,17 +30,18 @@ body:not(.is-mobile) .modal.mod-sidebar-layout {
 			}
 		}
 	}
-	
+
 	.community-modal-info {
-		margin-left: 287px;
+		margin-left: 1em;
+        margin-right: 1em;
 	}
-	
+
 	// This could be applied to all sidebar-layouts
 	.modal-setting-nav-bar {
 		background-color: var(--background-secondary-alt);
 		border: none;
 	}
-	
+
 	// Move the loading indicator below the nav bar
 	.community-modal-details.is-loading::before {
 		top: 50px;
