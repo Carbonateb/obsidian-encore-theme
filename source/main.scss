@@ -140,7 +140,7 @@ body:not(.is-mobile):not(.encore-disable-clickability-fix) {
 
 
 // Frontmatter special formatting
-body.shaded-title {
+body:not(.is-mobile).shaded-title {
 	.markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child {
 		position: relative;
 	}

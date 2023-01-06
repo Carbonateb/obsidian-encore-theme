@@ -1,6 +1,9 @@
 body {
 	// Encore (based on Obsidian, but with more colours)
 	&.theme-dark {
+        // Default line width is 700px
+		--file-line-width: 80%;
+
 		// Theme neutrals
 		--color-base-00: #1e1e1e; // Main background
 		--color-base-20: #262626; // Alt background
@@ -11,12 +14,12 @@ body {
 		--color-base-50: #666; // Headings, bullets, checked items
 		--color-base-70: #bababa; // Dim text
 		--color-base-100: #dadada; // Text
-		
+
 		// Default accent colour
 		--accent-h: 254;
 		--accent-s: 96%;
 		--accent-l: 82%;
-		
+
 		--bold-color: hsl(36, 96%, 82%);
 		--italic-color: hsl(189, 96%, 82%);
 		--highlight-hue: 37;
@@ -26,9 +29,9 @@ body {
 		--h4-color: hsl(calc(var(--accent-h) + 60), 50%, 90%);
 		--h5-color: hsl(calc(var(--accent-h) + 80), 80%, 93%);
 		--h6-color: hsl(calc(var(--accent-h) + 99), 95%, 95%);
-		
+
 		--workspace-background-translucent: #1e1e1ece;
-		
+
 		.cm-line.hr hr::after {
 			content: "";
 			position: absolute;
@@ -44,8 +47,11 @@ body {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
 		}
 	}
-	
+
 	&.theme-light {
+		// Default line width is 700px
+		--file-line-width: 80%;
+
 		--color-base-00: #ffffff; // Main background
 		--color-base-05: #e6e6e6; // Window title & embedded note title
 		--color-base-10: #fafafa; // Hovered buttons
@@ -56,12 +62,12 @@ body {
 		--color-base-50: #ababab; // Headings, bullets, checked items
 		--color-base-70: #414141; // Dim text
 		--color-base-100: #111111; // Text
-		
+
 		// Default accent colour
 		--accent-h: 254;
 		--accent-s: 40%;
 		--accent-l: 40%;
-		
+
 		--bold-color: hsl(347, 80%, 40%);
 		--italic-color: hsl(207, 80%, 40%);
 		--highlight-hue: 37;
@@ -71,9 +77,9 @@ body {
 		--h4-color: hsl(calc(var(--accent-h) + 60), 45%, 20%);
 		--h5-color: hsl(calc(var(--accent-h) + 80), 75%, 15%);
 		--h6-color: hsl(calc(var(--accent-h) + 99), 90%, 10%);
-		
+
 		--workspace-background-translucent: #ffffff99;
-		
+
 		.cm-line.hr hr::after {
 			content: "";
 			position: absolute;
@@ -89,11 +95,11 @@ body {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%2300000090' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
 		}
 	}
-	
-	
+
+
 	// ==================================================================================
 	// THEME: Monochrome (Encore with reduced colours)
-	
+
 	&.encore-theme-monochrome {
 		&.theme-dark {
 			--bold-color: inherit;
@@ -120,12 +126,12 @@ body {
 			--h6-color: inherit;
 		}
 	}
-	
-	
+
+
 	// ==================================================================================
 	// THEME: Atom (One Dark)
-	
-	
+
+
 	&.encore-theme-atom {
 		&.theme-dark{
 			--color-base-00: #272b34; // Main background
@@ -137,7 +143,7 @@ body {
 			--color-base-50: #4f586b; // Headings, bullets, checked items
 			--color-base-70: #abb2bf; // Dim text
 			--color-base-100: #ced2da; // Text
-			
+
 			--color-red: #e06c75;
 			--color-green-rgb: 224, 108, 117;
 			--color-green: #98c379;
@@ -145,11 +151,11 @@ body {
 			--color-yellow: #e5c07b;
 			--color-cyan: #56b6c2;
 			--color-blue: hsl(207, 82%, 66%);
-			
+
 			--accent-h: 207;
 			--accent-s: 82%;
 			--accent-l: 66%;
-			
+
 			--highlight-hue: 39;
 			--bold-color: var(--color-blue);
 			--italic-color: var(--color-green);
@@ -159,10 +165,10 @@ body {
 			--h4-color: var(--color-blue);
 			--h5-color: var(--color-red);
 			--h6-color: var(--color-yellow);
-			
+
 			--workspace-background-translucent: #272b34ab;
 		}
-		
+
 		&.theme-light {
 			--color-base-00: #fafafa; // Main background
 			--color-base-05: #ced2da; // Window title & embedded note title
@@ -173,7 +179,7 @@ body {
 			--color-base-50: #272b34; // Headings, bullets, checked items
 			--color-base-70: #20242b; // Dim text
 			--color-base-100: #272b34; // Text
-			
+
 			--color-red: #b95059;
 			--color-green-rgb: 224, 108, 117;
 			--color-green: #759c59;
@@ -181,11 +187,11 @@ body {
 			--color-yellow: #d3a95c;
 			--color-cyan: #42abb9;
 			--color-blue: #469de4;
-			
+
 			--accent-h: 207;
 			--accent-s: 82%;
 			--accent-l: 56%;
-			
+
 			--highlight-hue: 39;
 			--bold-color: var(--color-blue);
 			--italic-color: var(--color-green);
@@ -195,15 +201,15 @@ body {
 			--h4-color: var(--color-blue);
 			--h5-color: var(--color-red);
 			--h6-color: var(--color-yellow);
-			
+
 			--workspace-background-translucent: #fafafa99;
 		}
 	}
 
 	// ==================================================================================
 	// THEME: Dracula
-	
-	
+
+
 	&.encore-theme-dracula {
 		&.theme-dark{
 			--color-base-00: #1a1e24; // Main background
@@ -215,7 +221,7 @@ body {
 			--color-base-50: #7c81a0; // Headings, bullets, checked items
 			--color-base-70: #c4c4c0; // Dim text
 			--color-base-100: #f8f8f2; // Text
-			
+
 			--color-red: rgb(255, 85, 85);
 			--color-green-rgb: 255, 85, 85;
 			--color-green: #52fa7c;
@@ -223,11 +229,11 @@ body {
 			--color-yellow: #f1fa8c;
 			--color-cyan: #bd93f9;
 			--color-blue: #8be9fd;
-			
+
 			--accent-h: 135;
 			--accent-s: 94%;
 			--accent-l: 65%;
-			
+
 			--highlight-hue: 50;
 			--bold-color: var(--color-blue);
 			--italic-color: var(--color-yellow);
@@ -240,16 +246,16 @@ body {
 		}
 
 	}
-	
+
 	// ==================================================================================
 	// THEME: (Debug)
-	
+
 	&.encore-theme-debug {
 		&.theme-dark{
 			--color-base-10: #ff0000; // Not used
 			--color-base-60: #ff0000; // Not used
 		}
-		
+
 		&.theme-light {
 			--color-base-25: #fc0505; // Not used
 			--color-base-60: #fd0202; // Not used
