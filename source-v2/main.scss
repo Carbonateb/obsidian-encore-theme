@@ -1,0 +1,255 @@
+@use "resize-handle.scss";
+@use "markdown-embed.scss";
+@use "inline-title.scss";
+@use "translucent.scss";
+@use "highlight.scss";
+@use "titlebar.scss";
+@use "prompt.scss";
+@use "theme-browser.scss";
+@use "mobile.scss";
+@use "calendar.scss";
+@use "kanban.scss";
+@use "excalidraw.scss";
+@use "themes.scss";
+
+:root {
+	--corner-radius: 0.5rem;
+}
+
+body {
+	--checklist-done-decoration: none;
+	--checklist-done-color: var(--color-base-50);
+	--text-on-accent: var(--color-base-00);
+	--hr-thickness: 1px;
+	--highlight-hue: 37;
+	
+	text-underline-offset: 2px;
+	
+	// Don't change these theme colours
+	&.theme-dark {
+		--hr-color: #ffffff90;
+	}
+	&.theme-light {
+		--hr-color: #00000090;
+	}
+}
+
+.cm-strikethrough {
+	color: var(--color-base-70);
+}
+
+// Side bar
+.workspace-ribbon {
+	&.mod-left {
+		transition: all 250ms ease-out !important;
+
+		&.is-collapsed {
+			border-right-color: transparent;
+		}
+	}
+}
+
+// Make sidebar toggles your chosen colour
+.sidebar-toggle-button>.clickable-icon {
+	color: var(--interactive-accent);
+}
+
+.empty-state::before {
+	content: "";
+	width: 100%;
+	height: 30%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%23ffffff40' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.theme-light {
+	.empty-state::before {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%2300000040' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+	}
+}
+
+.empty-state-title {
+	font-size: 2.5rem !important;
+	font-weight: 300;
+	color: #ffffff50;
+	display: none;
+}
+
+
+// Fix for tree item dots
+.tree-item-children>div:not([class]) {
+	display: none;
+}
+
+.modal.mod-settings .vertical-tab-header {
+	border-right: none;
+}
+
+body:not(.is-translucent) {
+	// Only one modal dimmer at once
+	.modal-bg {
+		opacity: 0.0;
+	}
+	// Blur modal background
+	.modal-container.mod-dim .modal-bg {
+		backdrop-filter: brightness(0.5) blur(5px);
+		opacity: 1 !important;
+		background-color: transparent;
+	}
+}
+
+
+// Highlight button when in reading view
+.workspace-leaf-content[data-mode="preview"] {
+	.view-action:first-child {
+		color: var(--interactive-accent);
+	}
+}
+
+
+// Tab bars
+.workspace-tabs:not(.mod-top):not(.mod-root) .workspace-tab-header-container {
+	background-color: var(--titlebar-background-focused);
+	border-bottom: none;
+	border-radius: 4px;
+	margin: 0 8px;
+}
+
+.workspace-split {
+	background-color: var(--background-secondary);
+}
+
+
+// Better clickability fix
+body:not(.is-mobile):not(.encore-disable-clickability-fix) {
+	$oversize: 4rem;
+	.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+		max-width: unset;
+		margin-left: -$oversize;
+		padding-left: $oversize;
+		margin-right: -$oversize;
+		padding-right: $oversize;
+	}
+	
+	.ͼ1 .cm-scroller {
+		overflow-x: hidden;
+	}
+}
+
+
+// Frontmatter special formatting
+body.shaded-title {
+	.markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child {
+		position: relative;
+	}
+	.markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child::before {
+		content: "";
+		background-color: var(--background-secondary-alt);
+		display: block;
+		position: absolute;
+		top: -2rem;
+		transform: translateX(-1rem);
+		height: 3.25rem;
+		width: calc(var(--file-line-width) + 2rem);
+		z-index: -1;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+	.inline-title {
+		background-color: var(--background-secondary-alt);
+		border-radius: 8px;
+		padding-bottom: 0;
+		line-height: 1.5em;
+		margin-bottom: 0.5rem;
+		margin-left: -1rem;
+		margin-right: -1rem;
+		padding-left: 1rem;
+	}
+}
+
+
+// Minor tweak to padding (mostly affects plugins like calendar)
+.workspace-leaf-content .view-content {
+	padding: var(--size-4-3);
+}
+
+
+// Tooltip
+@keyframes tooltip-appear {
+	from {opacity: 0.0;}
+	to {opacity: 1.0;}
+}
+body>.tooltip {
+	--tooltip-edge-colour: var(--background-secondary-alt);
+	border: 1px solid var(--tooltip-edge-colour);
+	background-color: var(--background-primary);
+	color: var(--text-normal);
+	animation: tooltip-appear 150ms ease-out !important;
+	padding: 6px 8px;
+	border-radius: 8px;
+	>.tooltip-arrow {
+		border-bottom-color: var(--tooltip-edge-colour);
+	}
+	&.mod-right>.tooltip-arrow {
+		border-right-color: var(--tooltip-edge-colour);
+	}
+	&.mod-left>.tooltip-arrow {
+		border-left-color: var(--tooltip-edge-colour);
+	}
+	&.mod-top>.tooltip-arrow {
+		border-top-color: var(--tooltip-edge-colour);
+	}
+}
+body.encore-coloured-tooltip>.tooltip {
+	--tooltip-edge-colour: var(--color-accent);
+}
+
+// Callouts
+// I can't easily see the original selectors, please excuse my use of !important
+.markdown-source-view {
+	// Editing callout mode
+	.HyperMD-quote {
+		background-color: var(--background-primary-alt) !important;
+		
+		&.HyperMD-callout {
+			background-color: var(--background-secondary-alt) !important;
+			padding-top: 10px !important;
+			height: 46.5px !important;
+			font-size: var(--callout-title-size);
+			color: var(--color-accent);
+			font-weight: bold;
+		}
+	}
+	
+	// Not editing callout
+	.callout {
+		padding-left: 18px;
+		padding-bottom: 4px;
+		
+		p, ul {
+			margin-block-end: 22.5px;
+			
+			&:last-child {
+				margin-block-end: 0;
+			}
+		}
+		
+		ul {
+			margin-block-start: -1em;
+			// margin-block-end: 0;
+		}
+	}
+	
+	// Better line numbers
+	.cm-gutters {
+		pointer-events: none;
+	}
+	
+	
+	// Fixes blurry rail, was being offset by a fraction of a pixel
+	.cm-indent::before {
+		transform: none !important;
+	}
+}

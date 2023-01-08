@@ -1,0 +1,69 @@
+// Resets Obsidian's default styles to something very basic
+
+.view-content,
+.view-header,
+.workspace,
+.workspace-ribbon,
+.workspace-ribbon.mod-left.is-collapsed,
+.workspace-split.mod-root,
+.workspace-tabs,
+.workspace-tab-header.is-active,
+.workspace-tab-header-container,
+.workspace-tabs .workspace-leaf,
+.mod-root .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
+.mod-root .workspace-tabs .workspace-leaf,
+.mod-right-split,
+.mod-left-split,
+.workspace-split.mod-root .view-content,
+.mod-root .workspace-split.mod-horizontal > div:not(:first-of-type),
+.is-focused .workspace-leaf.mod-active .view-header, // Workspace head when active
+.sidebar-toggle-button
+{
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+.titlebar {
+	background-color: transparent !important;
+}
+
+// Removes background of top left corner button
+.workspace-ribbon.mod-left:before {
+	content: none;
+}
+
+.workspace-tab-header-container {
+	border: none;
+}
+
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+	// Makes the minimise, maximise, close buttons transparent
+	background-color: transparent !important;
+}
+
+
+// Floating tabs
+.workspace-tab-header::before, .workspace-tab-header::after {
+	display: none;
+}
+.mod-root .workspace-tab-header-container-inner {
+	padding: 0;
+	margin: 0;
+}
+.workspace .mod-root .workspace-tab-header {
+	padding: 0;
+}
+
+.view-header-title-container:not(.mod-at-end):after {
+	display: none;
+}
+
+.workspace-split:not(.mod-root) .graph-controls.is-close {
+	background-color: var(--background-modifier-hover);
+}
+
+// temp
+body {
+	background-color: black;
+}

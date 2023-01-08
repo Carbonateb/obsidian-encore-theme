@@ -1,0 +1,41 @@
+body.is-mobile {
+	// Drawer rework
+	.workspace-drawer {
+		background: none;
+		
+		.nav-header {
+			
+		}
+	}
+	
+	.workspace-drawer-inner {
+		background-color: var(--background-secondary);
+		margin: 8px;
+		border-radius: 8px;
+	}
+	
+	.workspace-drawer-backdrop {
+		// backdrop-filter: brightness(0.3) blur(4px);
+		backdrop-filter: brightness(0.3);
+		background: none;
+	}
+	
+	// Style header to look like desktop version
+	.workspace-drawer-active-tab-header {
+		background-color: var(--background-secondary-alt);
+		border-radius: 4px;
+		margin: 0 8px;
+	}
+	
+	// Style option list like desktop version
+	.workspace-drawer-tab-option-item {
+		background-color: var(--background-secondary-alt);
+		border-radius: 4px;
+		margin: 8px;
+		padding: var(--size-4-3);
+	}
+	
+	.workspace-drawer-header {
+		padding: 12px 12px 0;
+	}
+}

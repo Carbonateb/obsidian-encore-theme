@@ -1,0 +1,197 @@
+// Applies colours to the workspace, transforms it into Encore's signature style
+@import "variables.scss";
+
+body {
+	background-color: $grey-900;
+	
+	&.is-translucent:not(.is-fullscreen) {
+		--en-opacity: 0.5;
+		background-color: $grey-900 !important;
+	}
+}
+
+body.theme-light {
+	background-color: $grey-600;
+	&.is-translucent:not(.is-fullscreen) {
+		--en-opacity: 0.2;
+		background-color: $grey-900 !important;
+	}
+}
+
+// Main workspace area (under the tabs)
+.mod-root .workspace-tab-container .workspace-leaf-content {
+	--en-opacity: 1;
+	background-color: $grey-800;
+	border-radius: var(--tab-radius);
+	
+	// Canvas
+	.canvas-wrapper {
+		.canvas-background {
+			background-color: $grey-800;
+		}
+	}
+}
+
+body.theme-light {
+	.mod-root .workspace-tab-container .workspace-leaf-content {
+		--en-opacity: 1;
+		background-color: $grey-900;
+		border-radius: var(--tab-radius);
+	
+		// Canvas
+		.canvas-wrapper {
+			.canvas-background {
+				background-color: $grey-900;
+			}
+		}
+	}
+}
+	
+body.theme-light .mod-root:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content {
+	>.view-header {
+		background-color: $grey-900;
+	}
+}
+.mod-root:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content {
+	position: relative;
+	
+	>.view-header {
+		position: absolute;
+		left: 0;
+		right: 0;
+		// right: 10px;
+		--en-opacity: 0.66;
+		background-color: $grey-800;
+		backdrop-filter: var(--en-acrylic);
+	}
+	
+	// ! Due to the header covering the top part, view content needs to be pushed down!
+	
+	// Markdown edit view
+	>.view-content .cm-scroller {
+		padding-top: calc(var(--header-height) + 32px);
+	}
+	
+	// Markdown reading view
+	.markdown-preview-view{
+		padding-top: var(--header-height);
+	}
+	
+	// Graph view
+	.graph-controls {
+		margin-top: var(--header-height);
+		background-color: $grey-700;
+		border: none;
+		box-shadow: none;
+	}
+	
+	// Canvas
+	.canvas-wrapper {
+		.canvas-controls {
+			margin-top: var(--header-height);
+		}
+	}
+}
+
+.is-translucent:not(.is-fullscreen) {
+	.mod-root .workspace-leaf {
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+		border-radius: var(--tab-radius);
+	}
+	.mod-root .workspace-tab-container {
+		overflow: visible;
+	}
+}
+
+// Gap between vertically split workspaces
+.workspace-split.mod-vertical {
+	gap: 4px
+}
+
+// Tabs
+.mod-root .workspace-tabs .workspace-tab-header-container-inner {
+	gap: 4px;
+	padding: 4px 0;
+}
+.mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
+	--en-opacity: 1;
+	background-color: $grey-700;
+}
+
+.is-translucent:not(.is-fullscreen) {
+	.workspace-tab-header-container-inner {
+		overflow: visible;
+	}
+	.mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
+		--en-opacity: 0.66;
+		background-color: $grey-600;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+	}
+}
+
+.mod-root .workspace-tab-header-inner {
+	padding-left: 12px;
+	padding-right: 8px;
+}
+.workspace .mod-root .workspace-tab-header-inner::after {
+	content: none;
+}
+.workspace-tab-header-new-tab {
+	margin-left: 8px;
+}
+
+// Side tabs
+.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
+.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+	margin: 4px;
+	margin-top: 0;
+	padding: 0;
+	height: calc(var(--header-height) - 8px);
+	
+	.workspace-tab-header-container-inner {
+		padding: 0;
+		margin: 0;
+	}
+	border-radius: var(--tab-radius);
+	background-color: $grey-800;
+	
+	
+	justify-content: space-around;
+	
+	.workspace-tab-header-container-inner {
+		flex-grow: 1;
+		justify-content: space-evenly;
+		
+		.workspace-tab-header {
+			flex-grow: 1;
+			border-radius: var(--tab-radius);
+			
+			&.is-active {
+				background-color: $grey-700;
+			}
+		}
+	}
+	
+	.workspace-tab-header-spacer {
+		display: none;
+	}
+}
+
+.is-translucent:not(.is-fullscreen) {
+	.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
+	.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+		--en-opacity: 0.66;
+		background-color: $grey-700 !important;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		
+		.workspace-tab-header.is-active {
+			background-color: $grey-600;
+		}
+	}
+}
+
+
+// Minor tweak to padding (mostly affects plugins like calendar)
+.workspace-leaf-content .view-content {
+	padding: var(--size-4-3);
+}
