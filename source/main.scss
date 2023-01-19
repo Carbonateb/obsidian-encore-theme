@@ -12,7 +12,13 @@
 @use "extensions/projects.scss";
 
 // Themes
-@use "themes/encore.scss";
+@use "themes/_default.scss";
+@use "themes/mercury.scss";
+@use "themes/iron.scss";
+@use "themes/carbon.scss";
+@use "themes/blackout.scss";
+@use "themes/obsidian.scss";
+@use "themes/rgb.scss";
 
 @import "variables.scss";
 
@@ -74,7 +80,7 @@ body:not(.is-translucent) {
 	}
 	// Blur modal background
 	.modal-container.mod-dim .modal-bg {
-		backdrop-filter: blur(20px);
+		backdrop-filter: blur(25px) saturate(1.5);
 		opacity: 1 !important;
 		--en-opacity: 0.6;
 		background-color: $grey-900;
@@ -249,6 +255,7 @@ body.encore-coloured-tooltip>.tooltip {
 .modal {
 	border: none;
 	background-color: $grey-800;
+	--en-opacity: 1;
 	
 	.vertical-tab-header {
 		background-color: $grey-700;
@@ -277,6 +284,7 @@ body.encore-coloured-tooltip>.tooltip {
 	}
 	
 	.setting-item-description {
+		--en-opacity: 1;
 		color: $grey-400;
 	}
 }

@@ -1,0 +1,81 @@
+@import "../variables.scss";
+
+body.encore-theme-dark-blackout {
+	&.theme-dark {
+		--grey-900-rgb: 0, 0, 0;
+		--grey-800-rgb: 10, 10, 10;
+		--grey-700-rgb: 25, 25, 25;
+		--grey-600-rgb: 82, 82, 91;
+		--grey-500-rgb: 113, 113, 122;
+		--grey-400-rgb: 161, 161, 170;
+		--grey-300-rgb: 212, 212, 216;
+		--grey-200-rgb: 228, 228, 231;
+		--grey-100-rgb: 244, 244, 245;
+		--grey-50-rgb: 250, 250, 250;
+		
+		// Theme neutrals
+		// --en-opacity: 1;
+		--color-base-00: rgb(var(--grey-900-rgb)); // Main background
+		--color-base-10: rgb(var(--grey-900-rgb)); // Code blocks
+		--color-base-20: rgb(var(--grey-800-rgb)); // Alt background
+		--color-base-25: rgb(var(--grey-700-rgb)); // Text input
+		--color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
+		--color-base-35: rgb(var(--grey-500-rgb)); // Switch background, hovered buttons
+		--color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
+		--color-base-50: rgb(var(--grey-300-rgb)); // Headings, bullets, checked items
+		--color-base-60: rgb(var(--grey-300-rgb)); // ?
+		--color-base-70: rgb(var(--grey-200-rgb)); // Dim text
+		--color-base-100: rgb(var(--grey-100-rgb)); // Text
+		
+		// --color-base-00: red; // Main background
+		
+		// Default accent colour
+		--accent-h: 255;
+		--accent-s: 92%;
+		--accent-l: 76%;
+		
+		--workspace-background-translucent: #1e1e1e00;
+			
+		.cm-line.hr hr::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			--en-opacity: 1;
+			background-color: $grey-800;
+			border-radius: 100%;
+			margin: 0 46%;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+		}
+		
+		
+		// Restore the colour selection of the original theme
+		
+		background-color: $grey-800;
+		
+		.mod-root .workspace-tab-container .workspace-leaf-content {
+			--en-opacity: 1;
+			background-color: $grey-900;
+		
+			// Canvas
+			.canvas-wrapper {
+				.canvas-background {
+					background-color: $grey-900;
+				}
+			}
+		}
+		
+	}
+}
+
+// Fancy headers need to be changed, due to .workspace-leaf-content being changed
+body.encore-theme-dark-blackout.theme-dark:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content>.view-header {
+	--en-opacity: 0.66;
+	background-color: $grey-900; // * Should be same as .workspace-leaf-content
+	backdrop-filter: var(--en-acrylic);
+}

@@ -1,6 +1,0 @@
-/* Move notices to bottom right so they don't block close button */
-.notice-container {
-	bottom: 0;
-	top: unset;
-	flex-direction: column-reverse;
-}
