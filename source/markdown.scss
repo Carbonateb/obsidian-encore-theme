@@ -1,0 +1,46 @@
+// Used to style markdown views
+
+.markdown-source-view .cm-sizer {
+	>.inline-title {
+		font-size: 3rem;
+		line-height: 3rem;
+	}
+	
+	.cm-header-1 {
+		line-height: 4rem;
+	}
+	
+	.cm-header-2 {
+		line-height: 3.5rem;
+	}
+	
+	.cm-header-3 {
+		line-height: 3.25rem;
+	}
+	
+	.cm-header-4 {
+		line-height: 3rem;
+	}
+
+	.cm-header-5 {
+		line-height: 2.5rem;
+	}
+
+	.cm-header-6 {
+		line-height: 2.5rem;
+	}
+	
+	.cm-line {
+		line-height: 1.75rem;
+	}
+	
+	.HyperMD-codeblock-begin-bg {
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+	
+	.HyperMD-codeblock-end-bg {
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+}

@@ -1,0 +1,397 @@
+// Encore's default theme
+@import "../variables.scss";
+
+body {
+	--en-acrylic: blur(8px);
+	--header-height: 44px;
+	--tab-height: 38px;
+	--tab-radius: 6px;
+	--en-opacity: 1;
+	
+	
+	&.theme-dark {
+		// * Colors are from Tailwind's "Gray" colour palette
+		--grey-900-rgb: 17, 24, 39;
+		--grey-800-rgb: 31, 41, 55;
+		--grey-700-rgb: 55, 65, 81;
+		--grey-600-rgb: 75, 85, 99;
+		--grey-500-rgb: 107, 114, 128;
+		--grey-400-rgb: 156, 163, 175;
+		--grey-300-rgb: 209, 213, 219;
+		--grey-200-rgb: 228, 228, 231;
+		--grey-100-rgb: 243, 244, 246;
+		--grey-50-rgb: 255, 255, 255;
+		
+		// Theme neutrals
+		// --en-opacity: 1;
+		--color-base-00: rgb(var(--grey-900-rgb)); // Main background
+		--color-base-10: rgb(var(--grey-900-rgb)); // Code blocks
+		--color-base-20: rgb(var(--grey-800-rgb)); // Alt background
+		--color-base-25: rgb(var(--grey-700-rgb)); // Text input
+		--color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
+		--color-base-35: rgb(var(--grey-500-rgb)); // Switch background, hovered buttons
+		--color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
+		--color-base-50: rgb(var(--grey-300-rgb)); // Headings, bullets, checked items
+		--color-base-60: rgb(var(--grey-300-rgb)); // ?
+		--color-base-70: rgb(var(--grey-200-rgb)); // Dim text
+		--color-base-100: rgb(var(--grey-100-rgb)); // Text
+		
+		// --color-base-00: red; // Main background
+		
+		// Default accent colour
+		--accent-h: 255;
+		--accent-s: 92%;
+		--accent-l: 76%;
+		
+		--highlight-hue: 37;
+			
+		--workspace-background-translucent: #1e1e1e00;
+			
+		.cm-line.hr hr::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			--en-opacity: 1;
+			background-color: $grey-800;
+			border-radius: 100%;
+			margin: 0 46%;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+		}
+	}
+		
+	&.theme-light {
+		--grey-50-rgb: 17, 24, 39;
+		--grey-100-rgb: 31, 41, 55;
+		--grey-200-rgb: 55, 65, 81;
+		--grey-300-rgb: 75, 85, 99;
+		--grey-400-rgb: 107, 114, 128;
+		--grey-500-rgb: 156, 163, 175;
+		--grey-600-rgb: 209, 213, 219;
+		--grey-700-rgb: 228, 228, 231;
+		--grey-800-rgb: 243, 244, 246;
+		--grey-900-rgb: 255, 255, 255;
+		
+		--color-base-00: rgb(var(--grey-900-rgb)); // Main background
+		--color-base-10: rgb(var(--grey-900-rgb)); // Code blocks
+		--color-base-20: rgb(var(--grey-800-rgb)); // Alt background
+		--color-base-25: rgb(var(--grey-700-rgb)); // Text input
+		--color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
+		--color-base-35: rgb(var(--grey-500-rgb)); // Switch background, hovered buttons
+		--color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
+		--color-base-50: rgb(var(--grey-300-rgb)); // Headings, bullets, checked items
+		--color-base-60: rgb(var(--grey-300-rgb)); // ?
+		--color-base-70: rgb(var(--grey-200-rgb)); // Dim text
+		--color-base-100: rgb(var(--grey-100-rgb)); // Text
+			
+		// Default accent colour
+		--accent-h: 254;
+		--accent-s: 40%;
+		--accent-l: 40%;
+		
+		--highlight-hue: 37;
+			
+		--workspace-background-translucent: #ffffff99;
+			
+		.cm-line.hr hr::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			background-color: var(--background-primary);
+			margin: 0 46%;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%2300000090' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+		}
+	}
+}
+
+// Theme engine
+
+body { // Theme Default
+	--italic-color: var(--text-color);
+}
+body.encore-italic-neutral {
+	--italic-color: var(--text-color);
+}
+body.encore-italic-accent {
+	--italic-color: var(--color-accent-2);
+}
+body.encore-italic-red {
+	--italic-color: var(--color-red);
+}
+body.encore-italic-orange {
+	--italic-color: var(--color-orange);
+}
+body.encore-italic-yellow {
+	--italic-color: var(--color-yellow);
+}
+body.encore-italic-green {
+	--italic-color: var(--color-green);
+}
+body.encore-italic-cyan {
+	--italic-color: var(--color-cyan);
+}
+body.encore-italic-blue {
+	--italic-color: var(--color-blue);
+}
+body.encore-italic-purple {
+	--italic-color: var(--color-purple);
+}
+body.encore-italic-pink {
+	--italic-color: var(--color-pink);
+}
+
+body { // Theme Default
+	--bold-color: var(--text-color);
+	--bold-weight: 700;
+}
+body.encore-bold-neutral {
+	--bold-color: var(--text-color);
+}
+body.encore-bold-accent {
+	--bold-color: var(--color-accent-2);
+}
+body.encore-bold-red {
+	--bold-color: var(--color-red);
+}
+body.encore-bold-orange {
+	--bold-color: var(--color-orange);
+}
+body.encore-bold-yellow {
+	--bold-color: var(--color-yellow);
+}
+body.encore-bold-green {
+	--bold-color: var(--color-green);
+}
+body.encore-bold-cyan {
+	--bold-color: var(--color-cyan);
+}
+body.encore-bold-blue {
+	--bold-color: var(--color-blue);
+}
+body.encore-bold-purple {
+	--bold-color: var(--color-purple);
+}
+body.encore-bold-pink {
+	--bold-color: var(--color-pink);
+}
+
+body { // Theme Default
+	--inline-title-color: var(--color-accent-2);
+}
+body.encore-title-neutral {
+	--inline-title-color: var(--text-color);
+}
+body.encore-title-accent {
+	--inline-title-color: var(--color-accent-2);
+}
+body.encore-title-red {
+	--inline-title-color: var(--color-red);
+}
+body.encore-title-orange {
+	--inline-title-color: var(--color-orange);
+}
+body.encore-title-yellow {
+	--inline-title-color: var(--color-yellow);
+}
+body.encore-title-green {
+	--inline-title-color: var(--color-green);
+}
+body.encore-title-cyan {
+	--inline-title-color: var(--color-cyan);
+}
+body.encore-title-blue {
+	--inline-title-color: var(--color-blue);
+}
+body.encore-title-purple {
+	--inline-title-color: var(--color-purple);
+}
+body.encore-title-pink {
+	--inline-title-color: var(--color-pink);
+}
+
+body.encore-h1-neutral {
+	--h1-color: var(--text-color);
+}
+body.encore-h1-accent {
+	--h1-color: var(--color-accent-2);
+}
+body.encore-h1-red {
+	--h1-color: var(--color-red);
+}
+body.encore-h1-orange {
+	--h1-color: var(--color-orange);
+}
+body.encore-h1-yellow {
+	--h1-color: var(--color-yellow);
+}
+body.encore-h1-green {
+	--h1-color: var(--color-green);
+}
+body.encore-h1-cyan {
+	--h1-color: var(--color-cyan);
+}
+body.encore-h1-blue {
+	--h1-color: var(--color-blue);
+}
+body.encore-h1-purple {
+	--h1-color: var(--color-purple);
+}
+body.encore-h1-pink {
+	--h1-color: var(--color-pink);
+}
+
+
+body.encore-h2-accent {
+	--h2-color: var(--color-accent-2);
+}
+body.encore-h2-red {
+	--h2-color: var(--color-red);
+}
+body.encore-h2-orange {
+	--h2-color: var(--color-orange);
+}
+body.encore-h2-yellow {
+	--h2-color: var(--color-yellow);
+}
+body.encore-h2-green {
+	--h2-color: var(--color-green);
+}
+body.encore-h2-cyan {
+	--h2-color: var(--color-cyan);
+}
+body.encore-h2-blue {
+	--h2-color: var(--color-blue);
+}
+body.encore-h2-purple {
+	--h2-color: var(--color-purple);
+}
+body.encore-h2-pink {
+	--h2-color: var(--color-pink);
+}
+
+
+body.encore-h3-accent {
+	--h3-color: var(--color-accent-2);
+}
+body.encore-h3-red {
+	--h3-color: var(--color-red);
+}
+body.encore-h3-orange {
+	--h3-color: var(--color-orange);
+}
+body.encore-h3-yellow {
+	--h3-color: var(--color-yellow);
+}
+body.encore-h3-green {
+	--h3-color: var(--color-green);
+}
+body.encore-h3-cyan {
+	--h3-color: var(--color-cyan);
+}
+body.encore-h3-blue {
+	--h3-color: var(--color-blue);
+}
+body.encore-h3-purple {
+	--h3-color: var(--color-purple);
+}
+body.encore-h3-pink {
+	--h3-color: var(--color-pink);
+}
+
+
+body.encore-h4-accent {
+	--h4-color: var(--color-accent-2);
+}
+body.encore-h4-red {
+	--h4-color: var(--color-red);
+}
+body.encore-h4-orange {
+	--h4-color: var(--color-orange);
+}
+body.encore-h4-yellow {
+	--h4-color: var(--color-yellow);
+}
+body.encore-h4-green {
+	--h4-color: var(--color-green);
+}
+body.encore-h4-cyan {
+	--h4-color: var(--color-cyan);
+}
+body.encore-h4-blue {
+	--h4-color: var(--color-blue);
+}
+body.encore-h4-purple {
+	--h4-color: var(--color-purple);
+}
+body.encore-h4-pink {
+	--h4-color: var(--color-pink);
+}
+
+
+body.encore-h5-accent {
+	--h5-color: var(--color-accent-2);
+}
+body.encore-h5-red {
+	--h5-color: var(--color-red);
+}
+body.encore-h5-orange {
+	--h5-color: var(--color-orange);
+}
+body.encore-h5-yellow {
+	--h5-color: var(--color-yellow);
+}
+body.encore-h5-green {
+	--h5-color: var(--color-green);
+}
+body.encore-h5-cyan {
+	--h5-color: var(--color-cyan);
+}
+body.encore-h5-blue {
+	--h5-color: var(--color-blue);
+}
+body.encore-h5-purple {
+	--h5-color: var(--color-purple);
+}
+body.encore-h5-pink {
+	--h5-color: var(--color-pink);
+}
+
+
+body.encore-h6-accent {
+	--h6-color: var(--color-accent-2);
+}
+body.encore-h6-red {
+	--h6-color: var(--color-red);
+}
+body.encore-h6-orange {
+	--h6-color: var(--color-orange);
+}
+body.encore-h6-yellow {
+	--h6-color: var(--color-yellow);
+}
+body.encore-h6-green {
+	--h6-color: var(--color-green);
+}
+body.encore-h6-cyan {
+	--h6-color: var(--color-cyan);
+}
+body.encore-h6-blue {
+	--h6-color: var(--color-blue);
+}
+body.encore-h6-purple {
+	--h6-color: var(--color-purple);
+}
+body.encore-h6-pink {
+	--h6-color: var(--color-pink);
+}

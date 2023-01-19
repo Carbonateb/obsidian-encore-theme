@@ -4,34 +4,414 @@ name: Encore
 id: encore-settings
 settings:
   - 
-    id: theme-colours
-    title: Colour Theme
-    description: Add a splash of colour to Encore
+    id: theme-dark
+    title: Theme • Dark Mode
+    description: Theme used in dark mode
     type: class-select
     allowEmpty: false
-    default: encore-theme
+    default: encore-theme-dark
     options:
       - 
-        label: Encore
-        value: encore-theme
+        label: Cobalt
+        value: encore-theme-dark
       - 
-        label: Monochrome
-        value: encore-theme-monochrome
+        label: Mercury
+        value: encore-theme-dark-mercury
       - 
-        label: One Dark (Atom)
-        value: encore-theme-atom
-      -
-        label: Dracula
-        value: encore-theme-dracula
+        label: Iron
+        value: encore-theme-dark-iron
+      - 
+        label: Carbon
+        value: encore-theme-dark-carbon
+      - 
+        label: Blackout
+        value: encore-theme-dark-blackout
+      - 
+        label: Obsidian
+        value: encore-theme-dark-obsidian
+      - 
+        label: RGB
+        value: encore-theme-dark-rgb
   -
-    id: shaded-title
-    title: Shaded Title
-    description: Wraps the title of the note in a box. This will expand to contain any frontmatter in the note
-    type: class-toggle
+    id: theme-light
+    title: Theme • Light Mode
+    description: Theme used in light mode (wip)
+    type: class-select
+    allowEmpty: false
+    default: encore-theme-light
+    options:
+      - 
+        label: Sterling
+        value: encore-theme-light
+  -
+    id: italic-colour
+    title: Italic Colour
+    type: class-select
+    allowEmpty: false
+    default: encore-italic-default
+    options:
+      - 
+        label: Theme Default
+        value: encore-italic-default
+      - 
+        label: Neutral
+        value: encore-italic-neutral
+      - 
+        label: Accent
+        value: encore-italic-accent
+      - 
+        label: Red
+        value: encore-italic-red
+      - 
+        label: Orange
+        value: encore-italic-orange
+      - 
+        label: Yellow
+        value: encore-italic-yellow
+      - 
+        label: Green
+        value: encore-italic-green
+      - 
+        label: Cyan
+        value: encore-italic-cyan
+      - 
+        label: Blue
+        value: encore-italic-blue
+      - 
+        label: Purple
+        value: encore-italic-purple
+      - 
+        label: Pink
+        value: encore-italic-pink
+  -
+    id: bold-colour
+    title: Bold Colour
+    type: class-select
+    allowEmpty: false
+    default: encore-bold-default
+    options:
+      - 
+        label: Theme Default
+        value: encore-bold-default
+      - 
+        label: Neutral
+        value: encore-bold-neutral
+      - 
+        label: Accent
+        value: encore-bold-accent
+      - 
+        label: Red
+        value: encore-bold-red
+      - 
+        label: Orange
+        value: encore-bold-orange
+      - 
+        label: Yellow
+        value: encore-bold-yellow
+      - 
+        label: Green
+        value: encore-bold-green
+      - 
+        label: Cyan
+        value: encore-bold-cyan
+      - 
+        label: Blue
+        value: encore-bold-blue
+      - 
+        label: Purple
+        value: encore-bold-purple
+      - 
+        label: Pink
+        value: encore-bold-pink
+  -
+    id: title-colour
+    title: Title Colour
+    type: class-select
+    allowEmpty: false
+    default: encore-title-default
+    options:
+      - 
+        label: Theme Default
+        value: encore-title-default
+      - 
+        label: Neutral
+        value: encore-title-neutral
+      - 
+        label: Accent
+        value: encore-title-accent
+      - 
+        label: Red
+        value: encore-title-red
+      - 
+        label: Orange
+        value: encore-title-orange
+      - 
+        label: Yellow
+        value: encore-title-yellow
+      - 
+        label: Green
+        value: encore-title-green
+      - 
+        label: Cyan
+        value: encore-title-cyan
+      - 
+        label: Blue
+        value: encore-title-blue
+      - 
+        label: Purple
+        value: encore-title-purple
+      - 
+        label: Pink
+        value: encore-title-pink
+  -
+    id: h1-colour
+    title: Header 1 Colour
+    type: class-select
+    allowEmpty: false
+    default: encore-h1-default
+    options:
+      - 
+        label: Theme Default
+        value: encore-h1-default
+      - 
+        label: Neutral
+        value: encore-h1-neutral
+      - 
+        label: Accent
+        value: encore-h1-accent
+      - 
+        label: Red
+        value: encore-h1-red
+      - 
+        label: Orange
+        value: encore-h1-orange
+      - 
+        label: Yellow
+        value: encore-h1-yellow
+      - 
+        label: Green
+        value: encore-h1-green
+      - 
+        label: Cyan
+        value: encore-h1-cyan
+      - 
+        label: Blue
+        value: encore-h1-blue
+      - 
+        label: Purple
+        value: encore-h1-purple
+      - 
+        label: Pink
+        value: encore-h1-pink
+  -
+    id: h2-colour
+    title: Header 2 Colour
+    type: class-select
+    allowEmpty: false
+    default: encore-h2-default
+    options:
+      - 
+        label: Theme Default
+        value: encore-h2-default
+      - 
+        label: Neutral
+        value: encore-h2-neutral
+      - 
+        label: Accent
+        value: encore-h2-accent
+      - 
+        label: Red
+        value: encore-h2-red
+      - 
+        label: Orange
+        value: encore-h2-orange
+      - 
+        label: Yellow
+        value: encore-h2-yellow
+      - 
+        label: Green
+        value: encore-h2-green
+      - 
+        label: Cyan
+        value: encore-h2-cyan
+      - 
+        label: Blue
+        value: encore-h2-blue
+      - 
+        label: Purple
+        value: encore-h2-purple
+      - 
+        label: Pink
+        value: encore-h2-pink
+  -
+    id: h3-colour
+    title: Header 3 Colour
+    type: class-select
+    allowEmpty: false
+    default: encore-h3-default
+    options:
+      - 
+        label: Theme Default
+        value: encore-h3-default
+      - 
+        label: Neutral
+        value: encore-h3-neutral
+      - 
+        label: Accent
+        value: encore-h3-accent
+      - 
+        label: Red
+        value: encore-h3-red
+      - 
+        label: Orange
+        value: encore-h3-orange
+      - 
+        label: Yellow
+        value: encore-h3-yellow
+      - 
+        label: Green
+        value: encore-h3-green
+      - 
+        label: Cyan
+        value: encore-h3-cyan
+      - 
+        label: Blue
+        value: encore-h3-blue
+      - 
+        label: Purple
+        value: encore-h3-purple
+      - 
+        label: Pink
+        value: encore-h3-pink
+  -
+    id: h4-colour
+    title: Header 4 Colour
+    type: class-select
+    allowEmpty: false
+    default: encore-h4-default
+    options:
+      - 
+        label: Theme Default
+        value: encore-h4-default
+      - 
+        label: Neutral
+        value: encore-h4-neutral
+      - 
+        label: Accent
+        value: encore-h4-accent
+      - 
+        label: Red
+        value: encore-h4-red
+      - 
+        label: Orange
+        value: encore-h4-orange
+      - 
+        label: Yellow
+        value: encore-h4-yellow
+      - 
+        label: Green
+        value: encore-h4-green
+      - 
+        label: Cyan
+        value: encore-h4-cyan
+      - 
+        label: Blue
+        value: encore-h4-blue
+      - 
+        label: Purple
+        value: encore-h4-purple
+      - 
+        label: Pink
+        value: encore-h4-pink
+  -
+    id: h5-colour
+    title: Header 5 Colour
+    type: class-select
+    allowEmpty: false
+    default: encore-h5-default
+    options:
+      - 
+        label: Theme Default
+        value: encore-h5-default
+      - 
+        label: Neutral
+        value: encore-h5-neutral
+      - 
+        label: Accent
+        value: encore-h5-accent
+      - 
+        label: Red
+        value: encore-h5-red
+      - 
+        label: Orange
+        value: encore-h5-orange
+      - 
+        label: Yellow
+        value: encore-h5-yellow
+      - 
+        label: Green
+        value: encore-h5-green
+      - 
+        label: Cyan
+        value: encore-h5-cyan
+      - 
+        label: Blue
+        value: encore-h5-blue
+      - 
+        label: Purple
+        value: encore-h5-purple
+      - 
+        label: Pink
+        value: encore-h5-pink
+  -
+    id: h6-colour
+    title: Header 6 Colour
+    type: class-select
+    allowEmpty: false
+    default: encore-h6-default
+    options:
+      - 
+        label: Theme Default
+        value: encore-h6-default
+      - 
+        label: Neutral
+        value: encore-h6-neutral
+      - 
+        label: Accent
+        value: encore-h6-accent
+      - 
+        label: Red
+        value: encore-h6-red
+      - 
+        label: Orange
+        value: encore-h6-orange
+      - 
+        label: Yellow
+        value: encore-h6-yellow
+      - 
+        label: Green
+        value: encore-h6-green
+      - 
+        label: Cyan
+        value: encore-h6-cyan
+      - 
+        label: Blue
+        value: encore-h6-blue
+      - 
+        label: Purple
+        value: encore-h6-purple
+      - 
+        label: Pink
+        value: encore-h6-pink
   -
     id: encore-coloured-tooltip
     title: Coloured Tooltip
     description: Make tooltips stand out much more by applying your theme colour to the border
+    type: class-toggle
+  -
+    id: encore-disable-fancy-headers
+    title: Disable Fancy Headers
+    description: Encore changes headers to overlap main content for a nice blur effect. Disable this if you see issues
     type: class-toggle
   -
     id: encore-disable-clickability-fix

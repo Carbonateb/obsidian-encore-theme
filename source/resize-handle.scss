@@ -1,16 +1,3 @@
-.mod-root {
-	.workspace-split.mod-horizontal>div:not(:first-of-type) {
-		// padding-top: 4px;
-		background-color: var(--background-primary);
-	}
-	
-
-	// For vertically split workspaces
-	.workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-		background-color: var(--background-secondary-alt);
-	}
-}
-
 .workspace-leaf-resize-handle {
 	background-color: transparent;
 	border: none !important;
@@ -37,4 +24,17 @@
 
 .workspace-leaf-resize-handle:hover::after {
 	background-color: var(--interactive-accent) !important;
+}
+
+.workspace-split.mod-vertical.mod-root .workspace-leaf-resize-handle {
+	right: -6px;
+}
+
+.workspace-split.mod-vertical>.workspace-leaf-resize-handle,
+.mod-root .workspace-split.mod-horizontal :not(.mod-vertical) .workspace-leaf-resize-handle {
+	bottom: -6px;
+}
+
+.workspace-tabs {
+	overflow: visible;
 }

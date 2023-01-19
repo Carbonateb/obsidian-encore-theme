@@ -1,3 +1,4 @@
+@import "../variables.scss";
 
 body:not(.encore-no-excalidraw) {
 	@mixin replace-icon($icon, $size: unset) {
@@ -7,12 +8,32 @@ body:not(.encore-no-excalidraw) {
 		-webkit-mask-size: $size;
 	}
 	
+	.workspace-leaf-content[data-type='excalidraw'] {
+		border-top: none;
+		
+		.view-content.excalidraw-view {
+			padding: 0;
+		}
+		
+		.view-header {
+			z-index: 10;
+			background-color: rgba(255, 255, 255, 0.5) !important;
+		}
+	}
+	
+	&.theme-dark {
+		.workspace-leaf-content[data-type='excalidraw'] {
+			.view-header {
+				background-color: rgba(18, 18, 18, 0.5) !important;
+			}
+		}
+	}
+	
 	.excalidraw-wrapper {
 		background-color: transparent;
 	}
 	
 	.excalidraw {
-		border-radius: 8px;
 		background-color: transparent;
 		
 		--help-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke:currentColor;'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpath d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3'%3E%3C/path%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'%3E%3C/line%3E%3C/svg%3E");
@@ -46,13 +67,20 @@ body:not(.encore-no-excalidraw) {
 			@include replace-icon(var(--grip-icon));
 			background-color: var(--button-gray-1);
 		}
-		
-		.ToolIcon__icon {
-			// background-color: var(--button-gray-1);
-		}
 	}
 	
 	// Override theme colours when excalidraw colour matches obsidian colour theme
+	&.theme-dark .excalidraw.theme--dark {
+		--button-gray-1: var(--color-base-30); // Normal state
+		--button-gray-2: var(--color-base-40); // Hovered
+		--button-gray-3: var(--color-base-30); // Pressed
+		--dialog-border-color: var(--color-base-40);
+		--default-bg-color: var(--color-base-00);
+		--island-bg-color: var(--color-base-25);
+		--input-border-color: var(--color-base-30);
+		--input-bg-color: var(--color-base-20);
+		
+	}
 	&.theme-light .excalidraw:not(.theme--dark) {
 		--button-gray-1: var(--color-base-30); // Normal state
 		--button-gray-2: var(--color-base-40); // Hovered
@@ -63,30 +91,15 @@ body:not(.encore-no-excalidraw) {
 		--input-bg-color: var(--color-base-20);
 		
 	}
-	&.theme-dark .excalidraw.theme--dark {
-		--button-gray-1: var(--color-base-30); // Normal state
-		--button-gray-2: var(--color-base-40); // Hovered
-		--button-gray-3: var(--color-base-30); // Pressed
-		--dialog-border-color: var(--color-base-40);
-		--island-bg-color: var(--color-base-00);
-		--input-border-color: var(--color-base-30);
-		--input-bg-color: var(--color-base-20);
-		
-	}
 	
 	
 	
 	
-	// Move the help button to the left side, because word counter is in the way
+	// Remove the help button because it already exists in the dropdown menu
 	.excalidraw .layer-ui__wrapper .layer-ui__wrapper__footer-right {
-		transform: translateY(-32px);
 		.help-icon {
 			display: none;
 		}
-	}
-	
-	.excalidraw .layer-ui__wrapper .layer-ui__wrapper__footer-left {
-		margin-bottom: 0.3rem;
 	}
 	
 	
@@ -144,4 +157,14 @@ body:not(.encore-no-excalidraw) {
 	}
 }
 
-
+// Fancy header support
+body:not(.encore-disable-fancy-headers) {
+	.workspace-leaf-content[data-type='excalidraw'] .layer-ui__wrapper {
+		margin-top: var(--header-height);
+	}
+	
+	.excalidraw .layer-ui__wrapper .layer-ui__wrapper__footer-left,
+	.excalidraw .layer-ui__wrapper .layer-ui__wrapper__footer-right {
+		margin-bottom: var(--header-height);
+	}
+}

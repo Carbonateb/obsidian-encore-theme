@@ -1,0 +1,40 @@
+	-
+		id: strikethrough-colour
+		title: Strikethrough Colour
+		type: class-select
+		allowEmpty: false
+		default: encore-strikethrough-default
+		options:
+		- 
+			label: Theme Default
+			value: encore-strikethrough-default
+		- 
+			label: Neutral
+			value: encore-strikethrough-neutral
+		- 
+			label: Accent
+			value: encore-strikethrough-accent
+		- 
+			label: Red
+			value: encore-strikethrough-red
+		- 
+			label: Orange
+			value: encore-strikethrough-orange
+		- 
+			label: Yellow
+			value: encore-strikethrough-yellow
+		- 
+			label: Green
+			value: encore-strikethrough-green
+		- 
+			label: Cyan
+			value: encore-strikethrough-cyan
+		- 
+			label: Blue
+			value: encore-strikethrough-blue
+		- 
+			label: Purple
+			value: encore-strikethrough-purple
+		- 
+			label: Pink
+			value: encore-strikethrough-pink

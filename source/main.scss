@@ -1,20 +1,32 @@
-@use "resize-handle.scss";
-@use "markdown-embed.scss";
-@use "inline-title.scss";
-@use "translucent.scss";
-@use "highlight.scss";
+@use "reset.scss";
 @use "titlebar.scss";
-@use "prompt.scss";
-@use "theme-browser.scss";
+@use "resize-handle.scss";
+@use "workspace.scss";
+@use "markdown.scss";
 @use "mobile.scss";
-@use "calendar.scss";
-@use "kanban.scss";
-@use "excalidraw.scss";
-@use "themes.scss";
 
-:root {
-	--corner-radius: 0.5rem;
-}
+// Extensions
+@use "extensions/calendar.scss";
+@use "extensions/excalidraw.scss";
+@use "extensions/kanban.scss";
+@use "extensions/projects.scss";
+
+// Themes
+@use "themes/_default.scss";
+@use "themes/mercury.scss";
+@use "themes/iron.scss";
+@use "themes/carbon.scss";
+@use "themes/blackout.scss";
+@use "themes/obsidian.scss";
+@use "themes/rgb.scss";
+
+@import "variables.scss";
+
+
+
+// Misc tweaks below
+// ===============================================
+
 
 body {
 	--checklist-done-decoration: none;
@@ -32,93 +44,6 @@ body {
 	&.theme-light {
 		--hr-color: #00000090;
 	}
-}
-
-.cm-strikethrough {
-	color: var(--color-base-70);
-}
-
-// Side bar
-.workspace-ribbon {
-	&.mod-left {
-		transition: all 250ms ease-out !important;
-
-		&.is-collapsed {
-			border-right-color: transparent;
-		}
-	}
-}
-
-// Make sidebar toggles your chosen colour
-.sidebar-toggle-button>.clickable-icon {
-	color: var(--interactive-accent);
-}
-
-.empty-state::before {
-	content: "";
-	width: 100%;
-	height: 30%;
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%23ffffff40' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-.theme-light {
-	.empty-state::before {
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%2300000040' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
-	}
-}
-
-.empty-state-title {
-	font-size: 2.5rem !important;
-	font-weight: 300;
-	color: #ffffff50;
-	display: none;
-}
-
-
-// Fix for tree item dots
-.tree-item-children>div:not([class]) {
-	display: none;
-}
-
-.modal.mod-settings .vertical-tab-header {
-	border-right: none;
-}
-
-body:not(.is-translucent) {
-	// Only one modal dimmer at once
-	.modal-bg {
-		opacity: 0.0;
-	}
-	// Blur modal background
-	.modal-container.mod-dim .modal-bg {
-		backdrop-filter: brightness(0.5) blur(5px);
-		opacity: 1 !important;
-		background-color: transparent;
-	}
-}
-
-
-// Highlight button when in reading view
-.workspace-leaf-content[data-mode="preview"] {
-	.view-action:first-child {
-		color: var(--interactive-accent);
-	}
-}
-
-
-// Tab bars
-.workspace-tabs:not(.mod-top):not(.mod-root) .workspace-tab-header-container {
-	background-color: var(--titlebar-background-focused);
-	border-bottom: none;
-	border-radius: 4px;
-	margin: 0 8px;
-}
-
-.workspace-split {
-	background-color: var(--background-secondary);
 }
 
 
@@ -139,40 +64,75 @@ body:not(.is-mobile):not(.encore-disable-clickability-fix) {
 }
 
 
-// Frontmatter special formatting
-body.shaded-title {
-	.markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child {
-		position: relative;
-	}
-	.markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child::before {
-		content: "";
-		background-color: var(--background-secondary-alt);
-		display: block;
-		position: absolute;
-		top: -2rem;
-		transform: translateX(-1rem);
-		height: 3.25rem;
-		width: calc(var(--file-line-width) + 2rem);
-		z-index: -1;
-		border-bottom-left-radius: 8px;
-		border-bottom-right-radius: 8px;
-	}
-	.inline-title {
-		background-color: var(--background-secondary-alt);
-		border-radius: 8px;
-		padding-bottom: 0;
-		line-height: 1.5em;
-		margin-bottom: 0.5rem;
-		margin-left: -1rem;
-		margin-right: -1rem;
-		padding-left: 1rem;
+// Highlight button when in reading view
+.workspace-leaf-content[data-mode="preview"] {
+	.view-action:first-child {
+		color: var(--interactive-accent);
 	}
 }
 
 
-// Minor tweak to padding (mostly affects plugins like calendar)
-.workspace-leaf-content .view-content {
-	padding: var(--size-4-3);
+// Blurred modals
+body:not(.is-translucent) {
+	// Only one modal dimmer at once
+	.modal-bg {
+		opacity: 0.0;
+	}
+	// Blur modal background
+	.modal-container.mod-dim .modal-bg {
+		backdrop-filter: blur(25px) saturate(1.5);
+		opacity: 1 !important;
+		--en-opacity: 0.6;
+		background-color: $grey-900;
+	}
+}
+body.is-translucent {
+	// Only one modal dimmer at once
+	.modal-bg {
+		opacity: 0.0;
+	}
+	// Blur modal background
+	.modal-container.mod-dim .modal-bg {
+		backdrop-filter: blur(20px);
+		opacity: 1 !important;
+		--en-opacity: 0.8;
+		background-color: $grey-900;
+	}
+}
+
+
+// Fix for tree item dots
+.tree-item-children>div:not([class]) {
+	display: none;
+}
+
+
+// Fancy empty state
+.empty-state::before {
+	content: "";
+	width: 100%;
+	height: 30%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%23ffffff40' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+}
+.theme-light {
+	.empty-state::before {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='18' height='18' fill='none' stroke='%2300000040' stroke-width='2%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+	}
+}
+.empty-state-title {
+	font-size: 2.5rem !important;
+	font-weight: 300;
+	color: #ffffff50;
+	display: none;
+}
+
+
+// Make sidebar toggles your chosen colour
+.sidebar-toggle-button>.clickable-icon {
+	color: var(--interactive-accent);
 }
 
 
@@ -204,4 +164,131 @@ body>.tooltip {
 }
 body.encore-coloured-tooltip>.tooltip {
 	--tooltip-edge-colour: var(--color-accent);
+}
+
+
+// Highlights
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight,
+.search-result-file-matched-text {
+	background-color: hsla(var(--highlight-hue), 100%, 50%, 0.2);
+	outline: 1px solid hsla(var(--highlight-hue), 90%, 50%, 0.85);
+	padding: 0 0.15em;
+	border-radius: 3px;
+	box-shadow: 0 0 10px hsla(var(--highlight-hue), 90%, 50%, 0.75);
+}
+
+
+// Prompts
+.prompt {
+	background-color: transparent; //! Might need to change for transparent mode
+	border: none;
+	box-shadow: none;
+	height: 100%;
+	max-height: unset;
+	top: 0;
+	
+	>:first-child {
+		margin-top: 80px;
+	}
+	
+	>* {
+		max-width: var(--prompt-max-width);
+		width: var(--prompt-width);
+	}
+	
+	>.prompt-input-container {
+		background-color: var(--background-secondary-alt);
+		background-color: transparent;
+		
+		>.prompt-input {
+			background-color: transparent;
+			font-size: 3rem;
+			border-bottom: none !important;
+			height: auto;
+			
+		}
+		order: 1;
+	}
+	>.prompt-results {
+		order: 3;
+		border-top: 1px solid $grey-600;
+		color: $grey-300;
+		
+		>.suggestion-item {
+			cursor: pointer;
+			
+			&.is-selected {
+				color: var(--color-accent-2);
+			}
+			
+			kbd {
+				background-color: $grey-700;
+			}
+		}
+	}
+	>.prompt-instructions {
+		order: 2;
+		border-top: none;
+		margin-bottom: 2rem;
+		padding: 0;
+	}
+}
+
+
+
+// Status bar
+.status-bar {
+	bottom: 4px;
+	right: 4px;
+	border: none;
+	--en-opacity: 0.5;
+	background-color: $grey-600;
+	border-radius: var(--tab-radius);
+	backdrop-filter: var(--en-acrylic);
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+// Modals
+.modal {
+	border: none;
+	background-color: $grey-800;
+	--en-opacity: 1;
+	
+	.vertical-tab-header {
+		background-color: $grey-700;
+		border-right: none !important;
+		
+		.vertical-tab-header-group-title {
+			font-size: 1.33rem;
+		}
+	}
+	
+	.vertical-tab-content {
+		background-color: transparent;
+	}
+}
+
+.setting-item {
+	border-top: none;
+	padding: 0.5em 0;
+	
+	&.setting-item-heading {
+		margin-top: 2rem;
+	}
+	
+	&.setting-item-heading .setting-item-name {
+		font-size: 1.7rem;
+	}
+	
+	.setting-item-description {
+		--en-opacity: 1;
+		color: $grey-400;
+	}
+}
+
+.style-settings-container {
+	padding-left: 20px !important;
 }
