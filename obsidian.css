@@ -30,12 +30,15 @@ settings:
         label: Obsidian
         value: encore-theme-dark-obsidian
       - 
+        label: Atom (One Dark)
+        value: encore-theme-dark-atom
+      - 
         label: RGB
         value: encore-theme-dark-rgb
   -
     id: theme-light
     title: Theme • Light Mode
-    description: Theme used in light mode (wip)
+    description: Theme used in light mode
     type: class-select
     allowEmpty: false
     default: encore-theme-light
@@ -43,6 +46,22 @@ settings:
       - 
         label: Sterling
         value: encore-theme-light
+      - 
+        label: Atom (One Light)
+        value: encore-theme-light-atom
+  
+  
+  #########################################################
+  # Colours
+  
+  - 
+    id: colours
+    title: Colours
+    type: heading
+    level: 1
+    collapsed: false
+
+
   -
     id: italic-colour
     title: Italic Colour
@@ -51,7 +70,7 @@ settings:
     default: encore-italic-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-italic-default
       - 
         label: Neutral
@@ -60,29 +79,8 @@ settings:
         label: Accent
         value: encore-italic-accent
       - 
-        label: Red
-        value: encore-italic-red
-      - 
-        label: Orange
-        value: encore-italic-orange
-      - 
-        label: Yellow
-        value: encore-italic-yellow
-      - 
-        label: Green
-        value: encore-italic-green
-      - 
-        label: Cyan
-        value: encore-italic-cyan
-      - 
-        label: Blue
-        value: encore-italic-blue
-      - 
-        label: Purple
-        value: encore-italic-purple
-      - 
-        label: Pink
-        value: encore-italic-pink
+        label: Custom
+        value: encore-italic-custom
   -
     id: bold-colour
     title: Bold Colour
@@ -91,7 +89,7 @@ settings:
     default: encore-bold-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-bold-default
       - 
         label: Neutral
@@ -100,38 +98,17 @@ settings:
         label: Accent
         value: encore-bold-accent
       - 
-        label: Red
-        value: encore-bold-red
-      - 
-        label: Orange
-        value: encore-bold-orange
-      - 
-        label: Yellow
-        value: encore-bold-yellow
-      - 
-        label: Green
-        value: encore-bold-green
-      - 
-        label: Cyan
-        value: encore-bold-cyan
-      - 
-        label: Blue
-        value: encore-bold-blue
-      - 
-        label: Purple
-        value: encore-bold-purple
-      - 
-        label: Pink
-        value: encore-bold-pink
+        label: Custom
+        value: encore-bold-custom
   -
     id: title-colour
-    title: Title Colour
+    title: Note Title Colour
     type: class-select
     allowEmpty: false
     default: encore-title-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-title-default
       - 
         label: Neutral
@@ -140,38 +117,30 @@ settings:
         label: Accent
         value: encore-title-accent
       - 
-        label: Red
-        value: encore-title-red
-      - 
-        label: Orange
-        value: encore-title-orange
-      - 
-        label: Yellow
-        value: encore-title-yellow
-      - 
-        label: Green
-        value: encore-title-green
-      - 
-        label: Cyan
-        value: encore-title-cyan
-      - 
-        label: Blue
-        value: encore-title-blue
-      - 
-        label: Purple
-        value: encore-title-purple
-      - 
-        label: Pink
-        value: encore-title-pink
+        label: Custom
+        value: encore-title-custom
+  
+  
+  #########################################################
+  # Header Colours
+  
+  - 
+    id: header-colours
+    title: Headers
+    type: heading
+    level: 2
+    collapsed: true
+  
+  
   -
     id: h1-colour
-    title: Header 1 Colour
+    title: Header One Colour
     type: class-select
     allowEmpty: false
     default: encore-h1-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h1-default
       - 
         label: Neutral
@@ -180,38 +149,17 @@ settings:
         label: Accent
         value: encore-h1-accent
       - 
-        label: Red
-        value: encore-h1-red
-      - 
-        label: Orange
-        value: encore-h1-orange
-      - 
-        label: Yellow
-        value: encore-h1-yellow
-      - 
-        label: Green
-        value: encore-h1-green
-      - 
-        label: Cyan
-        value: encore-h1-cyan
-      - 
-        label: Blue
-        value: encore-h1-blue
-      - 
-        label: Purple
-        value: encore-h1-purple
-      - 
-        label: Pink
-        value: encore-h1-pink
+        label: Custom
+        value: encore-h1-custom
   -
     id: h2-colour
-    title: Header 2 Colour
+    title: Header Two Colour
     type: class-select
     allowEmpty: false
     default: encore-h2-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h2-default
       - 
         label: Neutral
@@ -220,38 +168,17 @@ settings:
         label: Accent
         value: encore-h2-accent
       - 
-        label: Red
-        value: encore-h2-red
-      - 
-        label: Orange
-        value: encore-h2-orange
-      - 
-        label: Yellow
-        value: encore-h2-yellow
-      - 
-        label: Green
-        value: encore-h2-green
-      - 
-        label: Cyan
-        value: encore-h2-cyan
-      - 
-        label: Blue
-        value: encore-h2-blue
-      - 
-        label: Purple
-        value: encore-h2-purple
-      - 
-        label: Pink
-        value: encore-h2-pink
+        label: Custom
+        value: encore-h2-custom
   -
     id: h3-colour
-    title: Header 3 Colour
+    title: Header Three Colour
     type: class-select
     allowEmpty: false
     default: encore-h3-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h3-default
       - 
         label: Neutral
@@ -260,38 +187,17 @@ settings:
         label: Accent
         value: encore-h3-accent
       - 
-        label: Red
-        value: encore-h3-red
-      - 
-        label: Orange
-        value: encore-h3-orange
-      - 
-        label: Yellow
-        value: encore-h3-yellow
-      - 
-        label: Green
-        value: encore-h3-green
-      - 
-        label: Cyan
-        value: encore-h3-cyan
-      - 
-        label: Blue
-        value: encore-h3-blue
-      - 
-        label: Purple
-        value: encore-h3-purple
-      - 
-        label: Pink
-        value: encore-h3-pink
+        label: Custom
+        value: encore-h3-custom
   -
     id: h4-colour
-    title: Header 4 Colour
+    title: Header Four Colour
     type: class-select
     allowEmpty: false
     default: encore-h4-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h4-default
       - 
         label: Neutral
@@ -300,38 +206,17 @@ settings:
         label: Accent
         value: encore-h4-accent
       - 
-        label: Red
-        value: encore-h4-red
-      - 
-        label: Orange
-        value: encore-h4-orange
-      - 
-        label: Yellow
-        value: encore-h4-yellow
-      - 
-        label: Green
-        value: encore-h4-green
-      - 
-        label: Cyan
-        value: encore-h4-cyan
-      - 
-        label: Blue
-        value: encore-h4-blue
-      - 
-        label: Purple
-        value: encore-h4-purple
-      - 
-        label: Pink
-        value: encore-h4-pink
+        label: Custom
+        value: encore-h4-custom
   -
     id: h5-colour
-    title: Header 5 Colour
+    title: Header Five Colour
     type: class-select
     allowEmpty: false
     default: encore-h5-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h5-default
       - 
         label: Neutral
@@ -340,38 +225,17 @@ settings:
         label: Accent
         value: encore-h5-accent
       - 
-        label: Red
-        value: encore-h5-red
-      - 
-        label: Orange
-        value: encore-h5-orange
-      - 
-        label: Yellow
-        value: encore-h5-yellow
-      - 
-        label: Green
-        value: encore-h5-green
-      - 
-        label: Cyan
-        value: encore-h5-cyan
-      - 
-        label: Blue
-        value: encore-h5-blue
-      - 
-        label: Purple
-        value: encore-h5-purple
-      - 
-        label: Pink
-        value: encore-h5-pink
+        label: Custom
+        value: encore-h5-custom
   -
     id: h6-colour
-    title: Header 6 Colour
+    title: Header Six Colour
     type: class-select
     allowEmpty: false
     default: encore-h6-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h6-default
       - 
         label: Neutral
@@ -380,34 +244,127 @@ settings:
         label: Accent
         value: encore-h6-accent
       - 
-        label: Red
-        value: encore-h6-red
-      - 
-        label: Orange
-        value: encore-h6-orange
-      - 
-        label: Yellow
-        value: encore-h6-yellow
-      - 
-        label: Green
-        value: encore-h6-green
-      - 
-        label: Cyan
-        value: encore-h6-cyan
-      - 
-        label: Blue
-        value: encore-h6-blue
-      - 
-        label: Purple
-        value: encore-h6-purple
-      - 
-        label: Pink
-        value: encore-h6-pink
+        label: Custom
+        value: encore-h6-custom
+  
+  
+  #########################################################
+  # Custom Colours
+  
+  - 
+    id: custom-colours
+    title: Custom Colours
+    type: heading
+    level: 1
+    collapsed: true
+  
+  
+  - 
+    id: encore-custom-italic
+    title: Italic Text
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-bold
+    title: Bold Text
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-title
+    title: Note Title
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+
+  - 
+    id: encore-custom-h1
+    title: Header One
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-h2
+    title: Header Two
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-h3
+    title: Header Three
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-h4
+    title: Header Four
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-h5
+    title: Header Five
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-h6
+    title: Header Six
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  
+  
+  
+  #########################################################
+  # Extras
+  
+  
+  - 
+    id: extras
+    title: Extras
+    type: heading
+    level: 1
+    collapsed: true
+  
+  
   -
     id: encore-coloured-tooltip
     title: Coloured Tooltip
     description: Make tooltips stand out much more by applying your theme colour to the border
     type: class-toggle
+
+  
+  
+  #########################################################
+  # Feature Toggles
+  
+
+  - 
+    id: feature-toggles
+    title: Feature Toggles
+    type: heading
+    level: 1
+    collapsed: true
   -
     id: encore-disable-fancy-headers
     title: Disable Fancy Headers
@@ -1053,11 +1010,11 @@ body.theme-dark {
   --color-base-60: rgb(var(--grey-300-rgb));
   --color-base-70: rgb(var(--grey-200-rgb));
   --color-base-100: rgb(var(--grey-100-rgb));
-  --accent-h: 255;
-  --accent-s: 92%;
+  --accent-h: 93;
+  --accent-s: 93%;
   --accent-l: 76%;
   --highlight-hue: 37;
-  --workspace-background-translucent: #1e1e1e00;
+  --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.2);
 }
 body.theme-dark .cm-line.hr hr::after {
   content: "";
@@ -1101,7 +1058,7 @@ body.theme-light {
   --accent-s: 40%;
   --accent-l: 40%;
   --highlight-hue: 37;
-  --workspace-background-translucent: #ffffff99;
+  --workspace-background-translucent: rgba(var(--grey-700-rgb), 0.7);
 }
 body.theme-light .cm-line.hr hr::after {
   content: "";
@@ -1119,92 +1076,36 @@ body.theme-light .cm-line.hr hr::after {
 }
 
 body {
-  --italic-color: var(--text-color);
-}
-
-body.encore-italic-neutral {
-  --italic-color: var(--text-color);
-}
-
-body.encore-italic-accent {
-  --italic-color: var(--color-accent-2);
-}
-
-body.encore-italic-red {
-  --italic-color: var(--color-red);
-}
-
-body.encore-italic-orange {
   --italic-color: var(--color-orange);
 }
 
-body.encore-italic-yellow {
-  --italic-color: var(--color-yellow);
+body.encore-italic-neutral {
+  --italic-color: var(--text-color) !important;
 }
 
-body.encore-italic-green {
-  --italic-color: var(--color-green);
+body.encore-italic-accent {
+  --italic-color: var(--color-accent-2) !important;
 }
 
-body.encore-italic-cyan {
-  --italic-color: var(--color-cyan);
-}
-
-body.encore-italic-blue {
-  --italic-color: var(--color-blue);
-}
-
-body.encore-italic-purple {
-  --italic-color: var(--color-purple);
-}
-
-body.encore-italic-pink {
-  --italic-color: var(--color-pink);
+body.encore-italic-custom {
+  --italic-color: var(--encore-custom-italic) !important;
 }
 
 body {
-  --bold-color: var(--text-color);
+  --bold-color: var(--color-cyan);
   --bold-weight: 700;
 }
 
 body.encore-bold-neutral {
-  --bold-color: var(--text-color);
+  --bold-color: var(--text-color) !important;
 }
 
 body.encore-bold-accent {
-  --bold-color: var(--color-accent-2);
+  --bold-color: var(--color-accent-2) !important;
 }
 
-body.encore-bold-red {
-  --bold-color: var(--color-red);
-}
-
-body.encore-bold-orange {
-  --bold-color: var(--color-orange);
-}
-
-body.encore-bold-yellow {
-  --bold-color: var(--color-yellow);
-}
-
-body.encore-bold-green {
-  --bold-color: var(--color-green);
-}
-
-body.encore-bold-cyan {
-  --bold-color: var(--color-cyan);
-}
-
-body.encore-bold-blue {
-  --bold-color: var(--color-blue);
-}
-
-body.encore-bold-purple {
-  --bold-color: var(--color-purple);
-}
-
-body.encore-bold-pink {
-  --bold-color: var(--color-pink);
+body.encore-bold-custom {
+  --bold-color: var(--encore-custom-bold) !important;
 }
 
 body {
@@ -1212,272 +1113,89 @@ body {
 }
 
 body.encore-title-neutral {
-  --inline-title-color: var(--text-color);
+  --inline-title-color: var(--text-color) !important;
 }
 
 body.encore-title-accent {
-  --inline-title-color: var(--color-accent-2);
+  --inline-title-color: var(--color-accent-2) !important;
 }
 
-body.encore-title-red {
-  --inline-title-color: var(--color-red);
-}
-
-body.encore-title-orange {
-  --inline-title-color: var(--color-orange);
-}
-
-body.encore-title-yellow {
-  --inline-title-color: var(--color-yellow);
-}
-
-body.encore-title-green {
-  --inline-title-color: var(--color-green);
-}
-
-body.encore-title-cyan {
-  --inline-title-color: var(--color-cyan);
-}
-
-body.encore-title-blue {
-  --inline-title-color: var(--color-blue);
-}
-
-body.encore-title-purple {
-  --inline-title-color: var(--color-purple);
-}
-
-body.encore-title-pink {
-  --inline-title-color: var(--color-pink);
+body.encore-title-custom {
+  --inline-title-color: var(--encore-custom-title) !important;
 }
 
 body.encore-h1-neutral {
-  --h1-color: var(--text-color);
+  --h1-color: var(--text-color) !important;
 }
 
 body.encore-h1-accent {
-  --h1-color: var(--color-accent-2);
+  --h1-color: var(--color-accent-2) !important;
 }
 
-body.encore-h1-red {
-  --h1-color: var(--color-red);
+body.encore-h1-custom {
+  --h1-color: var(--encore-custom-h1) !important;
 }
 
-body.encore-h1-orange {
-  --h1-color: var(--color-orange);
-}
-
-body.encore-h1-yellow {
-  --h1-color: var(--color-yellow);
-}
-
-body.encore-h1-green {
-  --h1-color: var(--color-green);
-}
-
-body.encore-h1-cyan {
-  --h1-color: var(--color-cyan);
-}
-
-body.encore-h1-blue {
-  --h1-color: var(--color-blue);
-}
-
-body.encore-h1-purple {
-  --h1-color: var(--color-purple);
-}
-
-body.encore-h1-pink {
-  --h1-color: var(--color-pink);
+body.encore-h2-neutral {
+  --h2-color: var(--text-color) !important;
 }
 
 body.encore-h2-accent {
-  --h2-color: var(--color-accent-2);
+  --h2-color: var(--color-accent-2) !important;
 }
 
-body.encore-h2-red {
-  --h2-color: var(--color-red);
+body.encore-h2-custom {
+  --h2-color: var(--encore-custom-h2) !important;
 }
 
-body.encore-h2-orange {
-  --h2-color: var(--color-orange);
-}
-
-body.encore-h2-yellow {
-  --h2-color: var(--color-yellow);
-}
-
-body.encore-h2-green {
-  --h2-color: var(--color-green);
-}
-
-body.encore-h2-cyan {
-  --h2-color: var(--color-cyan);
-}
-
-body.encore-h2-blue {
-  --h2-color: var(--color-blue);
-}
-
-body.encore-h2-purple {
-  --h2-color: var(--color-purple);
-}
-
-body.encore-h2-pink {
-  --h2-color: var(--color-pink);
+body.encore-h3-neutral {
+  --h3-color: var(--text-color) !important;
 }
 
 body.encore-h3-accent {
-  --h3-color: var(--color-accent-2);
+  --h3-color: var(--color-accent-2) !important;
 }
 
-body.encore-h3-red {
-  --h3-color: var(--color-red);
+body.encore-h3-custom {
+  --h3-color: var(--encore-custom-h3) !important;
 }
 
-body.encore-h3-orange {
-  --h3-color: var(--color-orange);
-}
-
-body.encore-h3-yellow {
-  --h3-color: var(--color-yellow);
-}
-
-body.encore-h3-green {
-  --h3-color: var(--color-green);
-}
-
-body.encore-h3-cyan {
-  --h3-color: var(--color-cyan);
-}
-
-body.encore-h3-blue {
-  --h3-color: var(--color-blue);
-}
-
-body.encore-h3-purple {
-  --h3-color: var(--color-purple);
-}
-
-body.encore-h3-pink {
-  --h3-color: var(--color-pink);
+body.encore-h4-neutral {
+  --h4-color: var(--text-color) !important;
 }
 
 body.encore-h4-accent {
-  --h4-color: var(--color-accent-2);
+  --h4-color: var(--color-accent-2) !important;
 }
 
-body.encore-h4-red {
-  --h4-color: var(--color-red);
+body.encore-h4-custom {
+  --h4-color: var(--encore-custom-h4) !important;
 }
 
-body.encore-h4-orange {
-  --h4-color: var(--color-orange);
-}
-
-body.encore-h4-yellow {
-  --h4-color: var(--color-yellow);
-}
-
-body.encore-h4-green {
-  --h4-color: var(--color-green);
-}
-
-body.encore-h4-cyan {
-  --h4-color: var(--color-cyan);
-}
-
-body.encore-h4-blue {
-  --h4-color: var(--color-blue);
-}
-
-body.encore-h4-purple {
-  --h4-color: var(--color-purple);
-}
-
-body.encore-h4-pink {
-  --h4-color: var(--color-pink);
+body.encore-h5-neutral {
+  --h5-color: var(--text-color) !important;
 }
 
 body.encore-h5-accent {
-  --h5-color: var(--color-accent-2);
+  --h5-color: var(--color-accent-2) !important;
 }
 
-body.encore-h5-red {
-  --h5-color: var(--color-red);
+body.encore-h5-custom {
+  --h5-color: var(--encore-custom-h5) !important;
 }
 
-body.encore-h5-orange {
-  --h5-color: var(--color-orange);
-}
-
-body.encore-h5-yellow {
-  --h5-color: var(--color-yellow);
-}
-
-body.encore-h5-green {
-  --h5-color: var(--color-green);
-}
-
-body.encore-h5-cyan {
-  --h5-color: var(--color-cyan);
-}
-
-body.encore-h5-blue {
-  --h5-color: var(--color-blue);
-}
-
-body.encore-h5-purple {
-  --h5-color: var(--color-purple);
-}
-
-body.encore-h5-pink {
-  --h5-color: var(--color-pink);
+body.encore-h6-neutral {
+  --h6-color: var(--text-color) !important;
 }
 
 body.encore-h6-accent {
-  --h6-color: var(--color-accent-2);
+  --h6-color: var(--color-accent-2) !important;
 }
 
-body.encore-h6-red {
-  --h6-color: var(--color-red);
+body.encore-h6-custom {
+  --h6-color: var(--encore-custom-h6) !important;
 }
 
-body.encore-h6-orange {
-  --h6-color: var(--color-orange);
-}
-
-body.encore-h6-yellow {
-  --h6-color: var(--color-yellow);
-}
-
-body.encore-h6-green {
-  --h6-color: var(--color-green);
-}
-
-body.encore-h6-cyan {
-  --h6-color: var(--color-cyan);
-}
-
-body.encore-h6-blue {
-  --h6-color: var(--color-blue);
-}
-
-body.encore-h6-purple {
-  --h6-color: var(--color-purple);
-}
-
-body.encore-h6-pink {
-  --h6-color: var(--color-pink);
-}
-
-body.encore-theme-dark-mercury {
-  --en-acrylic: blur(8px);
-  --header-height: 44px;
-  --tab-height: 38px;
-  --tab-radius: 6px;
-  --en-opacity: 1;
-}
 body.encore-theme-dark-mercury.theme-dark {
   --grey-900-rgb: 24, 24, 27;
   --grey-800-rgb: 39, 39, 42;
@@ -1489,46 +1207,26 @@ body.encore-theme-dark-mercury.theme-dark {
   --grey-200-rgb: 228, 228, 231;
   --grey-100-rgb: 244, 244, 245;
   --grey-50-rgb: 250, 250, 250;
-  --color-base-00: rgb(var(--grey-900-rgb));
-  --color-base-10: rgb(var(--grey-900-rgb));
-  --color-base-20: rgb(var(--grey-800-rgb));
-  --color-base-25: rgb(var(--grey-700-rgb));
-  --color-base-30: rgb(var(--grey-600-rgb));
-  --color-base-35: rgb(var(--grey-500-rgb));
-  --color-base-40: rgb(var(--grey-400-rgb));
-  --color-base-50: rgb(var(--grey-300-rgb));
-  --color-base-60: rgb(var(--grey-300-rgb));
-  --color-base-70: rgb(var(--grey-200-rgb));
-  --color-base-100: rgb(var(--grey-100-rgb));
-  --accent-h: 255;
+  --accent-h: 21;
   --accent-s: 92%;
-  --accent-l: 76%;
-  --workspace-background-translucent: #1e1e1e00;
-}
-body.encore-theme-dark-mercury.theme-dark .cm-line.hr hr::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  --en-opacity: 1;
-  background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
-  border-radius: 100%;
-  margin: 0 46%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+  --accent-l: 69%;
+  --color-red: #e06c75;
+  --color-green: #98c379;
+  --color-orange: #F99A66;
+  --color-yellow: #f7f2c5;
+  --color-cyan: #abe9f1;
+  --color-blue: #adc9ff;
+  --bold-color: var(--color-red);
+  --italic-color: var(--color-green);
+  --highlight-hue: 32;
+  --h1-color: var(--color-blue);
+  --h2-color: var(--color-cyan);
+  --h3-color: var(--color-yellow);
+  --h4-color: var(--color-blue);
+  --h5-color: var(--color-cyan);
+  --h6-color: var(--color-yellow);
 }
 
-body.encore-theme-dark-iron {
-  --en-acrylic: blur(8px);
-  --header-height: 44px;
-  --tab-height: 38px;
-  --tab-radius: 6px;
-  --en-opacity: 1;
-}
 body.encore-theme-dark-iron.theme-dark {
   --grey-900-rgb: 28, 25, 23;
   --grey-800-rgb: 41, 37, 36;
@@ -1540,37 +1238,24 @@ body.encore-theme-dark-iron.theme-dark {
   --grey-200-rgb: 231, 229, 228;
   --grey-100-rgb: 245, 245, 244;
   --grey-50-rgb: 250, 250, 249;
-  --color-base-00: rgb(var(--grey-900-rgb));
-  --color-base-10: rgb(var(--grey-900-rgb));
-  --color-base-20: rgb(var(--grey-800-rgb));
-  --color-base-25: rgb(var(--grey-700-rgb));
-  --color-base-30: rgb(var(--grey-600-rgb));
-  --color-base-35: rgb(var(--grey-500-rgb));
-  --color-base-40: rgb(var(--grey-400-rgb));
-  --color-base-50: rgb(var(--grey-300-rgb));
-  --color-base-60: rgb(var(--grey-300-rgb));
-  --color-base-70: rgb(var(--grey-200-rgb));
-  --color-base-100: rgb(var(--grey-100-rgb));
-  --accent-h: 255;
-  --accent-s: 92%;
-  --accent-l: 76%;
-  --workspace-background-translucent: #1e1e1e00;
-}
-body.encore-theme-dark-iron.theme-dark .cm-line.hr hr::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  --en-opacity: 1;
-  background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
-  border-radius: 100%;
-  margin: 0 46%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+  --accent-h: 165;
+  --accent-s: 74%;
+  --accent-l: 52%;
+  --color-red: #df2a51;
+  --color-green: #2adfb2;
+  --color-orange: #ff9b7c;
+  --color-yellow: #abe667;
+  --color-cyan: #2abbdf;
+  --color-blue: #5c87ff;
+  --bold-color: var(--color-yellow);
+  --italic-color: var(--color-orange);
+  --highlight-hue: 165;
+  --h1-color: var(--text-color);
+  --h2-color: var(--text-color);
+  --h3-color: var(--text-color);
+  --h4-color: var(--text-color);
+  --h5-color: var(--text-color);
+  --h6-color: var(--text-color);
 }
 
 body.encore-theme-dark-carbon.theme-dark {
@@ -1584,37 +1269,12 @@ body.encore-theme-dark-carbon.theme-dark {
   --grey-200-rgb: 228, 228, 231;
   --grey-100-rgb: 244, 244, 245;
   --grey-50-rgb: 250, 250, 250;
-  --color-base-00: rgb(var(--grey-900-rgb));
-  --color-base-10: rgb(var(--grey-900-rgb));
-  --color-base-20: rgb(var(--grey-800-rgb));
-  --color-base-25: rgb(var(--grey-700-rgb));
-  --color-base-30: rgb(var(--grey-600-rgb));
-  --color-base-35: rgb(var(--grey-500-rgb));
-  --color-base-40: rgb(var(--grey-400-rgb));
-  --color-base-50: rgb(var(--grey-300-rgb));
-  --color-base-60: rgb(var(--grey-300-rgb));
-  --color-base-70: rgb(var(--grey-200-rgb));
-  --color-base-100: rgb(var(--grey-100-rgb));
-  --accent-h: 255;
-  --accent-s: 92%;
-  --accent-l: 76%;
-  --workspace-background-translucent: #1e1e1e00;
-}
-body.encore-theme-dark-carbon.theme-dark .cm-line.hr hr::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  --en-opacity: 1;
-  background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
-  border-radius: 100%;
-  margin: 0 46%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+  --accent-h: 203;
+  --accent-s: 66%;
+  --accent-l: 54%;
+  --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.4);
+  --bold-color: var(--color-green);
+  --italic-color: var(--color-red);
 }
 
 body.encore-theme-dark-blackout.theme-dark {
@@ -1628,21 +1288,18 @@ body.encore-theme-dark-blackout.theme-dark {
   --grey-200-rgb: 228, 228, 231;
   --grey-100-rgb: 244, 244, 245;
   --grey-50-rgb: 250, 250, 250;
-  --color-base-00: rgb(var(--grey-900-rgb));
-  --color-base-10: rgb(var(--grey-900-rgb));
-  --color-base-20: rgb(var(--grey-800-rgb));
-  --color-base-25: rgb(var(--grey-700-rgb));
-  --color-base-30: rgb(var(--grey-600-rgb));
-  --color-base-35: rgb(var(--grey-500-rgb));
-  --color-base-40: rgb(var(--grey-400-rgb));
-  --color-base-50: rgb(var(--grey-300-rgb));
-  --color-base-60: rgb(var(--grey-300-rgb));
-  --color-base-70: rgb(var(--grey-200-rgb));
-  --color-base-100: rgb(var(--grey-100-rgb));
-  --accent-h: 255;
-  --accent-s: 92%;
-  --accent-l: 76%;
-  --workspace-background-translucent: #1e1e1e00;
+  --accent-h: 203;
+  --accent-s: 66%;
+  --accent-l: 54%;
+  --workspace-background-translucent: rgba(var(--grey-800-rgb), 0.7);
+  --bold-color: var(--color-cyan);
+  --italic-color: var(--color-green);
+  --h1-color: var(--color-red);
+  --h2-color: var(--color-orange);
+  --h3-color: var(--color-yellow);
+  --h4-color: var(--color-red);
+  --h5-color: var(--color-orange);
+  --h6-color: var(--color-yellow);
   background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
 }
 body.encore-theme-dark-blackout.theme-dark .cm-line.hr hr::after {
@@ -1653,7 +1310,7 @@ body.encore-theme-dark-blackout.theme-dark .cm-line.hr hr::after {
   right: 0;
   height: 100%;
   --en-opacity: 1;
-  background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
+  background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
   border-radius: 100%;
   margin: 0 46%;
   background-size: contain;
@@ -1675,6 +1332,70 @@ body.encore-theme-dark-blackout.theme-dark:not(.encore-disable-fancy-headers) .w
   backdrop-filter: var(--en-acrylic);
 }
 
+body.encore-theme-dark-atom.theme-dark {
+  --grey-900-rgb: 32, 36, 43;
+  --grey-800-rgb: 39, 43, 52;
+  --grey-700-rgb: 61, 68, 83;
+  --grey-600-rgb: 79, 88, 107;
+  --grey-500-rgb: 79, 88, 107;
+  --grey-400-rgb: 171, 178, 191;
+  --grey-300-rgb: 171, 178, 191;
+  --grey-200-rgb: 171, 178, 191;
+  --grey-100-rgb: 206, 210, 218;
+  --grey-50-rgb: 206, 210, 218;
+  --accent-h: 207;
+  --accent-s: 82%;
+  --accent-l: 66%;
+  --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.4);
+  --color-red: #e06c75;
+  --color-green: #98c379;
+  --color-orange: #d19a66;
+  --color-yellow: #e5c07b;
+  --color-cyan: #56b6c2;
+  --color-blue: #61afef;
+  --bold-color: var(--color-blue);
+  --italic-color: var(--color-green);
+  --highlight-hue: 37;
+  --h1-color: var(--color-orange);
+  --h2-color: var(--color-green);
+  --h3-color: var(--color-cyan);
+  --h4-color: var(--color-blue);
+  --h5-color: var(--color-red);
+  --h6-color: var(--color-yellow);
+}
+
+body.encore-theme-light-atom.theme-light {
+  --grey-50-rgb: 32, 36, 43;
+  --grey-100-rgb: 39, 43, 52;
+  --grey-200-rgb: 61, 68, 83;
+  --grey-300-rgb: 79, 88, 107;
+  --grey-400-rgb: 79, 88, 107;
+  --grey-500-rgb: 171, 178, 191;
+  --grey-600-rgb: 171, 178, 191;
+  --grey-700-rgb: 171, 178, 191;
+  --grey-800-rgb: 206, 210, 218;
+  --grey-900-rgb: 206, 210, 218;
+  --accent-h: 207;
+  --accent-s: 82%;
+  --accent-l: 56%;
+  --workspace-background-translucent: rgba(var(--grey-700-rgb), 0.7);
+  --color-red: #b95059;
+  --color-green: #759c59;
+  --color-orange: #c78a51;
+  --color-yellow: #d3a95c;
+  --color-cyan: #42abb9;
+  --color-blue: #469de4;
+  --bold-color: var(--color-blue);
+  --italic-color: var(--color-green);
+  --highlight-hue: 37;
+  --h1-color: var(--color-orange);
+  --h2-color: var(--color-green);
+  --h3-color: var(--color-cyan);
+  --h4-color: var(--color-blue);
+  --h5-color: var(--color-red);
+  --h6-color: var(--color-yellow);
+}
+
 body.encore-theme-dark-obsidian.theme-dark {
   --grey-900-rgb: 30, 30, 30;
   --grey-800-rgb: 38, 38, 38;
@@ -1686,21 +1407,13 @@ body.encore-theme-dark-obsidian.theme-dark {
   --grey-200-rgb: 228, 228, 231;
   --grey-100-rgb: 244, 244, 245;
   --grey-50-rgb: 250, 250, 250;
-  --color-base-00: rgb(var(--grey-900-rgb));
-  --color-base-10: rgb(var(--grey-900-rgb));
-  --color-base-20: rgb(var(--grey-800-rgb));
-  --color-base-25: rgb(var(--grey-700-rgb));
-  --color-base-30: rgb(var(--grey-600-rgb));
-  --color-base-35: rgb(var(--grey-500-rgb));
-  --color-base-40: rgb(var(--grey-400-rgb));
-  --color-base-50: rgb(var(--grey-300-rgb));
-  --color-base-60: rgb(var(--grey-300-rgb));
-  --color-base-70: rgb(var(--grey-200-rgb));
-  --color-base-100: rgb(var(--grey-100-rgb));
   --accent-h: 255;
   --accent-s: 92%;
   --accent-l: 76%;
-  --workspace-background-translucent: #1e1e1e00;
+  --inline-title-color: var(--text-color);
+  --bold-color: var(--text-color);
+  --italic-color: var(--text-color);
+  --workspace-background-translucent: rgba(var(--grey-700-rgb), 0.33);
   background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
 }
 body.encore-theme-dark-obsidian.theme-dark .cm-line.hr hr::after {
@@ -1711,7 +1424,7 @@ body.encore-theme-dark-obsidian.theme-dark .cm-line.hr hr::after {
   right: 0;
   height: 100%;
   --en-opacity: 1;
-  background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
+  background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
   border-radius: 100%;
   margin: 0 46%;
   background-size: contain;
@@ -1744,38 +1457,10 @@ body.encore-theme-dark-rgb.theme-dark {
   --grey-200-rgb: 228, 228, 231;
   --grey-100-rgb: 244, 244, 245;
   --grey-50-rgb: 250, 250, 250;
-  --color-base-00: rgb(var(--grey-900-rgb));
-  --color-base-10: rgb(var(--grey-900-rgb));
-  --color-base-20: rgb(var(--grey-800-rgb));
-  --color-base-25: rgb(var(--grey-700-rgb));
-  --color-base-30: rgb(var(--grey-600-rgb));
-  --color-base-35: rgb(var(--grey-500-rgb));
-  --color-base-40: rgb(var(--grey-400-rgb));
-  --color-base-50: rgb(var(--grey-300-rgb));
-  --color-base-60: rgb(var(--grey-300-rgb));
-  --color-base-70: rgb(var(--grey-200-rgb));
-  --color-base-100: rgb(var(--grey-100-rgb));
-  --accent-h: 255;
-  --accent-s: 92%;
-  --accent-l: 76%;
-  --workspace-background-translucent: #1e1e1e00;
+  --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.4);
+  --bold-color: var(--color-red);
+  --italic-color: var(--color-green);
   --rainbow-gradient: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,222,0,1) 15%, rgba(167,255,0,1) 26%, rgba(0,255,136,1) 39%, rgba(15,245,254,1) 55%, rgba(111,0,255,1) 80%, rgba(253,45,45,1) 100%);
-}
-body.encore-theme-dark-rgb.theme-dark .cm-line.hr hr::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  --en-opacity: 1;
-  background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
-  border-radius: 100%;
-  margin: 0 46%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
 }
 body.encore-theme-dark-rgb.theme-dark .mod-root .workspace-tab-container {
   border-radius: var(--tab-radius);

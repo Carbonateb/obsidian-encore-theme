@@ -13,29 +13,24 @@ body.encore-theme-dark-blackout {
 		--grey-100-rgb: 244, 244, 245;
 		--grey-50-rgb: 250, 250, 250;
 		
-		// Theme neutrals
-		// --en-opacity: 1;
-		--color-base-00: rgb(var(--grey-900-rgb)); // Main background
-		--color-base-10: rgb(var(--grey-900-rgb)); // Code blocks
-		--color-base-20: rgb(var(--grey-800-rgb)); // Alt background
-		--color-base-25: rgb(var(--grey-700-rgb)); // Text input
-		--color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
-		--color-base-35: rgb(var(--grey-500-rgb)); // Switch background, hovered buttons
-		--color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
-		--color-base-50: rgb(var(--grey-300-rgb)); // Headings, bullets, checked items
-		--color-base-60: rgb(var(--grey-300-rgb)); // ?
-		--color-base-70: rgb(var(--grey-200-rgb)); // Dim text
-		--color-base-100: rgb(var(--grey-100-rgb)); // Text
-		
-		// --color-base-00: red; // Main background
-		
 		// Default accent colour
-		--accent-h: 255;
-		--accent-s: 92%;
-		--accent-l: 76%;
+		--accent-h: 203;
+		--accent-s: 66%;
+		--accent-l: 54%;
 		
-		--workspace-background-translucent: #1e1e1e00;
-			
+		--workspace-background-translucent: rgba(var(--grey-800-rgb), 0.7);
+		
+		--bold-color: var(--color-cyan);
+		--italic-color: var(--color-green);
+		
+		--h1-color: var(--color-red);
+		--h2-color: var(--color-orange);
+		--h3-color: var(--color-yellow);
+		--h4-color: var(--color-red);
+		--h5-color: var(--color-orange);
+		--h6-color: var(--color-yellow);
+		
+		
 		.cm-line.hr hr::after {
 			content: "";
 			position: absolute;
@@ -44,7 +39,7 @@ body.encore-theme-dark-blackout {
 			right: 0;
 			height: 100%;
 			--en-opacity: 1;
-			background-color: $grey-800;
+			background-color: $grey-900;
 			border-radius: 100%;
 			margin: 0 46%;
 			background-size: contain;

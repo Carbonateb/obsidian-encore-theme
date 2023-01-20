@@ -30,12 +30,15 @@ settings:
         label: Obsidian
         value: encore-theme-dark-obsidian
       - 
+        label: Atom (One Dark)
+        value: encore-theme-dark-atom
+      - 
         label: RGB
         value: encore-theme-dark-rgb
   -
     id: theme-light
     title: Theme • Light Mode
-    description: Theme used in light mode (wip)
+    description: Theme used in light mode
     type: class-select
     allowEmpty: false
     default: encore-theme-light
@@ -43,6 +46,22 @@ settings:
       - 
         label: Sterling
         value: encore-theme-light
+      - 
+        label: Atom (One Light)
+        value: encore-theme-light-atom
+  
+  
+  #########################################################
+  # Colours
+  
+  - 
+    id: colours
+    title: Colours
+    type: heading
+    level: 1
+    collapsed: false
+
+
   -
     id: italic-colour
     title: Italic Colour
@@ -51,7 +70,7 @@ settings:
     default: encore-italic-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-italic-default
       - 
         label: Neutral
@@ -60,29 +79,8 @@ settings:
         label: Accent
         value: encore-italic-accent
       - 
-        label: Red
-        value: encore-italic-red
-      - 
-        label: Orange
-        value: encore-italic-orange
-      - 
-        label: Yellow
-        value: encore-italic-yellow
-      - 
-        label: Green
-        value: encore-italic-green
-      - 
-        label: Cyan
-        value: encore-italic-cyan
-      - 
-        label: Blue
-        value: encore-italic-blue
-      - 
-        label: Purple
-        value: encore-italic-purple
-      - 
-        label: Pink
-        value: encore-italic-pink
+        label: Custom
+        value: encore-italic-custom
   -
     id: bold-colour
     title: Bold Colour
@@ -91,7 +89,7 @@ settings:
     default: encore-bold-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-bold-default
       - 
         label: Neutral
@@ -100,38 +98,17 @@ settings:
         label: Accent
         value: encore-bold-accent
       - 
-        label: Red
-        value: encore-bold-red
-      - 
-        label: Orange
-        value: encore-bold-orange
-      - 
-        label: Yellow
-        value: encore-bold-yellow
-      - 
-        label: Green
-        value: encore-bold-green
-      - 
-        label: Cyan
-        value: encore-bold-cyan
-      - 
-        label: Blue
-        value: encore-bold-blue
-      - 
-        label: Purple
-        value: encore-bold-purple
-      - 
-        label: Pink
-        value: encore-bold-pink
+        label: Custom
+        value: encore-bold-custom
   -
     id: title-colour
-    title: Title Colour
+    title: Note Title Colour
     type: class-select
     allowEmpty: false
     default: encore-title-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-title-default
       - 
         label: Neutral
@@ -140,38 +117,30 @@ settings:
         label: Accent
         value: encore-title-accent
       - 
-        label: Red
-        value: encore-title-red
-      - 
-        label: Orange
-        value: encore-title-orange
-      - 
-        label: Yellow
-        value: encore-title-yellow
-      - 
-        label: Green
-        value: encore-title-green
-      - 
-        label: Cyan
-        value: encore-title-cyan
-      - 
-        label: Blue
-        value: encore-title-blue
-      - 
-        label: Purple
-        value: encore-title-purple
-      - 
-        label: Pink
-        value: encore-title-pink
+        label: Custom
+        value: encore-title-custom
+  
+  
+  #########################################################
+  # Header Colours
+  
+  - 
+    id: header-colours
+    title: Headers
+    type: heading
+    level: 2
+    collapsed: true
+  
+  
   -
     id: h1-colour
-    title: Header 1 Colour
+    title: Header One Colour
     type: class-select
     allowEmpty: false
     default: encore-h1-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h1-default
       - 
         label: Neutral
@@ -180,38 +149,17 @@ settings:
         label: Accent
         value: encore-h1-accent
       - 
-        label: Red
-        value: encore-h1-red
-      - 
-        label: Orange
-        value: encore-h1-orange
-      - 
-        label: Yellow
-        value: encore-h1-yellow
-      - 
-        label: Green
-        value: encore-h1-green
-      - 
-        label: Cyan
-        value: encore-h1-cyan
-      - 
-        label: Blue
-        value: encore-h1-blue
-      - 
-        label: Purple
-        value: encore-h1-purple
-      - 
-        label: Pink
-        value: encore-h1-pink
+        label: Custom
+        value: encore-h1-custom
   -
     id: h2-colour
-    title: Header 2 Colour
+    title: Header Two Colour
     type: class-select
     allowEmpty: false
     default: encore-h2-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h2-default
       - 
         label: Neutral
@@ -220,38 +168,17 @@ settings:
         label: Accent
         value: encore-h2-accent
       - 
-        label: Red
-        value: encore-h2-red
-      - 
-        label: Orange
-        value: encore-h2-orange
-      - 
-        label: Yellow
-        value: encore-h2-yellow
-      - 
-        label: Green
-        value: encore-h2-green
-      - 
-        label: Cyan
-        value: encore-h2-cyan
-      - 
-        label: Blue
-        value: encore-h2-blue
-      - 
-        label: Purple
-        value: encore-h2-purple
-      - 
-        label: Pink
-        value: encore-h2-pink
+        label: Custom
+        value: encore-h2-custom
   -
     id: h3-colour
-    title: Header 3 Colour
+    title: Header Three Colour
     type: class-select
     allowEmpty: false
     default: encore-h3-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h3-default
       - 
         label: Neutral
@@ -260,38 +187,17 @@ settings:
         label: Accent
         value: encore-h3-accent
       - 
-        label: Red
-        value: encore-h3-red
-      - 
-        label: Orange
-        value: encore-h3-orange
-      - 
-        label: Yellow
-        value: encore-h3-yellow
-      - 
-        label: Green
-        value: encore-h3-green
-      - 
-        label: Cyan
-        value: encore-h3-cyan
-      - 
-        label: Blue
-        value: encore-h3-blue
-      - 
-        label: Purple
-        value: encore-h3-purple
-      - 
-        label: Pink
-        value: encore-h3-pink
+        label: Custom
+        value: encore-h3-custom
   -
     id: h4-colour
-    title: Header 4 Colour
+    title: Header Four Colour
     type: class-select
     allowEmpty: false
     default: encore-h4-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h4-default
       - 
         label: Neutral
@@ -300,38 +206,17 @@ settings:
         label: Accent
         value: encore-h4-accent
       - 
-        label: Red
-        value: encore-h4-red
-      - 
-        label: Orange
-        value: encore-h4-orange
-      - 
-        label: Yellow
-        value: encore-h4-yellow
-      - 
-        label: Green
-        value: encore-h4-green
-      - 
-        label: Cyan
-        value: encore-h4-cyan
-      - 
-        label: Blue
-        value: encore-h4-blue
-      - 
-        label: Purple
-        value: encore-h4-purple
-      - 
-        label: Pink
-        value: encore-h4-pink
+        label: Custom
+        value: encore-h4-custom
   -
     id: h5-colour
-    title: Header 5 Colour
+    title: Header Five Colour
     type: class-select
     allowEmpty: false
     default: encore-h5-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h5-default
       - 
         label: Neutral
@@ -340,38 +225,17 @@ settings:
         label: Accent
         value: encore-h5-accent
       - 
-        label: Red
-        value: encore-h5-red
-      - 
-        label: Orange
-        value: encore-h5-orange
-      - 
-        label: Yellow
-        value: encore-h5-yellow
-      - 
-        label: Green
-        value: encore-h5-green
-      - 
-        label: Cyan
-        value: encore-h5-cyan
-      - 
-        label: Blue
-        value: encore-h5-blue
-      - 
-        label: Purple
-        value: encore-h5-purple
-      - 
-        label: Pink
-        value: encore-h5-pink
+        label: Custom
+        value: encore-h5-custom
   -
     id: h6-colour
-    title: Header 6 Colour
+    title: Header Six Colour
     type: class-select
     allowEmpty: false
     default: encore-h6-default
     options:
       - 
-        label: Theme Default
+        label: Set by theme
         value: encore-h6-default
       - 
         label: Neutral
@@ -380,34 +244,127 @@ settings:
         label: Accent
         value: encore-h6-accent
       - 
-        label: Red
-        value: encore-h6-red
-      - 
-        label: Orange
-        value: encore-h6-orange
-      - 
-        label: Yellow
-        value: encore-h6-yellow
-      - 
-        label: Green
-        value: encore-h6-green
-      - 
-        label: Cyan
-        value: encore-h6-cyan
-      - 
-        label: Blue
-        value: encore-h6-blue
-      - 
-        label: Purple
-        value: encore-h6-purple
-      - 
-        label: Pink
-        value: encore-h6-pink
+        label: Custom
+        value: encore-h6-custom
+  
+  
+  #########################################################
+  # Custom Colours
+  
+  - 
+    id: custom-colours
+    title: Custom Colours
+    type: heading
+    level: 1
+    collapsed: true
+  
+  
+  - 
+    id: encore-custom-italic
+    title: Italic Text
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-bold
+    title: Bold Text
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-title
+    title: Note Title
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+
+  - 
+    id: encore-custom-h1
+    title: Header One
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-h2
+    title: Header Two
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-h3
+    title: Header Three
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-h4
+    title: Header Four
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-h5
+    title: Header Five
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  - 
+    id: encore-custom-h6
+    title: Header Six
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#ffffff'
+  
+  
+  
+  #########################################################
+  # Extras
+  
+  
+  - 
+    id: extras
+    title: Extras
+    type: heading
+    level: 1
+    collapsed: true
+  
+  
   -
     id: encore-coloured-tooltip
     title: Coloured Tooltip
     description: Make tooltips stand out much more by applying your theme colour to the border
     type: class-toggle
+
+  
+  
+  #########################################################
+  # Feature Toggles
+  
+
+  - 
+    id: feature-toggles
+    title: Feature Toggles
+    type: heading
+    level: 1
+    collapsed: true
   -
     id: encore-disable-fancy-headers
     title: Disable Fancy Headers
