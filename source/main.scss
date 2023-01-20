@@ -203,7 +203,7 @@ body.encore-coloured-tooltip>.tooltip {
 
 
 // Prompts
-.prompt {
+body:not(.is-mobile) .prompt {
 	background-color: transparent; //! Might need to change for transparent mode
 	border: none;
 	box-shadow: none;
