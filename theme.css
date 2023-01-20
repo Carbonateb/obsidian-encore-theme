@@ -352,6 +352,23 @@ settings:
     title: Coloured Tooltip
     description: Make tooltips stand out much more by applying your theme colour to the border
     type: class-toggle
+  - 
+    id: blur-amount
+    title: Blur Amount
+    description: Lowering the blur amount helps increase performance
+    type: class-select
+    allowEmpty: false
+    default: encore-blur-full
+    options:
+      - 
+        label: Full
+        value: encore-blur-full
+      - 
+        label: Less
+        value: encore-blur-less
+      - 
+        label: Off
+        value: encore-blur-off
 
   
   
@@ -568,7 +585,7 @@ body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf
   position: absolute;
   left: 0;
   right: 0;
-  --en-opacity: 0.66;
+  --en-opacity: var(--en-acrylic-opacity);
   background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
   backdrop-filter: var(--en-acrylic);
 }
@@ -981,13 +998,6 @@ body:not(.encore-disable-fancy-headers) .excalidraw .layer-ui__wrapper .layer-ui
   border-bottom: 1px solid rgba(var(--grey-700-rgb), var(--en-opacity));
 }
 
-body {
-  --en-acrylic: blur(8px);
-  --header-height: 44px;
-  --tab-height: 38px;
-  --tab-radius: 6px;
-  --en-opacity: 1;
-}
 body.theme-dark {
   --grey-900-rgb: 17, 24, 39;
   --grey-800-rgb: 31, 41, 55;
@@ -1557,6 +1567,13 @@ body {
   --text-on-accent: var(--color-base-00);
   --hr-thickness: 1px;
   --highlight-hue: 37;
+  --en-acrylic: blur(8px);
+  --en-acrylic-opacity: 0.66;
+  --en-modal-backdrop: blur(25px);
+  --header-height: 44px;
+  --tab-height: 38px;
+  --tab-radius: 6px;
+  --en-opacity: 1;
   text-underline-offset: 2px;
 }
 body.theme-dark {
@@ -1564,6 +1581,19 @@ body.theme-dark {
 }
 body.theme-light {
   --hr-color: #00000090;
+}
+
+body.encore-blur-less {
+  --en-acrylic: blur(4px);
+  --en-acrylic-opacity: 0.9;
+  --en-modal-backdrop: blur(5px);
+}
+
+body.is-mobile,
+body.encore-blur-off {
+  --en-acrylic: brightness(0.5);
+  --en-acrylic-opacity: 0.9;
+  --en-modal-backdrop: brightness(0.5);
 }
 
 body:not(.is-mobile):not(.encore-disable-clickability-fix) .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
@@ -1585,7 +1615,7 @@ body:not(.is-translucent) .modal-bg {
   opacity: 0;
 }
 body:not(.is-translucent) .modal-container.mod-dim .modal-bg {
-  backdrop-filter: blur(25px) saturate(1.5);
+  backdrop-filter: var(--en-modal-backdrop);
   opacity: 1 !important;
   --en-opacity: 0.6;
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
@@ -1595,7 +1625,7 @@ body.is-translucent .modal-bg {
   opacity: 0;
 }
 body.is-translucent .modal-container.mod-dim .modal-bg {
-  backdrop-filter: blur(20px);
+  backdrop-filter: var(--en-modal-backdrop);
   opacity: 1 !important;
   --en-opacity: 0.8;
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));

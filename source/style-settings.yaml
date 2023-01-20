@@ -352,6 +352,23 @@ settings:
     title: Coloured Tooltip
     description: Make tooltips stand out much more by applying your theme colour to the border
     type: class-toggle
+  - 
+    id: blur-amount
+    title: Blur Amount
+    description: Lowering the blur amount helps increase performance
+    type: class-select
+    allowEmpty: false
+    default: encore-blur-full
+    options:
+      - 
+        label: Full
+        value: encore-blur-full
+      - 
+        label: Less
+        value: encore-blur-less
+      - 
+        label: Off
+        value: encore-blur-off
 
   
   

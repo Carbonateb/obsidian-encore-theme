@@ -2,12 +2,6 @@
 @import "../variables.scss";
 
 body {
-	--en-acrylic: blur(8px);
-	--header-height: 44px;
-	--tab-height: 38px;
-	--tab-radius: 6px;
-	--en-opacity: 1;
-	
 	// Cobalt
 	&.theme-dark {
 		// * Colors are from Tailwind's "Gray" colour palette
