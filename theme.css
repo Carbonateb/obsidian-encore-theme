@@ -1705,7 +1705,7 @@ body.encore-coloured-tooltip > .tooltip {
   box-shadow: 0 0 10px hsla(var(--highlight-hue), 90%, 50%, 0.75);
 }
 
-.prompt {
+body:not(.is-mobile) .prompt {
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -1713,39 +1713,39 @@ body.encore-coloured-tooltip > .tooltip {
   max-height: unset;
   top: 0;
 }
-.prompt > :first-child {
+body:not(.is-mobile) .prompt > :first-child {
   margin-top: 80px;
 }
-.prompt > * {
+body:not(.is-mobile) .prompt > * {
   max-width: var(--prompt-max-width);
   width: var(--prompt-width);
 }
-.prompt > .prompt-input-container {
+body:not(.is-mobile) .prompt > .prompt-input-container {
   background-color: var(--background-secondary-alt);
   background-color: transparent;
   order: 1;
 }
-.prompt > .prompt-input-container > .prompt-input {
+body:not(.is-mobile) .prompt > .prompt-input-container > .prompt-input {
   background-color: transparent;
   font-size: 3rem;
   border-bottom: none !important;
   height: auto;
 }
-.prompt > .prompt-results {
+body:not(.is-mobile) .prompt > .prompt-results {
   order: 3;
   border-top: 1px solid rgba(var(--grey-600-rgb), var(--en-opacity));
   color: rgba(var(--grey-300-rgb), var(--en-opacity));
 }
-.prompt > .prompt-results > .suggestion-item {
+body:not(.is-mobile) .prompt > .prompt-results > .suggestion-item {
   cursor: pointer;
 }
-.prompt > .prompt-results > .suggestion-item.is-selected {
+body:not(.is-mobile) .prompt > .prompt-results > .suggestion-item.is-selected {
   color: var(--color-accent-2);
 }
-.prompt > .prompt-results > .suggestion-item kbd {
+body:not(.is-mobile) .prompt > .prompt-results > .suggestion-item kbd {
   background-color: rgba(var(--grey-700-rgb), var(--en-opacity));
 }
-.prompt > .prompt-instructions {
+body:not(.is-mobile) .prompt > .prompt-instructions {
   order: 2;
   border-top: none;
   margin-bottom: 2rem;
