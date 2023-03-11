@@ -159,7 +159,9 @@ body:not(.encore-no-excalidraw) {
 
 // Fancy header support
 body:not(.encore-disable-fancy-headers) {
-	.workspace-leaf-content[data-type='excalidraw'] .layer-ui__wrapper {
+	.workspace-leaf-content[data-type='excalidraw'] .layer-ui__wrapper,
+	.workspace-leaf-content[data-type='excalidraw'] .App-top-bar,
+	.workspace-leaf-content[data-type='excalidraw'] .layer-ui__sidebar {
 		margin-top: var(--header-height);
 	}
 	

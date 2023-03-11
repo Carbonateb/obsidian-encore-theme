@@ -943,7 +943,9 @@ body:not(.encore-no-excalidraw) .workspace-leaf-content .excalidraw-view {
   padding-bottom: 4px;
 }
 
-body:not(.encore-disable-fancy-headers) .workspace-leaf-content[data-type=excalidraw] .layer-ui__wrapper {
+body:not(.encore-disable-fancy-headers) .workspace-leaf-content[data-type=excalidraw] .layer-ui__wrapper,
+body:not(.encore-disable-fancy-headers) .workspace-leaf-content[data-type=excalidraw] .App-top-bar,
+body:not(.encore-disable-fancy-headers) .workspace-leaf-content[data-type=excalidraw] .layer-ui__sidebar {
   margin-top: var(--header-height);
 }
 body:not(.encore-disable-fancy-headers) .excalidraw .layer-ui__wrapper .layer-ui__wrapper__footer-left,
