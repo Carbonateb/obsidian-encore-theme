@@ -1005,6 +1005,25 @@ body:not(.encore-disable-fancy-headers) .excalidraw .layer-ui__wrapper .layer-ui
   border-bottom: 1px solid rgba(var(--grey-700-rgb), var(--en-opacity));
 }
 
+body:not(.encore-no-makemd) .mk-note-header > img {
+  height: 380px;
+  display: block;
+}
+body:not(.encore-no-makemd) .mk-note-header:after {
+  content: "";
+  --gradient-color: var(--color-base-20);
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(transparent 40%, var(--gradient-color));
+}
+body:not(.encore-no-makemd) .mk-file-context-file {
+  text-shadow: 0 0 5px var(--color-base-00);
+}
+
+.cm-active.mk-placeholder:before {
+  opacity: 0.3;
+}
+
 body.theme-dark {
   --grey-900-rgb: 17, 24, 39;
   --grey-800-rgb: 31, 41, 55;
