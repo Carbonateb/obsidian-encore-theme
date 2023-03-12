@@ -402,4 +402,9 @@ settings:
     title: Disable Excalidraw Integration
     description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
     type: class-toggle
+  -
+    id: encore-no-makemd
+    title: Disable MAKE.md Integration
+    description: Encore makes some changes to MAKE.md to enhance its look and feel. Turn this on to disable
+    type: class-toggle
 */

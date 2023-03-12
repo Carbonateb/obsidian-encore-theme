@@ -65,6 +65,10 @@ body.encore-theme-dark-blackout {
 			}
 		}
 		
+		// MAKE.md fancy cover gradient
+		.mk-note-header:after {
+			--gradient-color: $grey-900;
+		}
 	}
 }
 

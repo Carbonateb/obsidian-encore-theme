@@ -1,0 +1,29 @@
+body:not(.encore-no-makemd) {
+	.mk-note-header>img {
+		height: 380px;
+
+		// Gets rid of some spacing below the image
+		display: block;
+	}
+
+	// Add a gradient to image
+	.mk-note-header:after {
+		content: "";
+		--gradient-color: var(--color-base-20);
+		position: absolute;
+		inset: 0;
+		background-image: linear-gradient(transparent 40%, var(--gradient-color));
+	}
+
+	// Shadow under file name (for cover image) 
+	.mk-file-context-file {
+		text-shadow: 0 0 5px var(--color-base-00);
+	}
+}
+
+// * The following changes are very minor and users probably won't want them off
+
+// Make the "Type '/' for commands" hint more subtle
+.cm-active.mk-placeholder:before {
+	opacity: 0.3;
+}

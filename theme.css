@@ -402,6 +402,11 @@ settings:
     title: Disable Excalidraw Integration
     description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
     type: class-toggle
+  -
+    id: encore-no-makemd
+    title: Disable MAKE.md Integration
+    description: Encore makes some changes to MAKE.md to enhance its look and feel. Turn this on to disable
+    type: class-toggle
 */
 
 @charset "UTF-8";
@@ -1337,6 +1342,9 @@ body.encore-theme-dark-blackout.theme-dark .mod-root .workspace-tab-container .w
 body.encore-theme-dark-blackout.theme-dark .mod-root .workspace-tab-container .workspace-leaf-content .canvas-wrapper .canvas-background {
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
 }
+body.encore-theme-dark-blackout.theme-dark .mk-note-header:after {
+  --gradient-color: $grey-900;
+}
 
 body.encore-theme-dark-blackout.theme-dark:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-header {
   --en-opacity: 0.66;
@@ -1450,6 +1458,9 @@ body.encore-theme-dark-obsidian.theme-dark .mod-root .workspace-tab-container .w
 }
 body.encore-theme-dark-obsidian.theme-dark .mod-root .workspace-tab-container .workspace-leaf-content .canvas-wrapper .canvas-background {
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
+}
+body.encore-theme-dark-obsidian.theme-dark .mk-note-header:after {
+  --gradient-color: $grey-900;
 }
 
 body.encore-theme-dark-obsidian.theme-dark:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-header {
