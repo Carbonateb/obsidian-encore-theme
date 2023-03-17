@@ -597,6 +597,9 @@ body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf
 body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-content .cm-scroller {
   padding-top: calc(var(--header-height) + 32px);
 }
+body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-content > iframe {
+  padding-top: var(--header-height);
+}
 body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content .markdown-reading-view > .markdown-preview-view {
   padding-top: var(--header-height);
 }

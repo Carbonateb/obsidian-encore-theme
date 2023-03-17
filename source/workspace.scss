@@ -72,6 +72,11 @@ body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf
 		padding-top: calc(var(--header-height) + 32px);
 	}
 	
+	// iframes for PDF reader (and possibly other things)
+	>.view-content > iframe {
+		padding-top: var(--header-height);
+	}
+	
 	// Markdown reading view
 	.markdown-reading-view > .markdown-preview-view{
 		padding-top: var(--header-height);
