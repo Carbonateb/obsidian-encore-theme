@@ -73,7 +73,7 @@ body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf
 	}
 	
 	// Markdown reading view
-	.markdown-preview-view{
+	.markdown-reading-view > .markdown-preview-view{
 		padding-top: var(--header-height);
 	}
 	
