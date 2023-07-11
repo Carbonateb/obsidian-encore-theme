@@ -123,13 +123,6 @@ body.is-translucent {
 	}
 }
 
-
-// Fix for tree item dots
-.tree-item-children>div:not([class]) {
-	display: none;
-}
-
-
 // Fancy empty state
 .empty-state::before {
 	content: "";

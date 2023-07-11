@@ -1669,10 +1669,6 @@ body.is-translucent .modal-container.mod-dim .modal-bg {
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
 }
 
-.tree-item-children > div:not([class]) {
-  display: none;
-}
-
 .empty-state::before {
   content: "";
   width: 100%;
