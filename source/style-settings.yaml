@@ -388,6 +388,11 @@ settings:
     description: Encore changes headers to overlap main content for a nice blur effect. Disable this if you see issues
     type: class-toggle
   -
+    id: encore-disable-grain
+    title: Disable Grainy Background
+    description: Encore adds a subtle grain effect around the main workspace
+    type: class-toggle
+  -
     id: encore-disable-clickability-fix
     title: Disable Clickability Fix
     description: Encore makes it easier to click the edge of a document by adding some invisible padding. May cause issues if you have content that exceeds the width of your page. No effect on mobile version.

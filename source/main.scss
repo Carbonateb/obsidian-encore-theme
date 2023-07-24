@@ -6,6 +6,7 @@
 @use "mobile.scss";
 
 // Extensions
+@use "extensions/grain.scss";
 @use "extensions/calendar.scss";
 @use "extensions/excalidraw.scss";
 @use "extensions/kanban.scss";
@@ -132,9 +133,6 @@ body.is-translucent {
   }
 }
 .empty-state-title {
-  font-size: 2.5rem !important;
-  font-weight: 300;
-  color: #ffffff50;
   display: none;
 }
 
