@@ -2,222 +2,228 @@
 @import "../variables.scss";
 
 body {
-	// Cobalt
-	&.theme-dark {
-		// * Colors are from Tailwind's "Gray" colour palette
-		--grey-900-rgb: 17, 24, 39;
-		--grey-800-rgb: 31, 41, 55;
-		--grey-700-rgb: 55, 65, 81;
-		--grey-600-rgb: 75, 85, 99;
-		--grey-500-rgb: 107, 114, 128;
-		--grey-400-rgb: 156, 163, 175;
-		--grey-300-rgb: 209, 213, 219;
-		--grey-200-rgb: 228, 228, 231;
-		--grey-100-rgb: 243, 244, 246;
-		--grey-50-rgb: 255, 255, 255;
-		
-		// Theme neutrals
-		// --en-opacity: 1;
-		--color-base-00: rgb(var(--grey-900-rgb)); // Main background
-		--color-base-10: rgb(var(--grey-900-rgb)); // Code blocks
-		--color-base-20: rgb(var(--grey-800-rgb)); // Alt background
-		--color-base-25: rgb(var(--grey-700-rgb)); // Text input
-		--color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
-		--color-base-35: rgb(var(--grey-500-rgb)); // Switch background, hovered buttons
-		--color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
-		--color-base-50: rgb(var(--grey-300-rgb)); // Headings, bullets, checked items
-		--color-base-60: rgb(var(--grey-300-rgb)); // ?
-		--color-base-70: rgb(var(--grey-200-rgb)); // Dim text
-		--color-base-100: rgb(var(--grey-100-rgb)); // Text
-		
-		// --color-base-00: red; // Main background
-		
-		// Default accent colour
-		--accent-h: 93;
-		--accent-s: 93%;
-		--accent-l: 76%;
-		
-		--highlight-hue: 37;
-			
-		--workspace-background-translucent: rgba(var(--grey-900-rgb), 0.2);
-			
-		.cm-line.hr hr::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 100%;
-			--en-opacity: 1;
-			background-color: $grey-800;
-			border-radius: 100%;
-			margin: 0 46%;
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
-		}
-	}
-	
-	// Sterling
-	&.theme-light {
-		--grey-50-rgb: 17, 24, 39;
-		--grey-100-rgb: 31, 41, 55;
-		--grey-200-rgb: 55, 65, 81;
-		--grey-300-rgb: 75, 85, 99;
-		--grey-400-rgb: 107, 114, 128;
-		--grey-500-rgb: 156, 163, 175;
-		--grey-600-rgb: 209, 213, 219;
-		--grey-700-rgb: 228, 228, 231;
-		--grey-800-rgb: 243, 244, 246;
-		--grey-900-rgb: 255, 255, 255;
-		
-		--color-base-00: rgb(var(--grey-900-rgb)); // Main background
-		--color-base-10: rgb(var(--grey-900-rgb)); // Code blocks
-		--color-base-20: rgb(var(--grey-800-rgb)); // Alt background
-		--color-base-25: rgb(var(--grey-700-rgb)); // Text input
-		--color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
-		--color-base-35: rgb(var(--grey-500-rgb)); // Switch background, hovered buttons
-		--color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
-		--color-base-50: rgb(var(--grey-300-rgb)); // Headings, bullets, checked items
-		--color-base-60: rgb(var(--grey-300-rgb)); // ?
-		--color-base-70: rgb(var(--grey-200-rgb)); // Dim text
-		--color-base-100: rgb(var(--grey-100-rgb)); // Text
-			
-		// Default accent colour
-		--accent-h: 254;
-		--accent-s: 40%;
-		--accent-l: 40%;
-		
-		--highlight-hue: 37;
-			
-		--workspace-background-translucent: rgba(var(--grey-700-rgb), 0.7);
-			
-		.cm-line.hr hr::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 100%;
-			background-color: var(--background-primary);
-			margin: 0 46%;
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%2300000090' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
-		}
-		
-		// MAKE.md fancy cover gradient
-		.mk-note-header:after {
-			--gradient-color: var(--color-base-10);
-		}
-	}
+  // Cobalt
+  &.theme-dark {
+    // * Colors are from Tailwind's "Gray" colour palette
+    --grey-900-rgb: 17, 24, 39;
+    --grey-800-rgb: 31, 41, 55;
+    --grey-700-rgb: 55, 65, 81;
+    --grey-600-rgb: 75, 85, 99;
+    --grey-500-rgb: 107, 114, 128;
+    --grey-400-rgb: 156, 163, 175;
+    --grey-300-rgb: 209, 213, 219;
+    --grey-200-rgb: 228, 228, 231;
+    --grey-100-rgb: 243, 244, 246;
+    --grey-50-rgb: 255, 255, 255;
+
+    // Theme neutrals
+    // --en-opacity: 1;
+    --color-base-00: rgb(var(--grey-900-rgb)); // Main background
+    --color-base-10: rgb(var(--grey-900-rgb)); // Code blocks
+    --color-base-20: rgb(var(--grey-800-rgb)); // Alt background
+    --color-base-25: rgb(var(--grey-700-rgb)); // Text input
+    --color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
+    --color-base-35: rgb(
+      var(--grey-500-rgb)
+    ); // Switch background, hovered buttons
+    --color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
+    --color-base-50: rgb(
+      var(--grey-300-rgb)
+    ); // Headings, bullets, checked items
+    --color-base-60: rgb(var(--grey-300-rgb)); // ?
+    --color-base-70: rgb(var(--grey-200-rgb)); // Dim text
+    --color-base-100: rgb(var(--grey-100-rgb)); // Text
+
+    // --color-base-00: red; // Main background
+
+    // Default accent colour
+    --accent-h: 93;
+    --accent-s: 93%;
+    --accent-l: 76%;
+
+    --highlight-hue: 37;
+
+    --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.2);
+
+    .cm-line.hr hr::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      --en-opacity: 1;
+      background-color: $grey-800;
+      border-radius: 100%;
+      margin: 0 46%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='8' height='8' fill='none' stroke='%23ffffff80' stroke-width='4%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M172.7 461.6c73.6-149.1 2.1-217-43.7-246.9m72 96.7c71.6-17.3 141-16.3 189.8 88.5m-114-96.3c-69.6-174 44.6-181 16.3-273.6m97.7 370c1.6-3 3.3-5.8 5.1-8.6 20-29.9 34.2-53.2 41.4-65.3a16 16 0 0 0-1.2-17.7 342.1 342.1 0 0 1-40.2-66.1c-10.9-26-12.5-66.5-12.6-86.2 0-7.4-2.4-14.7-7-20.6l-81.8-104a32 32 0 0 0-1.4-1.5m97.7 370a172.8 172.8 0 0 0-18 59c-2.9 21.5-24 38.4-45 32.6-30-8.3-64.5-21.1-95.7-23.5l-47.8-3.6c-7.7-.6-15-4-20.3-9.5l-82.3-84.8c-9-9.2-11.4-23-6.2-34.8 0 0 51-111.8 52.8-117.7l.7-3M293.1 30a31.5 31.5 0 0 0-44.4-2.3l-97.4 87.5c-5.4 5-9 11.5-10 18.8-3.7 24.5-9.7 68-12.3 80.7'%3E%3C/path%3E%3C/svg%3E");
+    }
+  }
+
+  // Sterling
+  &.theme-light {
+    --grey-50-rgb: 17, 24, 39;
+    --grey-100-rgb: 31, 41, 55;
+    --grey-200-rgb: 55, 65, 81;
+    --grey-300-rgb: 75, 85, 99;
+    --grey-400-rgb: 107, 114, 128;
+    --grey-500-rgb: 156, 163, 175;
+    --grey-600-rgb: 209, 213, 219;
+    --grey-700-rgb: 228, 228, 231;
+    --grey-800-rgb: 243, 244, 246;
+    --grey-900-rgb: 255, 255, 255;
+
+    --color-base-00: rgb(var(--grey-900-rgb)); // Main background
+    --color-base-10: rgb(var(--grey-900-rgb)); // Code blocks
+    --color-base-20: rgb(var(--grey-800-rgb)); // Alt background
+    --color-base-25: rgb(var(--grey-700-rgb)); // Text input
+    --color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
+    --color-base-35: rgb(
+      var(--grey-500-rgb)
+    ); // Switch background, hovered buttons
+    --color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
+    --color-base-50: rgb(
+      var(--grey-300-rgb)
+    ); // Headings, bullets, checked items
+    --color-base-60: rgb(var(--grey-300-rgb)); // ?
+    --color-base-70: rgb(var(--grey-200-rgb)); // Dim text
+    --color-base-100: rgb(var(--grey-100-rgb)); // Text
+
+    // Default accent colour
+    --accent-h: 254;
+    --accent-s: 40%;
+    --accent-l: 40%;
+
+    --highlight-hue: 37;
+
+    --workspace-background-translucent: rgba(var(--grey-700-rgb), 0.7);
+
+    .cm-line.hr hr::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background-color: var(--background-primary);
+      margin: 0 46%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='8' height='8' fill='none' stroke='%2300000090' stroke-width='4%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M172.7 461.6c73.6-149.1 2.1-217-43.7-246.9m72 96.7c71.6-17.3 141-16.3 189.8 88.5m-114-96.3c-69.6-174 44.6-181 16.3-273.6m97.7 370c1.6-3 3.3-5.8 5.1-8.6 20-29.9 34.2-53.2 41.4-65.3a16 16 0 0 0-1.2-17.7 342.1 342.1 0 0 1-40.2-66.1c-10.9-26-12.5-66.5-12.6-86.2 0-7.4-2.4-14.7-7-20.6l-81.8-104a32 32 0 0 0-1.4-1.5m97.7 370a172.8 172.8 0 0 0-18 59c-2.9 21.5-24 38.4-45 32.6-30-8.3-64.5-21.1-95.7-23.5l-47.8-3.6c-7.7-.6-15-4-20.3-9.5l-82.3-84.8c-9-9.2-11.4-23-6.2-34.8 0 0 51-111.8 52.8-117.7l.7-3M293.1 30a31.5 31.5 0 0 0-44.4-2.3l-97.4 87.5c-5.4 5-9 11.5-10 18.8-3.7 24.5-9.7 68-12.3 80.7'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    // MAKE.md fancy cover gradient
+    .mk-note-header:after {
+      --gradient-color: var(--color-base-10);
+    }
+  }
 }
 
 // Theme engine
 
-body { // Theme Default
-	--italic-color: var(--color-orange);
+body {
+  // Theme Default
+  --italic-color: var(--color-orange);
 }
 body.encore-italic-neutral {
-	--italic-color: var(--text-color) !important;
+  --italic-color: var(--text-color) !important;
 }
 body.encore-italic-accent {
-	--italic-color: var(--color-accent-2) !important;
+  --italic-color: var(--color-accent-2) !important;
 }
 body.encore-italic-custom {
-	--italic-color: var(--encore-custom-italic) !important;
+  --italic-color: var(--encore-custom-italic) !important;
 }
 
-body { // Theme Default
-	--bold-color: var(--color-cyan);
-	--bold-weight: 700;
+body {
+  // Theme Default
+  --bold-color: var(--color-cyan);
+  --bold-weight: 700;
 }
 body.encore-bold-neutral {
-	--bold-color: var(--text-color) !important;
+  --bold-color: var(--text-color) !important;
 }
 body.encore-bold-accent {
-	--bold-color: var(--color-accent-2) !important;
+  --bold-color: var(--color-accent-2) !important;
 }
 body.encore-bold-custom {
-	--bold-color: var(--encore-custom-bold) !important;
+  --bold-color: var(--encore-custom-bold) !important;
 }
 
-body { // Theme Default
-	--inline-title-color: var(--color-accent-2);
+body {
+  // Theme Default
+  --inline-title-color: var(--color-accent-2);
 }
 body.encore-title-neutral {
-	--inline-title-color: var(--text-color) !important;
+  --inline-title-color: var(--text-color) !important;
 }
 body.encore-title-accent {
-	--inline-title-color: var(--color-accent-2) !important;
+  --inline-title-color: var(--color-accent-2) !important;
 }
 body.encore-title-custom {
-	--inline-title-color: var(--encore-custom-title) !important;
+  --inline-title-color: var(--encore-custom-title) !important;
 }
 
 body.encore-h1-neutral {
-	--h1-color: var(--text-color) !important;
+  --h1-color: var(--text-color) !important;
 }
 body.encore-h1-accent {
-	--h1-color: var(--color-accent-2) !important;
+  --h1-color: var(--color-accent-2) !important;
 }
 body.encore-h1-custom {
-	--h1-color: var(--encore-custom-h1) !important;
+  --h1-color: var(--encore-custom-h1) !important;
 }
-
 
 body.encore-h2-neutral {
-	--h2-color: var(--text-color) !important;
+  --h2-color: var(--text-color) !important;
 }
 body.encore-h2-accent {
-	--h2-color: var(--color-accent-2) !important;
+  --h2-color: var(--color-accent-2) !important;
 }
 body.encore-h2-custom {
-	--h2-color: var(--encore-custom-h2) !important;
+  --h2-color: var(--encore-custom-h2) !important;
 }
-
 
 body.encore-h3-neutral {
-	--h3-color: var(--text-color) !important;
+  --h3-color: var(--text-color) !important;
 }
 body.encore-h3-accent {
-	--h3-color: var(--color-accent-2) !important;
+  --h3-color: var(--color-accent-2) !important;
 }
 body.encore-h3-custom {
-	--h3-color: var(--encore-custom-h3) !important;
+  --h3-color: var(--encore-custom-h3) !important;
 }
-
 
 body.encore-h4-neutral {
-	--h4-color: var(--text-color) !important;
+  --h4-color: var(--text-color) !important;
 }
 body.encore-h4-accent {
-	--h4-color: var(--color-accent-2) !important;
+  --h4-color: var(--color-accent-2) !important;
 }
 body.encore-h4-custom {
-	--h4-color: var(--encore-custom-h4) !important;
+  --h4-color: var(--encore-custom-h4) !important;
 }
-
 
 body.encore-h5-neutral {
-	--h5-color: var(--text-color) !important;
+  --h5-color: var(--text-color) !important;
 }
 body.encore-h5-accent {
-	--h5-color: var(--color-accent-2) !important;
+  --h5-color: var(--color-accent-2) !important;
 }
 body.encore-h5-custom {
-	--h5-color: var(--encore-custom-h5) !important;
+  --h5-color: var(--encore-custom-h5) !important;
 }
-
 
 body.encore-h6-neutral {
-	--h6-color: var(--text-color) !important;
+  --h6-color: var(--text-color) !important;
 }
 body.encore-h6-accent {
-	--h6-color: var(--color-accent-2) !important;
+  --h6-color: var(--color-accent-2) !important;
 }
 body.encore-h6-custom {
-	--h6-color: var(--encore-custom-h6) !important;
+  --h6-color: var(--encore-custom-h6) !important;
 }
