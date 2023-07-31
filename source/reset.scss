@@ -45,6 +45,10 @@
 
 // Floating tabs
 .workspace-tab-header::before, .workspace-tab-header::after {
+	// Causes a animation jitter issue when creating a new tab
+	// I tried setting opacity to 0 but that caused a slightly
+	// worse issue. Has to do with moving tab around do compensate
+	// for little side flairs, which are no longer there.
 	display: none;
 }
 .mod-root .workspace-tab-header-container-inner {

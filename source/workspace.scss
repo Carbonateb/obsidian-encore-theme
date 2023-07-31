@@ -28,6 +28,7 @@ body.theme-light {
 	.canvas-wrapper {
 		.canvas-background {
 			background-color: $grey-800;
+			--canvas-dot-pattern: var(--color-base-35);
 		}
 	}
 }
@@ -116,7 +117,7 @@ body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf
 .is-translucent:not(.is-fullscreen) {
 	.mod-root .workspace-leaf {
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-		border-radius: var(--tab-radius);
+		// border-radius: var(--tab-radius);
 	}
 	.mod-root .workspace-tab-container {
 		overflow: visible;
@@ -135,7 +136,7 @@ body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf
 }
 .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
 	--en-opacity: 1;
-	background-color: $grey-700;
+	background-color: $grey-600;
 }
 body.theme-light {
 	.mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
@@ -145,12 +146,9 @@ body.theme-light {
 }
 
 .is-translucent:not(.is-fullscreen) {
-	.workspace-tab-header-container-inner {
-		overflow: visible;
-	}
 	.mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
-		--en-opacity: 0.66;
-		background-color: $grey-600;
+		--en-opacity: 0.5;
+		background-color: $grey-500;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 	}
 }
@@ -220,4 +218,8 @@ body.theme-light {
 // Minor tweak to padding (mostly affects plugins like calendar)
 .workspace-leaf-content .view-content {
 	padding: var(--size-4-3);
+}
+
+.is-translucent:not(.is-fullscreen) .workspace-tab-header-container-inner {
+	overflow: auto;
 }

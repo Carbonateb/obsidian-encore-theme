@@ -2,24 +2,25 @@
 @import "../variables.scss";
 
 body {
-  // Cobalt
+  // Obsidian 2
   &.theme-dark {
     // * Colors are from Tailwind's "Gray" colour palette
-    --grey-900-rgb: 17, 24, 39;
-    --grey-800-rgb: 31, 41, 55;
-    --grey-700-rgb: 55, 65, 81;
-    --grey-600-rgb: 75, 85, 99;
-    --grey-500-rgb: 107, 114, 128;
-    --grey-400-rgb: 156, 163, 175;
-    --grey-300-rgb: 209, 213, 219;
-    --grey-200-rgb: 228, 228, 231;
-    --grey-100-rgb: 243, 244, 246;
-    --grey-50-rgb: 255, 255, 255;
+    --grey-900-rgb: 15, 15, 15;
+    --color-base-10: rgb(27, 27, 27); // Code blocks
+    --grey-800-rgb: 34, 34, 34;
+    --grey-700-rgb: 38, 38, 38;
+    --grey-600-rgb: 45, 45, 45;
+    --grey-500-rgb: 75, 75, 75;
+    --grey-400-rgb: 125, 125, 125;
+    --color-base-50: rgb(135, 135, 135); // Headings, bullets, checked items
+    --grey-300-rgb: 180, 180, 180;
+    --grey-200-rgb: 200, 200, 200;
+    --grey-100-rgb: 245, 245, 245;
+    --grey-50-rgb: 250, 250, 250;
 
     // Theme neutrals
     // --en-opacity: 1;
     --color-base-00: rgb(var(--grey-900-rgb)); // Main background
-    --color-base-10: rgb(var(--grey-900-rgb)); // Code blocks
     --color-base-20: rgb(var(--grey-800-rgb)); // Alt background
     --color-base-25: rgb(var(--grey-700-rgb)); // Text input
     --color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
@@ -27,9 +28,6 @@ body {
       var(--grey-500-rgb)
     ); // Switch background, hovered buttons
     --color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
-    --color-base-50: rgb(
-      var(--grey-300-rgb)
-    ); // Headings, bullets, checked items
     --color-base-60: rgb(var(--grey-300-rgb)); // ?
     --color-base-70: rgb(var(--grey-200-rgb)); // Dim text
     --color-base-100: rgb(var(--grey-100-rgb)); // Text
@@ -37,30 +35,14 @@ body {
     // --color-base-00: red; // Main background
 
     // Default accent colour
-    --accent-h: 93;
-    --accent-s: 93%;
-    --accent-l: 76%;
+    // 7c3aed
+    --accent-h: 262;
+    --accent-s: 83%;
+    --accent-l: 69%;
 
     --highlight-hue: 37;
 
     --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.2);
-
-    .cm-line.hr hr::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      --en-opacity: 1;
-      background-color: $grey-800;
-      border-radius: 100%;
-      margin: 0 46%;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='8' height='8' fill='none' stroke='%23ffffff80' stroke-width='4%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M172.7 461.6c73.6-149.1 2.1-217-43.7-246.9m72 96.7c71.6-17.3 141-16.3 189.8 88.5m-114-96.3c-69.6-174 44.6-181 16.3-273.6m97.7 370c1.6-3 3.3-5.8 5.1-8.6 20-29.9 34.2-53.2 41.4-65.3a16 16 0 0 0-1.2-17.7 342.1 342.1 0 0 1-40.2-66.1c-10.9-26-12.5-66.5-12.6-86.2 0-7.4-2.4-14.7-7-20.6l-81.8-104a32 32 0 0 0-1.4-1.5m97.7 370a172.8 172.8 0 0 0-18 59c-2.9 21.5-24 38.4-45 32.6-30-8.3-64.5-21.1-95.7-23.5l-47.8-3.6c-7.7-.6-15-4-20.3-9.5l-82.3-84.8c-9-9.2-11.4-23-6.2-34.8 0 0 51-111.8 52.8-117.7l.7-3M293.1 30a31.5 31.5 0 0 0-44.4-2.3l-97.4 87.5c-5.4 5-9 11.5-10 18.8-3.7 24.5-9.7 68-12.3 80.7'%3E%3C/path%3E%3C/svg%3E");
-    }
   }
 
   // Sterling
@@ -101,19 +83,9 @@ body {
 
     --workspace-background-translucent: rgba(var(--grey-700-rgb), 0.7);
 
+    .markdown-rendered hr::after,
     .cm-line.hr hr::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      background-color: var(--background-primary);
-      margin: 0 46%;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='8' height='8' fill='none' stroke='%2300000090' stroke-width='4%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M172.7 461.6c73.6-149.1 2.1-217-43.7-246.9m72 96.7c71.6-17.3 141-16.3 189.8 88.5m-114-96.3c-69.6-174 44.6-181 16.3-273.6m97.7 370c1.6-3 3.3-5.8 5.1-8.6 20-29.9 34.2-53.2 41.4-65.3a16 16 0 0 0-1.2-17.7 342.1 342.1 0 0 1-40.2-66.1c-10.9-26-12.5-66.5-12.6-86.2 0-7.4-2.4-14.7-7-20.6l-81.8-104a32 32 0 0 0-1.4-1.5m97.7 370a172.8 172.8 0 0 0-18 59c-2.9 21.5-24 38.4-45 32.6-30-8.3-64.5-21.1-95.7-23.5l-47.8-3.6c-7.7-.6-15-4-20.3-9.5l-82.3-84.8c-9-9.2-11.4-23-6.2-34.8 0 0 51-111.8 52.8-117.7l.7-3M293.1 30a31.5 31.5 0 0 0-44.4-2.3l-97.4 87.5c-5.4 5-9 11.5-10 18.8-3.7 24.5-9.7 68-12.3 80.7'%3E%3C/path%3E%3C/svg%3E");
+      background-image: var(--obsidian-logo-small-dark);
     }
 
     // MAKE.md fancy cover gradient
@@ -127,7 +99,8 @@ body {
 
 body {
   // Theme Default
-  --italic-color: var(--color-orange);
+  --italic-color: var(--text-color);
+  --italic-weight: 600;
 }
 body.encore-italic-neutral {
   --italic-color: var(--text-color) !important;
@@ -141,8 +114,8 @@ body.encore-italic-custom {
 
 body {
   // Theme Default
-  --bold-color: var(--color-cyan);
-  --bold-weight: 700;
+  --bold-color: var(--text-color);
+  --bold-weight: 800;
 }
 body.encore-bold-neutral {
   --bold-color: var(--text-color) !important;
@@ -157,6 +130,10 @@ body.encore-bold-custom {
 body {
   // Theme Default
   --inline-title-color: var(--color-accent-2);
+  --h1-color: rgba(var(--grey-100-rgb), 0.9);
+  --h2-color: rgba(var(--grey-100-rgb), 0.925);
+  --h3-color: rgba(var(--grey-100-rgb), 0.95);
+  --h4-color: rgba(var(--grey-100-rgb), 0.975);
 }
 body.encore-title-neutral {
   --inline-title-color: var(--text-color) !important;

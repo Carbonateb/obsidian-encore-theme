@@ -1,0 +1,22 @@
+body.encore-theme-dark-cobalt {
+	&.theme-dark {
+		--grey-900-rgb: 17, 24, 39;
+		--grey-800-rgb: 31, 41, 55;
+		--grey-700-rgb: 55, 65, 81;
+		--grey-600-rgb: 75, 85, 99;
+		--grey-500-rgb: 107, 114, 128;
+		--grey-400-rgb: 156, 163, 175;
+		--grey-300-rgb: 209, 213, 219;
+		--grey-200-rgb: 228, 228, 231;
+		--grey-100-rgb: 243, 244, 246;
+		--grey-50-rgb: 255, 255, 255;
+
+		// Default accent colour
+		--accent-h: 93;
+		--accent-s: 93%;
+		--accent-l: 76%;
+		
+		--bold-color: var(--color-green);
+		--italic-color: var(--color-red);
+	}
+}

@@ -12,8 +12,11 @@ settings:
     default: encore-theme-dark
     options:
       - 
-        label: Cobalt
+        label: Obsidian Redux
         value: encore-theme-dark
+      - 
+        label: Cobalt
+        value: encore-theme-dark-cobalt
       - 
         label: Mercury
         value: encore-theme-dark-mercury
@@ -27,6 +30,7 @@ settings:
         label: Blackout
         value: encore-theme-dark-blackout
       - 
+        label: Obsidian
         label: Obsidian
         value: encore-theme-dark-obsidian
       - 
@@ -351,6 +355,12 @@ settings:
     id: encore-coloured-tooltip
     title: Coloured Tooltip
     description: Make tooltips stand out much more by applying your theme colour to the border
+    type: class-toggle
+  - 
+  -
+    id: encore-bright-accent
+    title: Use Bright Accent Colour
+    description: Enable if you're using a bright accent color that is hard to read white text on. Will change text to be black.
     type: class-toggle
   - 
     id: blur-amount

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "sass --watch --no-source-map source/main.scss themes/Encore-Dev.css",
+    "dev": "sass --watch --no-source-map source/main.scss .obsidian/snippets/encore-dev.css",
     "build": "sass --no-source-map source/main.scss theme.css"
   },
   "devDependencies": {
