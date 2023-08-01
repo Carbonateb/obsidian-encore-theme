@@ -83,6 +83,7 @@ body {
 
     --workspace-background-translucent: rgba(var(--grey-700-rgb), 0.7);
 
+    .markdown-source-view:not(.is-live-preview) .HyperMD-hr::after,
     .markdown-rendered hr::after,
     .cm-line.hr hr::after {
       background-image: var(--obsidian-logo-small-dark);

@@ -397,6 +397,11 @@ settings:
     description: Encore changes headers to overlap main content for a nice blur effect. Disable this if you see issues
     type: class-toggle
   -
+    id: encore-disable-typography-spacing
+    title: Disable Typography Spacing
+    description: Encore adds a lot of white space to your notes to make them easier to read. Disable if you don't like how your notes now look.
+    type: class-toggle
+  -
     id: encore-disable-grain
     title: Disable Grainy Background
     description: Encore adds a subtle grain effect around the main workspace
@@ -744,25 +749,29 @@ body {
   --line-height-normal: 1.65;
   --link-decoration: none;
   --link-color: var(--color-accent-2);
-  --link-unresolved-opacity: 1.0;
+  --link-unresolved-opacity: 1;
   --link-unresolved-filter: contrast(0.3) brightness(120%);
 }
 
-.markdown-source-view.mod-cm6 .cm-line {
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line {
   padding-bottom: 0.75em;
 }
 
 body {
-  --list-spacing: 0.5em;
   --list-marker-color: var(--color-base-40);
 }
 
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line {
+body:not(.encore-disable-typography-spacing) {
+  --list-spacing: 0.5em;
+}
+
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line {
   padding-bottom: 0;
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-list-line + .cm-line:not(.HyperMD-list-line) {
-  padding-top: 1.2em;
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .HyperMD-list-line + .cm-line:not(.HyperMD-list-line),
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .HyperMD-list-line + .internal-embed.image-embed {
+  padding-top: 1.25em;
 }
 
 .markdown-rendered {
@@ -796,7 +805,7 @@ body {
   color: var(--inline-title-color);
 }
 
-.markdown-rendered .internal-embed:not(.image-embed) {
+body:not(.encore-disable-typography-spacing) .markdown-rendered .internal-embed:not(.image-embed) {
   margin-top: 1.5em;
 }
 
@@ -806,7 +815,7 @@ body {
   --h1-weight: 800;
 }
 
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-1 {
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-1 {
   padding-top: 0.8em;
   padding-bottom: 0.5em;
 }
@@ -817,7 +826,7 @@ body {
   --h2-weight: 700;
 }
 
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-2 {
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-2 {
   padding-top: 0.8em;
   padding-bottom: 0.5em;
 }
@@ -828,12 +837,13 @@ body {
   --h3-weight: 600;
 }
 
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-3 {
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-3 {
   padding-top: 0.8em;
   padding-bottom: 0.5em;
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-header + .cm-line.HyperMD-header, .HyperMD-header:first-child {
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .HyperMD-header + .cm-line.HyperMD-header,
+.HyperMD-header:first-child {
   padding-top: 0 !important;
 }
 
@@ -843,7 +853,7 @@ body {
   --h4-weight: 600;
 }
 
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-4 {
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-4 {
   padding-top: 0.8em;
   padding-bottom: 0.5em;
 }
@@ -866,6 +876,7 @@ body {
   overflow: visible;
 }
 
+.markdown-source-view:not(.is-live-preview) .HyperMD-hr::after,
 .markdown-rendered hr::after,
 .cm-line.hr hr::after {
   content: "";
@@ -880,8 +891,30 @@ body {
   background-image: var(--obsidian-logo-small);
 }
 
-.markdown-rendered hr {
+body:not(.encore-disable-typography-spacing) .markdown-rendered hr {
   margin: 5em 0;
+}
+
+.markdown-source-view:not(.is-live-preview) .HyperMD-hr {
+  position: relative;
+}
+
+.markdown-source-view:not(.is-live-preview) .HyperMD-hr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 13px;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent 10%, var(--hr-color) 46.2%, transparent 46.2%, transparent 54%, var(--hr-color) 54%, transparent);
+}
+
+.markdown-source-view:not(.is-live-preview) .HyperMD-hr::after {
+  top: 2px;
+}
+
+.internal-embed.image-embed img {
+  border-radius: 4px;
 }
 
 body.is-mobile .workspace-drawer {
@@ -1235,6 +1268,7 @@ body.theme-light {
   --highlight-hue: 37;
   --workspace-background-translucent: rgba(var(--grey-700-rgb), 0.7);
 }
+body.theme-light .markdown-source-view:not(.is-live-preview) .HyperMD-hr::after,
 body.theme-light .markdown-rendered hr::after,
 body.theme-light .cm-line.hr hr::after {
   background-image: var(--obsidian-logo-small-dark);
@@ -1493,22 +1527,6 @@ body.encore-theme-dark-blackout.theme-dark {
   --h6-color: var(--color-yellow);
   background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
 }
-body.encore-theme-dark-blackout.theme-dark .cm-line.hr hr::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  --en-opacity: 1;
-  background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
-  border-radius: 100%;
-  margin: 0 46%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='8' height='8' fill='none' stroke='%23ffffff80' stroke-width='4%' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M172.7 461.6c73.6-149.1 2.1-217-43.7-246.9m72 96.7c71.6-17.3 141-16.3 189.8 88.5m-114-96.3c-69.6-174 44.6-181 16.3-273.6m97.7 370c1.6-3 3.3-5.8 5.1-8.6 20-29.9 34.2-53.2 41.4-65.3a16 16 0 0 0-1.2-17.7 342.1 342.1 0 0 1-40.2-66.1c-10.9-26-12.5-66.5-12.6-86.2 0-7.4-2.4-14.7-7-20.6l-81.8-104a32 32 0 0 0-1.4-1.5m97.7 370a172.8 172.8 0 0 0-18 59c-2.9 21.5-24 38.4-45 32.6-30-8.3-64.5-21.1-95.7-23.5l-47.8-3.6c-7.7-.6-15-4-20.3-9.5l-82.3-84.8c-9-9.2-11.4-23-6.2-34.8 0 0 51-111.8 52.8-117.7l.7-3M293.1 30a31.5 31.5 0 0 0-44.4-2.3l-97.4 87.5c-5.4 5-9 11.5-10 18.8-3.7 24.5-9.7 68-12.3 80.7'%3E%3C/path%3E%3C/svg%3E");
-}
 body.encore-theme-dark-blackout.theme-dark .mod-root .workspace-tab-container .workspace-leaf-content {
   --en-opacity: 1;
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
@@ -1609,22 +1627,6 @@ body.encore-theme-dark-obsidian.theme-dark {
   --italic-color: var(--text-color);
   --workspace-background-translucent: rgba(var(--grey-700-rgb), 0.33);
   background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
-}
-body.encore-theme-dark-obsidian.theme-dark .cm-line.hr hr::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  --en-opacity: 1;
-  background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
-  border-radius: 100%;
-  margin: 0 46%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
 }
 body.encore-theme-dark-obsidian.theme-dark .mod-root .workspace-tab-container .workspace-leaf-content {
   --en-opacity: 1;
