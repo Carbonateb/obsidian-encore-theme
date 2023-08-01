@@ -1,5 +1,5 @@
 # Encore - A Fresh Take on Obsidian
-![[preview-obsidian-redux.webp]]
+![Screenshot of Encore, with Obsidian Redux theme](images/preview-obsidian-redux.webp)
 *Font: Rubik (not included)*
 Unlike most themes which mainly change the colors of the base theme, Encore makes some drastic changes that paint Obsidian in a new light - while still feeling familiar and easy to navigate.
 > **That sound contradictory, how?** Encore retains your muscle memory by keeping everything in the same spot. Instead we make big changes to the ==visual hierarchy== of the app! Basically, if you squint, which elements stand out the most?
@@ -11,7 +11,7 @@ At the same time, Encore adds a few *visual flairs* to the app, making Obsidian 
 - New horizontal lines featuring the logo. Feels like a fancy book!
 - The iconic **fancy header**, taking a page from Safari's book
 - Kick things up to 11 with the **RGB Theme**, featuring actual animated RGB. Use Style Settings to enable
-![[preview-rgb-picker.webp]]
+![Screenshot of RGB command palette](images/preview-rgb-picker.webp)
 *Yes, it really is this good.* 
 
 ---
@@ -24,15 +24,15 @@ By default, Encore uses a color palette based on the official Obsidian website (
 Encore's new default palette keeps things familiar yet fresh - a new take on the original color palette.
 ## Cobalt
 Encore's old default palette is swathed in a cold, metallic blue, with striking green accents. A staple of Encore's collection. Based on Tailwind's *Gray* color swatch.
-![[preview-encore.webp]]
+![Cobalt theme](images/preview-encore.webp)
 ## Mercury
 Lighter and slightly more colorful than Obsidian Redux, where the grays have a slight blue tint. Based on Tailwind's *Zinc* color swatch.
-![[preview-encore-mercury.webp]]
+![Mercury theme](images/preview-encore-mercury.webp)
 ## Iron
 If you're a fan of warmer colors, Iron was made for you. Based on Tailwind's *Stone* color swatch.
 ## Carbon
 There are no shadows, merely the absence of light.
-![[preview-encore-carbon.webp]]
+![Carbon theme](images/preview-encore-carbon.webp)
 ## Blackout
 With fervent devotion, the cult of the OLED bask in the total and absolute darkness, forging an eternal bond with the enigmatic depths of existence. Utilizes true black in the editor window.
 ## Obsidian
@@ -41,12 +41,12 @@ Even closer to Obsidian's default theme than Obsidian Redux, utilizing the exact
 The iconic Atom theme has made its debut in Encore
 ## RGB
 Where the trinity of vibrant realms converges, weaving an electrifying tapestry that celebrates the ever shifting harmony of red, green, and blue. **Obsidian's one and only RGB theme**. Colors based on Carbon.
-![[preview-encore-rgb.webp]]
-![[preview-encore-rgb-translucent.webp]]
+![RGB theme](images/preview-encore-rgb.webp)
+![RGB theme - translucent](images/preview-encore-rgb-translucent.webp)
 Truly one of the greatest themes to exist of all time.
 ## Sterling
 Encore's light theme for flashbang enjoyers.
-![[preview-encore-sterling.webp]]
+![Sterling theme](images/preview-encore-sterling.webp)
 
 ---
 # Dev Setup
