@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"type":"text","text":"# My source is I made it the fuck up","id":"a436b7ffb858d277","x":500,"y":40,"width":385,"height":216},
+		{"type":"text","text":"# That's a nice argument senator\nWhy don't you back that up with a source","id":"5ea22271ca4e3225","x":-300,"y":-340,"width":290,"height":240,"color":"3"},
+		{"type":"file","file":"Pasted image 20230802004144.png","id":"ef73b915129208a5","x":260,"y":-379,"width":400,"height":318},
+		{"type":"file","file":"Pasted image 20230802003837.png","id":"9e55ecdab6ce6a39","x":-410,"y":0,"width":400,"height":225}
+	],
+	"edges":[
+		{"id":"8ef4c271b785dd5e","fromNode":"5ea22271ca4e3225","fromSide":"right","toNode":"a436b7ffb858d277","toSide":"left"}
+	]
+}

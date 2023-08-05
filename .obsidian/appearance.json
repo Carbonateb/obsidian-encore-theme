@@ -1,14 +1,15 @@
 {
-  "accentColor": "",
-  "translucency": true,
+  "accentColor": "#8d68fd",
+  "translucency": false,
   "enabledCssSnippets": [
     "encore-dev-settings",
     "encore-dev"
   ],
   "baseFontSizeAction": true,
-  "theme": "obsidian",
+  "theme": "moonstone",
   "cssTheme": "",
   "showViewHeader": true,
   "interfaceFontFamily": "Rubik",
-  "textFontFamily": "Rubik"
+  "textFontFamily": "Rubik",
+  "nativeMenus": false
 }
