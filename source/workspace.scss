@@ -112,6 +112,10 @@ body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf
 	&[data-type="style-settings"]>.view-content {
 		padding-top: var(--header-height);
 	}
+	
+	&[data-type="kanban"]>.view-header {
+		position: relative !important;
+	}
 }
 
 .is-translucent:not(.is-fullscreen) {
