@@ -611,6 +611,9 @@ body.theme-light .mod-root:not(.encore-disable-fancy-headers) .workspace-tab-con
 body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content {
   position: relative;
 }
+body:not(.encore-disable-fancy-headers) .workspace-leaf-content[data-type=kanban]>.view-header {
+  position: relative !important;
+}
 body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-header {
   position: absolute;
   left: 0;
