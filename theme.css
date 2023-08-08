@@ -861,6 +861,28 @@ body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-l
   padding-bottom: 0.5em;
 }
 
+body {
+  --h5-size: 0.75rem;
+  --h5-line-height: 1.5;
+  --h5-weight: 600;
+}
+
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-5 {
+  padding-top: 0.8em;
+  padding-bottom: 0.5em;
+}
+
+body {
+  --h6-size: 0.5rem;
+  --h6-line-height: 1.5;
+  --h6-weight: 600;
+}
+
+body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-6 {
+  padding-top: 0.8em;
+  padding-bottom: 0.5em;
+}
+
 .markdown-source-view .cm-sizer .HyperMD-codeblock-begin-bg {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
