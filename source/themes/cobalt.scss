@@ -19,17 +19,16 @@ body.encore-theme-dark-cobalt {
 		--accent-s: 93%;
 		--accent-l: 76%;
 		
-	}
-	
-	&.encore-colors-colorful {
-		--highlight-hue: 50;
-		--italic-color: #d2e6d2;
-		--bold-color: #e0eec5;
-		--h1-color: #b3bcf0;
-		--h2-color: #989ed6;
-		--h3-color: #8987c9;
-		--h4-color: #9482c5;
-		--h5-color: #9482c5;
-		--h6-color: #9482c5;
+		&.encore-colors-colorful {
+			--highlight-hue: 50;
+			--italic-color: #d2e6d2;
+			--bold-color: #e0eec5;
+			--h1-color: #b3bcf0;
+			--h2-color: #989ed6;
+			--h3-color: #8987c9;
+			--h4-color: #9482c5;
+			--h5-color: #9482c5;
+			--h6-color: #9482c5;
+		}
 	}
 }

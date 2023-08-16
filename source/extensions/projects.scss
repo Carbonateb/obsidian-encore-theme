@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.mod-root:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content .projects-container {
+.mod-root.encore-fancy-headers .workspace-tab-container .workspace-leaf-content .projects-container {
 	padding-top: var(--header-height);
 	
 	.container {

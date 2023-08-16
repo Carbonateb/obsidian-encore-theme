@@ -48,12 +48,12 @@ body.theme-light {
 	}
 }
 	
-body.theme-light .mod-root:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content {
+body.theme-light .mod-root.encore-fancy-headers .workspace-tab-container .workspace-leaf-content {
 	>.view-header {
 		background-color: $grey-900;
 	}
 }
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content {
 	position: relative;
 	
 	>.view-header {

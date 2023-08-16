@@ -1,12 +1,13 @@
 {
-  "accentColor": "#8d68fd",
+  "accentColor": "",
   "translucency": false,
   "enabledCssSnippets": [
     "encore-dev-settings",
+    "encore-settings",
     "encore-dev"
   ],
   "baseFontSizeAction": true,
-  "theme": "moonstone",
+  "theme": "system",
   "cssTheme": "",
   "showViewHeader": true,
   "interfaceFontFamily": "Rubik",

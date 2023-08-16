@@ -5,7 +5,7 @@ id: encore-settings
 settings:
   - 
     id: theme-dark
-    title: Theme • Dark Mode
+    title: 🌚 Theme • Dark Mode
     description: Theme used in dark mode
     type: class-select
     allowEmpty: false
@@ -43,7 +43,7 @@ settings:
         value: encore-theme-dark-rgb
   -
     id: theme-light
-    title: Theme • Light Mode
+    title: 🌞 Theme • Light Mode
     description: Theme used in light mode
     type: class-select
     allowEmpty: false
@@ -161,7 +161,11 @@ settings:
     type: heading
     level: 1
     collapsed: true
-  
+  -
+    id: encore-fancy-headers
+    title: ✨ Fancy View Headers
+    description: Make note contents flow under note view headers, with a nice blur effect. Disabled by default as it may cause issues with some plugins.
+    type: class-toggle
   -
     id: encore-coloured-tooltip
     title: Coloured Tooltip
@@ -203,11 +207,6 @@ settings:
     type: heading
     level: 1
     collapsed: true
-  -
-    id: encore-disable-fancy-headers
-    title: Disable Fancy Headers
-    description: Encore changes headers to overlap main content for a nice blur effect. Disable this if you see issues
-    type: class-toggle
   -
     id: encore-disable-typography-spacing
     title: Disable Typography Spacing

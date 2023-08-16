@@ -44,6 +44,19 @@ body {
     --highlight-hue: 37;
 
     --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.2);
+    
+    &.encore-colors-colorful {
+      --highlight-hue: 30;
+      // --italic-color: #82c0e9;
+      // --bold-color: #fcfcfc;
+      
+      --h1-color: #975af2;
+      --h2-color: #d965e4;
+      --h3-color: #e05b9e;
+      --h4-color: #e96363;
+      --h5-color: #ee7e51;
+      --h6-color: #ecc68b;
+    }
   }
 
   // Sterling

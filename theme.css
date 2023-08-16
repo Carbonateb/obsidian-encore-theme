@@ -5,7 +5,7 @@ id: encore-settings
 settings:
   - 
     id: theme-dark
-    title: Theme • Dark Mode
+    title: 🌚 Theme • Dark Mode
     description: Theme used in dark mode
     type: class-select
     allowEmpty: false
@@ -33,6 +33,9 @@ settings:
         label: Obsidian
         value: encore-theme-dark-obsidian
       - 
+        label: Blue Slate
+        value: encore-theme-dark-slate
+      - 
         label: Atom (One Dark)
         value: encore-theme-dark-atom
       - 
@@ -40,228 +43,48 @@ settings:
         value: encore-theme-dark-rgb
   -
     id: theme-light
-    title: Theme • Light Mode
+    title: 🌞 Theme • Light Mode
     description: Theme used in light mode
     type: class-select
     allowEmpty: false
     default: encore-theme-light
     options:
       - 
-        label: Sterling
+        label: Obsidian Redux
         value: encore-theme-light
+      - 
+        label: Sterling
+        value: encore-theme-light-sterling
       - 
         label: Atom (One Light)
         value: encore-theme-light-atom
-  
-  
-  #########################################################
-  # Colours
-  
-  - 
-    id: colours
-    title: Colours
-    type: heading
-    level: 1
-    collapsed: false
-
-
   -
-    id: italic-colour
-    title: Italic Colour
+    id: colors
+    title: 🎨 Colors in Text
+    description: All of Encore's themes come with colors for headers, bold, italics, etc... Enable them here, or choose your own
     type: class-select
     allowEmpty: false
-    default: encore-italic-default
+    default: encore-colors-neutral
     options:
       - 
-        label: Set by theme
-        value: encore-italic-default
-      - 
         label: Neutral
-        value: encore-italic-neutral
+        value: encore-colors-neutral
       - 
-        label: Accent
-        value: encore-italic-accent
+        label: Colorful
+        value: encore-colors-colorful
       - 
         label: Custom
-        value: encore-italic-custom
-  -
-    id: bold-colour
-    title: Bold Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-bold-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-bold-default
-      - 
-        label: Neutral
-        value: encore-bold-neutral
-      - 
-        label: Accent
-        value: encore-bold-accent
-      - 
-        label: Custom
-        value: encore-bold-custom
-  -
-    id: title-colour
-    title: Note Title Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-title-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-title-default
-      - 
-        label: Neutral
-        value: encore-title-neutral
-      - 
-        label: Accent
-        value: encore-title-accent
-      - 
-        label: Custom
-        value: encore-title-custom
-  
-  
-  #########################################################
-  # Header Colours
-  
-  - 
-    id: header-colours
-    title: Headers
-    type: heading
-    level: 2
-    collapsed: true
-  
-  
-  -
-    id: h1-colour
-    title: Header One Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h1-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h1-default
-      - 
-        label: Neutral
-        value: encore-h1-neutral
-      - 
-        label: Accent
-        value: encore-h1-accent
-      - 
-        label: Custom
-        value: encore-h1-custom
-  -
-    id: h2-colour
-    title: Header Two Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h2-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h2-default
-      - 
-        label: Neutral
-        value: encore-h2-neutral
-      - 
-        label: Accent
-        value: encore-h2-accent
-      - 
-        label: Custom
-        value: encore-h2-custom
-  -
-    id: h3-colour
-    title: Header Three Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h3-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h3-default
-      - 
-        label: Neutral
-        value: encore-h3-neutral
-      - 
-        label: Accent
-        value: encore-h3-accent
-      - 
-        label: Custom
-        value: encore-h3-custom
-  -
-    id: h4-colour
-    title: Header Four Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h4-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h4-default
-      - 
-        label: Neutral
-        value: encore-h4-neutral
-      - 
-        label: Accent
-        value: encore-h4-accent
-      - 
-        label: Custom
-        value: encore-h4-custom
-  -
-    id: h5-colour
-    title: Header Five Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h5-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h5-default
-      - 
-        label: Neutral
-        value: encore-h5-neutral
-      - 
-        label: Accent
-        value: encore-h5-accent
-      - 
-        label: Custom
-        value: encore-h5-custom
-  -
-    id: h6-colour
-    title: Header Six Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h6-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h6-default
-      - 
-        label: Neutral
-        value: encore-h6-neutral
-      - 
-        label: Accent
-        value: encore-h6-accent
-      - 
-        label: Custom
-        value: encore-h6-custom
-  
+        value: encore-colors-custom
   
   #########################################################
   # Custom Colours
   
   - 
     id: custom-colours
-    title: Custom Colours
+    title: 🖌️ Custom Colours
     type: heading
     level: 1
     collapsed: true
-  
-  
   - 
     id: encore-custom-italic
     title: Italic Text
@@ -273,14 +96,6 @@ settings:
   - 
     id: encore-custom-bold
     title: Bold Text
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#000000'
-    default-dark: '#ffffff'
-  - 
-    id: encore-custom-title
-    title: Note Title
     type: variable-themed-color
     opacity: false
     format: hex
@@ -337,19 +152,20 @@ settings:
     default-dark: '#ffffff'
   
   
-  
   #########################################################
   # Extras
   
-  
   - 
     id: extras
-    title: Extras
+    title: 💎 Extras
     type: heading
     level: 1
     collapsed: true
-  
-  
+  -
+    id: encore-fancy-headers
+    title: ✨ Fancy View Headers
+    description: Make note contents flow under note view headers, with a nice blur effect. Disabled by default as it may cause issues with some plugins.
+    type: class-toggle
   -
     id: encore-coloured-tooltip
     title: Coloured Tooltip
@@ -387,15 +203,10 @@ settings:
 
   - 
     id: feature-toggles
-    title: Feature Toggles
+    title: ⚙️ Feature Toggles
     type: heading
     level: 1
     collapsed: true
-  -
-    id: encore-disable-fancy-headers
-    title: Disable Fancy Headers
-    description: Encore changes headers to overlap main content for a nice blur effect. Disable this if you see issues
-    type: class-toggle
   -
     id: encore-disable-typography-spacing
     title: Disable Typography Spacing
@@ -604,17 +415,14 @@ body.theme-light .mod-root .workspace-tab-container .workspace-leaf-content .can
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
 }
 
-body.theme-light .mod-root:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-header {
+body.theme-light .mod-root.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .view-header {
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
 }
 
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content {
   position: relative;
 }
-body:not(.encore-disable-fancy-headers) .workspace-leaf-content[data-type=kanban]>.view-header {
-  position: relative !important;
-}
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-header {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .view-header {
   position: absolute;
   left: 0;
   right: 0;
@@ -622,32 +430,35 @@ body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf
   background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
   backdrop-filter: var(--en-acrylic);
 }
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-content .cm-scroller {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .view-content .cm-scroller {
   padding-top: calc(var(--header-height) + 32px);
 }
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-content > iframe {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .view-content > iframe {
   padding-top: var(--header-height);
 }
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content .markdown-reading-view > .markdown-preview-view {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content .markdown-reading-view > .markdown-preview-view {
   padding-top: var(--header-height);
 }
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content .graph-controls {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content .graph-controls {
   margin-top: var(--header-height);
   background-color: rgba(var(--grey-700-rgb), var(--en-opacity));
   border: none;
   box-shadow: none;
 }
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content .canvas-wrapper .canvas-controls {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content .canvas-wrapper .canvas-controls {
   margin-top: var(--header-height);
 }
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content .canvas-wrapper .markdown-preview-view {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content .canvas-wrapper .markdown-preview-view {
   padding-top: 0;
 }
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content[data-type=image] > .view-content {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content[data-type=image] > .view-content {
   padding-top: var(--header-height);
 }
-body:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content[data-type=style-settings] > .view-content {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content[data-type=style-settings] > .view-content {
   padding-top: var(--header-height);
+}
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content[data-type=kanban] > .view-header {
+  position: relative !important;
 }
 
 .is-translucent:not(.is-fullscreen) .mod-root .workspace-leaf {
@@ -1133,13 +944,13 @@ body:not(.encore-no-excalidraw) .workspace-leaf-content .excalidraw-view {
   padding-bottom: 4px;
 }
 
-body:not(.encore-disable-fancy-headers) .workspace-leaf-content[data-type=excalidraw] .layer-ui__wrapper,
-body:not(.encore-disable-fancy-headers) .workspace-leaf-content[data-type=excalidraw] .App-top-bar,
-body:not(.encore-disable-fancy-headers) .workspace-leaf-content[data-type=excalidraw] .layer-ui__sidebar {
+body.encore-fancy-headers .workspace-leaf-content[data-type=excalidraw] .layer-ui__wrapper,
+body.encore-fancy-headers .workspace-leaf-content[data-type=excalidraw] .App-top-bar,
+body.encore-fancy-headers .workspace-leaf-content[data-type=excalidraw] .layer-ui__sidebar {
   margin-top: var(--header-height);
 }
-body:not(.encore-disable-fancy-headers) .excalidraw .layer-ui__wrapper .layer-ui__wrapper__footer-left,
-body:not(.encore-disable-fancy-headers) .excalidraw .layer-ui__wrapper .layer-ui__wrapper__footer-right {
+body.encore-fancy-headers .excalidraw .layer-ui__wrapper .layer-ui__wrapper__footer-left,
+body.encore-fancy-headers .excalidraw .layer-ui__wrapper .layer-ui__wrapper__footer-right {
   margin-bottom: var(--header-height);
 }
 
@@ -1182,10 +993,10 @@ body:not(.encore-disable-fancy-headers) .excalidraw .layer-ui__wrapper .layer-ui
   box-shadow: unset;
 }
 
-.mod-root:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content .projects-container {
+.mod-root.encore-fancy-headers .workspace-tab-container .workspace-leaf-content .projects-container {
   padding-top: var(--header-height);
 }
-.mod-root:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content .projects-container .container {
+.mod-root.encore-fancy-headers .workspace-tab-container .workspace-leaf-content .projects-container .container {
   background-color: transparent;
   border-bottom: 1px solid rgba(var(--grey-700-rgb), var(--en-opacity));
 }
@@ -1210,26 +1021,28 @@ body:not(.encore-no-makemd) .mk-file-context-file {
 }
 
 body.theme-dark {
-  --grey-900-rgb: 15, 15, 15;
-  --color-base-10: rgb(27, 27, 27);
-  --grey-800-rgb: 34, 34, 34;
-  --grey-700-rgb: 38, 38, 38;
-  --grey-600-rgb: 45, 45, 45;
-  --grey-500-rgb: 75, 75, 75;
-  --grey-400-rgb: 125, 125, 125;
-  --color-base-50: rgb(135, 135, 135);
-  --grey-300-rgb: 180, 180, 180;
-  --grey-200-rgb: 200, 200, 200;
-  --grey-100-rgb: 245, 245, 245;
   --grey-50-rgb: 250, 250, 250;
+  --grey-100-rgb: 245, 245, 245;
+  --grey-200-rgb: 200, 200, 200;
+  --grey-300-rgb: 180, 180, 180;
+  --grey-350-rgb: 135, 135, 135;
+  --grey-400-rgb: 125, 125, 125;
+  --grey-500-rgb: 75, 75, 75;
+  --grey-600-rgb: 45, 45, 45;
+  --grey-700-rgb: 38, 38, 38;
+  --grey-800-rgb: 34, 34, 34;
+  --grey-850-rgb: 27, 27, 27;
+  --grey-875-rgb: 22, 22, 22;
+  --grey-900-rgb: 15, 15, 15;
   --color-base-00: rgb(var(--grey-900-rgb));
+  --color-base-05: rgb(var(--grey-875-rgb));
+  --color-base-10: rgb(var(--grey-850-rgb));
   --color-base-20: rgb(var(--grey-800-rgb));
   --color-base-25: rgb(var(--grey-700-rgb));
   --color-base-30: rgb(var(--grey-600-rgb));
-  --color-base-35: rgb(
-    var(--grey-500-rgb)
-  );
+  --color-base-35: rgb(var(--grey-500-rgb));
   --color-base-40: rgb(var(--grey-400-rgb));
+  --color-base-50: rgb(var(--grey-350-rgb));
   --color-base-60: rgb(var(--grey-300-rgb));
   --color-base-70: rgb(var(--grey-200-rgb));
   --color-base-100: rgb(var(--grey-100-rgb));
@@ -1239,29 +1052,38 @@ body.theme-dark {
   --highlight-hue: 37;
   --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.2);
 }
+body.theme-dark.encore-colors-colorful {
+  --highlight-hue: 30;
+  --h1-color: #975af2;
+  --h2-color: #d965e4;
+  --h3-color: #e05b9e;
+  --h4-color: #e96363;
+  --h5-color: #ee7e51;
+  --h6-color: #ecc68b;
+}
 body.theme-light {
   --grey-50-rgb: 17, 24, 39;
   --grey-100-rgb: 31, 41, 55;
   --grey-200-rgb: 55, 65, 81;
   --grey-300-rgb: 75, 85, 99;
+  --grey-350-rgb: 90, 90, 90;
   --grey-400-rgb: 107, 114, 128;
   --grey-500-rgb: 156, 163, 175;
   --grey-600-rgb: 209, 213, 219;
   --grey-700-rgb: 228, 228, 231;
   --grey-800-rgb: 243, 244, 246;
+  --grey-850-rgb: 250, 250, 250;
+  --grey-875-rgb: 250, 250, 250;
   --grey-900-rgb: 255, 255, 255;
   --color-base-00: rgb(var(--grey-900-rgb));
-  --color-base-10: rgb(var(--grey-900-rgb));
+  --color-base-05: rgb(var(--grey-875-rgb));
+  --color-base-10: rgb(var(--grey-850-rgb));
   --color-base-20: rgb(var(--grey-800-rgb));
   --color-base-25: rgb(var(--grey-700-rgb));
   --color-base-30: rgb(var(--grey-600-rgb));
-  --color-base-35: rgb(
-    var(--grey-500-rgb)
-  );
+  --color-base-35: rgb(var(--grey-500-rgb));
   --color-base-40: rgb(var(--grey-400-rgb));
-  --color-base-50: rgb(
-    var(--grey-300-rgb)
-  );
+  --color-base-50: rgb(var(--grey-350-rgb));
   --color-base-60: rgb(var(--grey-300-rgb));
   --color-base-70: rgb(var(--grey-200-rgb));
   --color-base-100: rgb(var(--grey-100-rgb));
@@ -1283,38 +1105,8 @@ body.theme-light .mk-note-header:after {
 body {
   --italic-color: var(--text-color);
   --italic-weight: 600;
-}
-
-body.encore-italic-neutral {
-  --italic-color: var(--text-color) !important;
-}
-
-body.encore-italic-accent {
-  --italic-color: var(--color-accent-2) !important;
-}
-
-body.encore-italic-custom {
-  --italic-color: var(--encore-custom-italic) !important;
-}
-
-body {
   --bold-color: var(--text-color);
   --bold-weight: 800;
-}
-
-body.encore-bold-neutral {
-  --bold-color: var(--text-color) !important;
-}
-
-body.encore-bold-accent {
-  --bold-color: var(--color-accent-2) !important;
-}
-
-body.encore-bold-custom {
-  --bold-color: var(--encore-custom-bold) !important;
-}
-
-body {
   --inline-title-color: var(--color-accent-2);
   --h1-color: rgba(var(--grey-100-rgb), 0.9);
   --h2-color: rgba(var(--grey-100-rgb), 0.925);
@@ -1322,150 +1114,91 @@ body {
   --h4-color: rgba(var(--grey-100-rgb), 0.975);
 }
 
-body.encore-title-neutral {
-  --inline-title-color: var(--text-color) !important;
-}
-
-body.encore-title-accent {
-  --inline-title-color: var(--color-accent-2) !important;
-}
-
-body.encore-title-custom {
-  --inline-title-color: var(--encore-custom-title) !important;
-}
-
-body.encore-h1-neutral {
-  --h1-color: var(--text-color) !important;
-}
-
-body.encore-h1-accent {
-  --h1-color: var(--color-accent-2) !important;
-}
-
-body.encore-h1-custom {
+body.encore-colors-custom {
+  --italic-color: var(--encore-custom-italic) !important;
+  --bold-color: var(--encore-custom-bold) !important;
   --h1-color: var(--encore-custom-h1) !important;
-}
-
-body.encore-h2-neutral {
-  --h2-color: var(--text-color) !important;
-}
-
-body.encore-h2-accent {
-  --h2-color: var(--color-accent-2) !important;
-}
-
-body.encore-h2-custom {
   --h2-color: var(--encore-custom-h2) !important;
-}
-
-body.encore-h3-neutral {
-  --h3-color: var(--text-color) !important;
-}
-
-body.encore-h3-accent {
-  --h3-color: var(--color-accent-2) !important;
-}
-
-body.encore-h3-custom {
   --h3-color: var(--encore-custom-h3) !important;
-}
-
-body.encore-h4-neutral {
-  --h4-color: var(--text-color) !important;
-}
-
-body.encore-h4-accent {
-  --h4-color: var(--color-accent-2) !important;
-}
-
-body.encore-h4-custom {
   --h4-color: var(--encore-custom-h4) !important;
-}
-
-body.encore-h5-neutral {
-  --h5-color: var(--text-color) !important;
-}
-
-body.encore-h5-accent {
-  --h5-color: var(--color-accent-2) !important;
-}
-
-body.encore-h5-custom {
   --h5-color: var(--encore-custom-h5) !important;
-}
-
-body.encore-h6-neutral {
-  --h6-color: var(--text-color) !important;
-}
-
-body.encore-h6-accent {
-  --h6-color: var(--color-accent-2) !important;
-}
-
-body.encore-h6-custom {
   --h6-color: var(--encore-custom-h6) !important;
 }
 
 body.encore-theme-dark-cobalt.theme-dark {
-  --grey-900-rgb: 17, 24, 39;
-  --grey-800-rgb: 31, 41, 55;
-  --grey-700-rgb: 55, 65, 81;
-  --grey-600-rgb: 75, 85, 99;
-  --grey-500-rgb: 107, 114, 128;
-  --grey-400-rgb: 156, 163, 175;
-  --grey-300-rgb: 209, 213, 219;
-  --grey-200-rgb: 228, 228, 231;
-  --grey-100-rgb: 243, 244, 246;
   --grey-50-rgb: 255, 255, 255;
+  --grey-100-rgb: 235, 240, 246;
+  --grey-200-rgb: 186, 192, 201;
+  --grey-300-rgb: 163, 186, 178;
+  --grey-350-rgb: 117, 122, 132;
+  --grey-400-rgb: 108, 114, 125;
+  --grey-500-rgb: 70, 76, 89;
+  --grey-600-rgb: 48, 55, 66;
+  --grey-700-rgb: 34, 43, 54;
+  --grey-800-rgb: 23, 31, 43;
+  --grey-850-rgb: 14, 18, 27;
+  --grey-875-rgb: 9, 13, 21;
+  --grey-900-rgb: 11, 16, 28;
   --accent-h: 93;
   --accent-s: 93%;
   --accent-l: 76%;
-  --bold-color: var(--color-green);
-  --italic-color: var(--color-red);
+}
+body.encore-theme-dark-cobalt.theme-dark.encore-colors-colorful {
+  --highlight-hue: 50;
+  --italic-color: #d2e6d2;
+  --bold-color: #e0eec5;
+  --h1-color: #b3bcf0;
+  --h2-color: #989ed6;
+  --h3-color: #8987c9;
+  --h4-color: #9482c5;
+  --h5-color: #9482c5;
+  --h6-color: #9482c5;
 }
 
 body.encore-theme-dark-mercury.theme-dark {
-  --grey-900-rgb: 24, 24, 27;
-  --grey-800-rgb: 39, 39, 42;
-  --grey-700-rgb: 63, 63, 70;
-  --grey-600-rgb: 82, 82, 91;
-  --grey-500-rgb: 113, 113, 122;
-  --grey-400-rgb: 161, 161, 170;
-  --grey-300-rgb: 212, 212, 216;
-  --grey-200-rgb: 228, 228, 231;
-  --grey-100-rgb: 244, 244, 245;
-  --grey-50-rgb: 250, 250, 250;
+  --grey-50-rgb: 255, 255, 255;
+  --grey-100-rgb: 244, 244, 247;
+  --grey-200-rgb: 199, 199, 204;
+  --grey-300-rgb: 174, 175, 183;
+  --grey-350-rgb: 129, 130, 144;
+  --grey-400-rgb: 116, 116, 127;
+  --grey-500-rgb: 73, 73, 80;
+  --grey-600-rgb: 42, 42, 46;
+  --grey-700-rgb: 33, 33, 36;
+  --grey-800-rgb: 29, 29, 32;
+  --grey-850-rgb: 23, 23, 26;
+  --grey-875-rgb: 18, 18, 21;
+  --grey-900-rgb: 12, 12, 15;
   --accent-h: 21;
   --accent-s: 92%;
   --accent-l: 69%;
-  --color-red: #e06c75;
-  --color-green: #98c379;
-  --color-orange: #F99A66;
-  --color-yellow: #f7f2c5;
-  --color-cyan: #abe9f1;
-  --color-blue: #adc9ff;
-  --bold-color: var(--color-red);
-  --italic-color: var(--color-green);
-  --highlight-hue: 32;
-  --h1-color: var(--color-blue);
-  --h2-color: var(--color-cyan);
-  --h3-color: var(--color-yellow);
-  --h4-color: var(--color-blue);
-  --h5-color: var(--color-cyan);
-  --h6-color: var(--color-yellow);
+}
+body.encore-theme-dark-mercury.theme-dark.encore-colors-colorful {
+  --highlight-hue: 50;
+  --italic-color: #d2e6d2;
+  --bold-color: #e0eec5;
+  --h1-color: #61aafd;
+  --h2-color: #5ce4ab;
+  --h3-color: #50f3d8;
+  --h4-color: #9adfff;
+  --h5-color: #9482c5;
+  --h6-color: #9482c5;
 }
 
 body.encore-theme-dark-iron.theme-dark {
+  --grey-50-rgb: 255, 255, 255;
+  --grey-100-rgb: 245, 240, 240;
+  --grey-200-rgb: 231, 223, 219;
+  --grey-300-rgb: 212, 204, 198;
+  --grey-350-rgb: 147, 137, 136;
+  --grey-400-rgb: 115, 105, 105;
+  --grey-500-rgb: 97, 89, 87;
+  --grey-600-rgb: 87, 79, 76;
+  --grey-700-rgb: 57, 51, 50;
+  --grey-800-rgb: 41, 36, 36;
+  --grey-850-rgb: 36, 31, 31;
+  --grey-875-rgb: 33, 29, 28;
   --grey-900-rgb: 28, 25, 23;
-  --grey-800-rgb: 41, 37, 36;
-  --grey-700-rgb: 68, 64, 63;
-  --grey-600-rgb: 87, 83, 78;
-  --grey-500-rgb: 120, 113, 108;
-  --grey-400-rgb: 168, 162, 158;
-  --grey-300-rgb: 214, 211, 209;
-  --grey-200-rgb: 231, 229, 228;
-  --grey-100-rgb: 245, 245, 244;
-  --grey-50-rgb: 250, 250, 249;
   --accent-h: 165;
   --accent-s: 74%;
   --accent-l: 52%;
@@ -1475,76 +1208,98 @@ body.encore-theme-dark-iron.theme-dark {
   --color-yellow: #abe667;
   --color-cyan: #2abbdf;
   --color-blue: #5c87ff;
-  --bold-color: var(--color-yellow);
-  --italic-color: var(--color-orange);
-  --highlight-hue: 165;
-  --h1-color: var(--text-color);
-  --h2-color: var(--text-color);
-  --h3-color: var(--text-color);
-  --h4-color: var(--text-color);
-  --h5-color: var(--text-color);
-  --h6-color: var(--text-color);
+}
+body.encore-theme-dark-iron.theme-dark.encore-colors-colorful {
+  --highlight-hue: 30;
+  --italic-color: #82c0e9;
+  --bold-color: #d86679;
+  --h1-color: #ffc444;
+  --h2-color: #faa250;
+  --h3-color: #f88765;
+  --h4-color: #f88773;
+  --h5-color: #f88773;
+  --h6-color: #f88773;
 }
 
 body.encore-theme-dark-carbon.theme-dark {
+  --grey-50-rgb: 225, 227, 233;
+  --grey-100-rgb: 222, 227, 241;
+  --grey-200-rgb: 173, 181, 200;
+  --grey-300-rgb: 162, 165, 186;
+  --grey-350-rgb: 126, 128, 148;
+  --grey-400-rgb: 97, 97, 115;
+  --grey-500-rgb: 40, 40, 48;
+  --grey-600-rgb: 26, 26, 32;
+  --grey-700-rgb: 20, 20, 25;
+  --grey-800-rgb: 11, 11, 12;
+  --grey-850-rgb: 8, 8, 8;
+  --grey-875-rgb: 6, 6, 6;
   --grey-900-rgb: 3, 3, 3;
-  --grey-800-rgb: 12, 12, 12;
-  --grey-700-rgb: 28, 28, 28;
-  --grey-600-rgb: 82, 82, 91;
-  --grey-500-rgb: 113, 113, 122;
-  --grey-400-rgb: 161, 161, 170;
-  --grey-300-rgb: 212, 212, 216;
-  --grey-200-rgb: 228, 228, 231;
-  --grey-100-rgb: 244, 244, 245;
-  --grey-50-rgb: 250, 250, 250;
   --accent-h: 203;
   --accent-s: 66%;
   --accent-l: 54%;
   --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.4);
+}
+body.encore-theme-dark-carbon.theme-dark.encore-colors-colorful {
+  --highlight-hue: 30;
   --bold-color: var(--color-green);
   --italic-color: var(--color-red);
+  --h1-color: #5af273;
+  --h2-color: #65e4de;
+  --h3-color: #e755db;
+  --h4-color: #e9ca63;
+  --h5-color: #9dee51;
+  --h6-color: #8badec;
 }
 
 body.encore-theme-dark-blackout.theme-dark {
+  --grey-50-rgb: 225, 227, 233;
+  --grey-100-rgb: 222, 227, 241;
+  --grey-200-rgb: 173, 181, 200;
+  --grey-300-rgb: 162, 165, 186;
+  --grey-350-rgb: 126, 128, 148;
+  --grey-400-rgb: 97, 97, 115;
+  --grey-500-rgb: 40, 40, 48;
+  --grey-600-rgb: 26, 26, 32;
+  --grey-700-rgb: 20, 20, 25;
+  --grey-800-rgb: 0, 0, 0;
+  --grey-850-rgb: 0, 0, 0;
+  --grey-875-rgb: 0, 0, 0;
   --grey-900-rgb: 0, 0, 0;
-  --grey-800-rgb: 10, 10, 10;
-  --grey-700-rgb: 25, 25, 25;
-  --grey-600-rgb: 82, 82, 91;
-  --grey-500-rgb: 113, 113, 122;
-  --grey-400-rgb: 161, 161, 170;
-  --grey-300-rgb: 212, 212, 216;
-  --grey-200-rgb: 228, 228, 231;
-  --grey-100-rgb: 244, 244, 245;
-  --grey-50-rgb: 250, 250, 250;
   --accent-h: 203;
   --accent-s: 66%;
   --accent-l: 54%;
-  --workspace-background-translucent: rgba(var(--grey-800-rgb), 0.7);
-  --bold-color: var(--color-cyan);
-  --italic-color: var(--color-green);
-  --h1-color: var(--color-red);
-  --h2-color: var(--color-orange);
-  --h3-color: var(--color-yellow);
-  --h4-color: var(--color-red);
-  --h5-color: var(--color-orange);
-  --h6-color: var(--color-yellow);
-  background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
+  --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.4);
 }
-body.encore-theme-dark-blackout.theme-dark .mod-root .workspace-tab-container .workspace-leaf-content {
-  --en-opacity: 1;
-  background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
-}
-body.encore-theme-dark-blackout.theme-dark .mod-root .workspace-tab-container .workspace-leaf-content .canvas-wrapper .canvas-background {
-  background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
-}
-body.encore-theme-dark-blackout.theme-dark .mk-note-header:after {
-  --gradient-color: var(--color-base-10);
+body.encore-theme-dark-blackout.theme-dark.encore-colors-colorful {
+  --highlight-hue: 30;
+  --bold-color: #a283ec;
+  --italic-color: #98f8eb;
+  --h1-color: #975af2;
+  --h2-color: #d965e4;
+  --h3-color: #e05b9e;
+  --h4-color: #e96363;
+  --h5-color: #ee7e51;
+  --h6-color: #ecc68b;
 }
 
-body.encore-theme-dark-blackout.theme-dark:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-header {
-  --en-opacity: 0.66;
-  background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
-  backdrop-filter: var(--en-acrylic);
+body.encore-theme-dark-slate.theme-dark {
+  --grey-50-rgb: 255, 255, 255;
+  --grey-100-rgb: 241, 243, 244;
+  --grey-200-rgb: 228, 228, 231;
+  --grey-300-rgb: 209, 213, 219;
+  --grey-350-rgb: 177, 179, 192;
+  --grey-400-rgb: 156, 163, 175;
+  --grey-500-rgb: 107, 114, 128;
+  --grey-600-rgb: 75, 85, 99;
+  --grey-700-rgb: 55, 65, 81;
+  --grey-800-rgb: 31, 41, 55;
+  --grey-850-rgb: 23, 29, 44;
+  --grey-875-rgb: 20, 26, 38;
+  --grey-900-rgb: 17, 24, 39;
+  --accent-h: 93;
+  --accent-s: 93%;
+  --accent-l: 76%;
 }
 
 body.encore-theme-dark-atom.theme-dark {
@@ -1568,6 +1323,8 @@ body.encore-theme-dark-atom.theme-dark {
   --color-yellow: #e5c07b;
   --color-cyan: #56b6c2;
   --color-blue: #61afef;
+}
+body.encore-theme-dark-atom.theme-dark.encore-colors-colorful {
   --bold-color: var(--color-blue);
   --italic-color: var(--color-green);
   --highlight-hue: 37;
@@ -1642,27 +1399,32 @@ body.encore-theme-dark-obsidian.theme-dark .mk-note-header:after {
   --gradient-color: var(--color-base-10);
 }
 
-body.encore-theme-dark-obsidian.theme-dark:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content > .view-header {
+body.encore-theme-dark-obsidian.theme-dark.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .view-header {
   --en-opacity: 0.66;
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
   backdrop-filter: var(--en-acrylic);
 }
 
 body.encore-theme-dark-rgb.theme-dark {
-  --grey-900-rgb: 5, 5, 5;
-  --grey-800-rgb: 12, 12, 12;
-  --grey-700-rgb: 37, 38, 38;
-  --grey-600-rgb: 82, 82, 91;
-  --grey-500-rgb: 113, 113, 122;
-  --grey-400-rgb: 161, 161, 170;
-  --grey-300-rgb: 212, 212, 216;
-  --grey-200-rgb: 228, 228, 231;
-  --grey-100-rgb: 244, 244, 245;
-  --grey-50-rgb: 250, 250, 250;
+  --grey-50-rgb: 225, 227, 233;
+  --grey-100-rgb: 222, 227, 241;
+  --grey-200-rgb: 173, 181, 200;
+  --grey-300-rgb: 162, 165, 186;
+  --grey-350-rgb: 126, 128, 148;
+  --grey-400-rgb: 97, 97, 115;
+  --grey-500-rgb: 40, 40, 48;
+  --grey-600-rgb: 26, 26, 32;
+  --grey-700-rgb: 20, 20, 25;
+  --grey-800-rgb: 11, 11, 12;
+  --grey-850-rgb: 8, 8, 8;
+  --grey-875-rgb: 6, 6, 6;
+  --grey-900-rgb: 3, 3, 3;
   --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.4);
+  --rainbow-gradient: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,222,0,1) 15%, rgba(167,255,0,1) 26%, rgba(0,255,136,1) 39%, rgba(15,245,254,1) 55%, rgba(111,0,255,1) 80%, rgba(253,45,45,1) 100%);
+}
+body.encore-theme-dark-rgb.theme-dark.encore-colors-colorful {
   --bold-color: var(--color-red);
   --italic-color: var(--color-green);
-  --rainbow-gradient: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,222,0,1) 15%, rgba(167,255,0,1) 26%, rgba(0,255,136,1) 39%, rgba(15,245,254,1) 55%, rgba(111,0,255,1) 80%, rgba(253,45,45,1) 100%);
 }
 body.encore-theme-dark-rgb.theme-dark .mod-root .workspace-tab-container {
   border-radius: var(--tab-radius);
@@ -1753,6 +1515,42 @@ body.encore-theme-dark-rgb.theme-dark .mod-root .workspace-tab-header.is-active 
     background-position-x: 100vw;
   }
 }
+body.encore-theme-light-sterling.theme-light {
+  --grey-50-rgb: 17, 24, 39;
+  --grey-100-rgb: 31, 41, 55;
+  --grey-200-rgb: 55, 65, 81;
+  --grey-300-rgb: 75, 85, 99;
+  --grey-350-rgb: 90, 90, 90;
+  --grey-400-rgb: 107, 114, 128;
+  --grey-500-rgb: 156, 163, 175;
+  --grey-600-rgb: 209, 213, 219;
+  --grey-700-rgb: 228, 228, 231;
+  --grey-800-rgb: 243, 244, 246;
+  --grey-850-rgb: 250, 250, 250;
+  --grey-875-rgb: 250, 250, 250;
+  --grey-900-rgb: 255, 255, 255;
+  --accent-h: 165;
+  --accent-s: 74%;
+  --accent-l: 52%;
+  --color-red: #df2a51;
+  --color-green: #2adfb2;
+  --color-orange: #ff9b7c;
+  --color-yellow: #abe667;
+  --color-cyan: #2abbdf;
+  --color-blue: #5c87ff;
+}
+body.encore-theme-light-sterling.encore-colors-colorful {
+  --highlight-hue: 30;
+  --italic-color: #82c0e9;
+  --bold-color: #d86679;
+  --h1-color: #ffc444;
+  --h2-color: #faa250;
+  --h3-color: #f88765;
+  --h4-color: #f88773;
+  --h5-color: #f88773;
+  --h6-color: #f88773;
+}
+
 body {
   --checklist-done-decoration: none;
   --checklist-done-color: var(--color-base-50);

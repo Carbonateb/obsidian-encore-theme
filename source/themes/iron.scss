@@ -26,30 +26,18 @@ body.encore-theme-dark-iron {
 		--color-yellow: #abe667;
 		--color-cyan: #2abbdf;
 		--color-blue: #5c87ff;
-		
-		// --bold-color: var(--color-yellow);
-		// --italic-color: var(--color-orange);
-		// --highlight-hue: 165;
-		// // --inline-title-color: var(--text-color);
-		// --h1-color: var(--text-color);
-		// --h2-color: var(--text-color);
-		// --h3-color: var(--text-color);
-		// --h4-color: var(--text-color);
-		// --h5-color: var(--text-color);
-		// --h6-color: var(--text-color);
-	}
-	
-		
-	&.encore-colors-colorful {
-		--highlight-hue: 30;
-		--italic-color: #82c0e9;
-		--bold-color: #d86679;
-		
-		--h1-color: #ffc444;
-		--h2-color: #faa250;
-		--h3-color: #f88765;
-		--h4-color: #f88773;
-		--h5-color: #f88773;
-		--h6-color: #f88773;
+
+		&.encore-colors-colorful {
+			--highlight-hue: 30;
+			--italic-color: #82c0e9;
+			--bold-color: #d86679;
+			
+			--h1-color: #ffc444;
+			--h2-color: #faa250;
+			--h3-color: #f88765;
+			--h4-color: #f88773;
+			--h5-color: #f88773;
+			--h6-color: #f88773;
+		}
 	}
 }

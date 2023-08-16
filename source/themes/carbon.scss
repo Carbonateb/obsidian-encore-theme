@@ -23,7 +23,17 @@ body.encore-theme-dark-carbon {
 		
 		--workspace-background-translucent: rgba(var(--grey-900-rgb), 0.4);
 		
-		--bold-color: var(--color-green);
-		--italic-color: var(--color-red);
+		&.encore-colors-colorful {
+			--highlight-hue: 30;
+			--bold-color: var(--color-green);
+			--italic-color: var(--color-red);
+			
+			--h1-color: #5af273;
+			--h2-color: #65e4de;
+			--h3-color: #e755db;
+			--h4-color: #e9ca63;
+			--h5-color: #9dee51;
+			--h6-color: #8badec;
+		}
 	}
 }

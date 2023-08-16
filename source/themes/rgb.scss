@@ -17,9 +17,12 @@ body.encore-theme-dark-rgb {
 		--grey-900-rgb: 3, 3, 3;
 		
 		--workspace-background-translucent: rgba(var(--grey-900-rgb), 0.4);
+
+		&.encore-colors-colorful {
+			--bold-color: var(--color-red);
+			--italic-color: var(--color-green);
+		}
 		
-		--bold-color: var(--color-red);
-		--italic-color: var(--color-green);
 		
 		// RGB effect around workspaces
 		.mod-root .workspace-tab-container {

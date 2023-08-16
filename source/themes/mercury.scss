@@ -21,33 +21,16 @@ body.encore-theme-dark-mercury {
 		--accent-s: 92%;
 		--accent-l: 69%;
 		
-		// --color-red: #e06c75;
-		// --color-green: #98c379;
-		// --color-orange: #F99A66;
-		// --color-yellow: #f7f2c5;
-		// --color-cyan: #abe9f1;
-		// --color-blue: #adc9ff;
-		
-		// --bold-color: var(--color-red);
-		// --italic-color: var(--color-green);
-		// --highlight-hue: 32;
-		// --h1-color: var(--color-blue);
-		// --h2-color: var(--color-cyan);
-		// --h3-color: var(--color-yellow);
-		// --h4-color: var(--color-blue);
-		// --h5-color: var(--color-cyan);
-		// --h6-color: var(--color-yellow);
-	}
-	
-	&.encore-colors-colorful {
-		--highlight-hue: 50;
-		--italic-color: #d2e6d2;
-		--bold-color: #e0eec5;
-		--h1-color: #61aafd;
-		--h2-color: #5ce4ab;
-		--h3-color: #50f3d8;
-		--h4-color: #9adfff;
-		--h5-color: #9482c5;
-		--h6-color: #9482c5;
+		&.encore-colors-colorful {
+			--highlight-hue: 50;
+			--italic-color: #d2e6d2;
+			--bold-color: #e0eec5;
+			--h1-color: #61aafd;
+			--h2-color: #5ce4ab;
+			--h3-color: #50f3d8;
+			--h4-color: #9adfff;
+			--h5-color: #9482c5;
+			--h6-color: #9482c5;
+		}
 	}
 }
