@@ -41,6 +41,9 @@ settings:
       - 
         label: RGB
         value: encore-theme-dark-rgb
+      - 
+        label: Material Ocean
+        value: encore-theme-dark-materialocean
   -
     id: theme-light
     title: 🌞 Theme • Light Mode
