@@ -675,6 +675,18 @@ body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-l
   padding-bottom: 0.5em;
 }
 
+body {
+  --h5-size: 0.95rem;
+  --h5-line-height: 1.6;
+  --h5-weight: 600;
+}
+
+body {
+  --h6-size: 0.85rem;
+  --h6-line-height: 1.7;
+  --h6-weight: 600;
+}
+
 .markdown-source-view .cm-sizer .HyperMD-codeblock-begin-bg {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
