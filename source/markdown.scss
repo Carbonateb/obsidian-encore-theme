@@ -1,4 +1,6 @@
 // Used to style markdown views
+// Used to style markdown views
+// Used to style markdown views
 
 // Normal text
 body {
@@ -136,6 +138,21 @@ body:not(.encore-disable-typography-spacing)
   padding-top: 0.8em;
   padding-bottom: 0.5em;
 }
+
+// Header 5
+body {
+  --h5-size: 0.95rem;
+  --h5-line-height: 1.6;
+  --h5-weight: 600;
+}
+
+// Header 6
+body {
+  --h6-size: 0.85rem;
+  --h6-line-height: 1.7;
+  --h6-weight: 600;
+}
+
 
 // Code block
 .markdown-source-view .cm-sizer {
