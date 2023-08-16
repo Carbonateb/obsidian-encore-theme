@@ -28,15 +28,17 @@ body.encore-theme-dark-atom {
 		--color-cyan: #56b6c2;
 		--color-blue: #61afef;
 		
-		--bold-color: var(--color-blue);
-		--italic-color: var(--color-green);
-		--highlight-hue: 37;
-		--h1-color: var(--color-orange);
-		--h2-color: var(--color-green);
-		--h3-color: var(--color-cyan);
-		--h4-color: var(--color-blue);
-		--h5-color: var(--color-red);
-		--h6-color: var(--color-yellow);
+		&.encore-colors-colorful {
+			--bold-color: var(--color-blue);
+			--italic-color: var(--color-green);
+			--highlight-hue: 37;
+			--h1-color: var(--color-orange);
+			--h2-color: var(--color-green);
+			--h3-color: var(--color-cyan);
+			--h4-color: var(--color-blue);
+			--h5-color: var(--color-red);
+			--h6-color: var(--color-yellow);
+		}
 	}
 }
 

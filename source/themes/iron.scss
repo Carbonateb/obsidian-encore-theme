@@ -2,17 +2,19 @@
 
 body.encore-theme-dark-iron {
 	&.theme-dark {
-		// * Colors are from Tailwind's "Stone" colour palette
+		--grey-50-rgb: 255, 255, 255;
+		--grey-100-rgb: 245, 240, 240;
+		--grey-200-rgb: 231, 223, 219;
+		--grey-300-rgb: 212, 204, 198;
+		--grey-350-rgb: 147, 137, 136;
+		--grey-400-rgb: 115, 105, 105;
+		--grey-500-rgb: 97, 89, 87;
+		--grey-600-rgb: 87, 79, 76;
+		--grey-700-rgb: 57, 51, 50;
+		--grey-800-rgb: 41, 36, 36;
+		--grey-850-rgb: 36, 31, 31;
+		--grey-875-rgb: 33, 29, 28;		
 		--grey-900-rgb: 28, 25, 23;
-		--grey-800-rgb: 41, 37, 36;
-		--grey-700-rgb: 68, 64, 63;
-		--grey-600-rgb: 87, 83, 78;
-		--grey-500-rgb: 120, 113, 108;
-		--grey-400-rgb: 168, 162, 158;
-		--grey-300-rgb: 214, 211, 209;
-		--grey-200-rgb: 231, 229, 228;
-		--grey-100-rgb: 245, 245, 244;
-		--grey-50-rgb: 250, 250, 249;
 		
 		--accent-h: 165;
 		--accent-s: 74%;
@@ -24,16 +26,18 @@ body.encore-theme-dark-iron {
 		--color-yellow: #abe667;
 		--color-cyan: #2abbdf;
 		--color-blue: #5c87ff;
-		
-		--bold-color: var(--color-yellow);
-		--italic-color: var(--color-orange);
-		--highlight-hue: 165;
-		// --inline-title-color: var(--text-color);
-		--h1-color: var(--text-color);
-		--h2-color: var(--text-color);
-		--h3-color: var(--text-color);
-		--h4-color: var(--text-color);
-		--h5-color: var(--text-color);
-		--h6-color: var(--text-color);
+
+		&.encore-colors-colorful {
+			--highlight-hue: 30;
+			--italic-color: #82c0e9;
+			--bold-color: #d86679;
+			
+			--h1-color: #ffc444;
+			--h2-color: #faa250;
+			--h3-color: #f88765;
+			--h4-color: #f88773;
+			--h5-color: #f88773;
+			--h6-color: #f88773;
+		}
 	}
 }

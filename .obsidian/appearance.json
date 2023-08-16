@@ -1,14 +1,16 @@
 {
   "accentColor": "",
-  "translucency": true,
+  "translucency": false,
   "enabledCssSnippets": [
     "encore-dev-settings",
+    "encore-settings",
     "encore-dev"
   ],
   "baseFontSizeAction": true,
-  "theme": "obsidian",
+  "theme": "system",
   "cssTheme": "",
   "showViewHeader": true,
   "interfaceFontFamily": "Rubik",
-  "textFontFamily": "Rubik"
+  "textFontFamily": "Rubik",
+  "nativeMenus": false
 }

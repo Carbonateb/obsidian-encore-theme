@@ -5,7 +5,7 @@ id: encore-settings
 settings:
   - 
     id: theme-dark
-    title: Theme • Dark Mode
+    title: 🌚 Theme • Dark Mode
     description: Theme used in dark mode
     type: class-select
     allowEmpty: false
@@ -33,6 +33,9 @@ settings:
         label: Obsidian
         value: encore-theme-dark-obsidian
       - 
+        label: Blue Slate
+        value: encore-theme-dark-slate
+      - 
         label: Atom (One Dark)
         value: encore-theme-dark-atom
       - 
@@ -40,228 +43,48 @@ settings:
         value: encore-theme-dark-rgb
   -
     id: theme-light
-    title: Theme • Light Mode
+    title: 🌞 Theme • Light Mode
     description: Theme used in light mode
     type: class-select
     allowEmpty: false
     default: encore-theme-light
     options:
       - 
-        label: Sterling
+        label: Obsidian Redux
         value: encore-theme-light
+      - 
+        label: Sterling
+        value: encore-theme-light-sterling
       - 
         label: Atom (One Light)
         value: encore-theme-light-atom
-  
-  
-  #########################################################
-  # Colours
-  
-  - 
-    id: colours
-    title: Colours
-    type: heading
-    level: 1
-    collapsed: false
-
-
   -
-    id: italic-colour
-    title: Italic Colour
+    id: colors
+    title: 🎨 Colors in Text
+    description: All of Encore's themes come with colors for headers, bold, italics, etc... Enable them here, or choose your own
     type: class-select
     allowEmpty: false
-    default: encore-italic-default
+    default: encore-colors-neutral
     options:
       - 
-        label: Set by theme
-        value: encore-italic-default
-      - 
         label: Neutral
-        value: encore-italic-neutral
+        value: encore-colors-neutral
       - 
-        label: Accent
-        value: encore-italic-accent
+        label: Colorful
+        value: encore-colors-colorful
       - 
         label: Custom
-        value: encore-italic-custom
-  -
-    id: bold-colour
-    title: Bold Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-bold-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-bold-default
-      - 
-        label: Neutral
-        value: encore-bold-neutral
-      - 
-        label: Accent
-        value: encore-bold-accent
-      - 
-        label: Custom
-        value: encore-bold-custom
-  -
-    id: title-colour
-    title: Note Title Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-title-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-title-default
-      - 
-        label: Neutral
-        value: encore-title-neutral
-      - 
-        label: Accent
-        value: encore-title-accent
-      - 
-        label: Custom
-        value: encore-title-custom
-  
-  
-  #########################################################
-  # Header Colours
-  
-  - 
-    id: header-colours
-    title: Headers
-    type: heading
-    level: 2
-    collapsed: true
-  
-  
-  -
-    id: h1-colour
-    title: Header One Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h1-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h1-default
-      - 
-        label: Neutral
-        value: encore-h1-neutral
-      - 
-        label: Accent
-        value: encore-h1-accent
-      - 
-        label: Custom
-        value: encore-h1-custom
-  -
-    id: h2-colour
-    title: Header Two Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h2-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h2-default
-      - 
-        label: Neutral
-        value: encore-h2-neutral
-      - 
-        label: Accent
-        value: encore-h2-accent
-      - 
-        label: Custom
-        value: encore-h2-custom
-  -
-    id: h3-colour
-    title: Header Three Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h3-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h3-default
-      - 
-        label: Neutral
-        value: encore-h3-neutral
-      - 
-        label: Accent
-        value: encore-h3-accent
-      - 
-        label: Custom
-        value: encore-h3-custom
-  -
-    id: h4-colour
-    title: Header Four Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h4-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h4-default
-      - 
-        label: Neutral
-        value: encore-h4-neutral
-      - 
-        label: Accent
-        value: encore-h4-accent
-      - 
-        label: Custom
-        value: encore-h4-custom
-  -
-    id: h5-colour
-    title: Header Five Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h5-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h5-default
-      - 
-        label: Neutral
-        value: encore-h5-neutral
-      - 
-        label: Accent
-        value: encore-h5-accent
-      - 
-        label: Custom
-        value: encore-h5-custom
-  -
-    id: h6-colour
-    title: Header Six Colour
-    type: class-select
-    allowEmpty: false
-    default: encore-h6-default
-    options:
-      - 
-        label: Set by theme
-        value: encore-h6-default
-      - 
-        label: Neutral
-        value: encore-h6-neutral
-      - 
-        label: Accent
-        value: encore-h6-accent
-      - 
-        label: Custom
-        value: encore-h6-custom
-  
+        value: encore-colors-custom
   
   #########################################################
   # Custom Colours
   
   - 
     id: custom-colours
-    title: Custom Colours
+    title: 🖌️ Custom Colours
     type: heading
     level: 1
     collapsed: true
-  
-  
   - 
     id: encore-custom-italic
     title: Italic Text
@@ -273,14 +96,6 @@ settings:
   - 
     id: encore-custom-bold
     title: Bold Text
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#000000'
-    default-dark: '#ffffff'
-  - 
-    id: encore-custom-title
-    title: Note Title
     type: variable-themed-color
     opacity: false
     format: hex
@@ -337,19 +152,20 @@ settings:
     default-dark: '#ffffff'
   
   
-  
   #########################################################
   # Extras
   
-  
   - 
     id: extras
-    title: Extras
+    title: 💎 Extras
     type: heading
     level: 1
     collapsed: true
-  
-  
+  -
+    id: encore-fancy-headers
+    title: ✨ Fancy View Headers
+    description: Make note contents flow under note view headers, with a nice blur effect. Disabled by default as it may cause issues with some plugins.
+    type: class-toggle
   -
     id: encore-coloured-tooltip
     title: Coloured Tooltip
@@ -387,15 +203,10 @@ settings:
 
   - 
     id: feature-toggles
-    title: Feature Toggles
+    title: ⚙️ Feature Toggles
     type: heading
     level: 1
     collapsed: true
-  -
-    id: encore-disable-fancy-headers
-    title: Disable Fancy Headers
-    description: Encore changes headers to overlap main content for a nice blur effect. Disable this if you see issues
-    type: class-toggle
   -
     id: encore-disable-typography-spacing
     title: Disable Typography Spacing

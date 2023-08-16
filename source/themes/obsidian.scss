@@ -50,7 +50,7 @@ body.encore-theme-dark-obsidian {
 }
 
 // Fancy headers need to be changed, due to .workspace-leaf-content being changed
-body.encore-theme-dark-obsidian.theme-dark:not(.encore-disable-fancy-headers) .workspace-tab-container .workspace-leaf-content>.view-header {
+body.encore-theme-dark-obsidian.theme-dark.encore-fancy-headers .workspace-tab-container .workspace-leaf-content>.view-header {
 	--en-opacity: 0.66;
 	background-color: $grey-900; // * Should be same as .workspace-leaf-content
 	backdrop-filter: var(--en-acrylic);

@@ -4,30 +4,31 @@
 body {
   // Obsidian 2
   &.theme-dark {
-    // * Colors are from Tailwind's "Gray" colour palette
-    --grey-900-rgb: 15, 15, 15;
-    --color-base-10: rgb(27, 27, 27); // Code blocks
-    --grey-800-rgb: 34, 34, 34;
-    --grey-700-rgb: 38, 38, 38;
-    --grey-600-rgb: 45, 45, 45;
-    --grey-500-rgb: 75, 75, 75;
-    --grey-400-rgb: 125, 125, 125;
-    --color-base-50: rgb(135, 135, 135); // Headings, bullets, checked items
-    --grey-300-rgb: 180, 180, 180;
-    --grey-200-rgb: 200, 200, 200;
-    --grey-100-rgb: 245, 245, 245;
     --grey-50-rgb: 250, 250, 250;
-
+    --grey-100-rgb: 245, 245, 245;
+    --grey-200-rgb: 200, 200, 200;
+    --grey-300-rgb: 180, 180, 180;
+    --grey-350-rgb: 135, 135, 135;
+    --grey-400-rgb: 125, 125, 125;
+    --grey-500-rgb: 75, 75, 75;
+    --grey-600-rgb: 45, 45, 45;
+    --grey-700-rgb: 38, 38, 38;
+    --grey-800-rgb: 34, 34, 34;
+    --grey-850-rgb: 27, 27, 27;
+    --grey-875-rgb: 22, 22, 22;
+    --grey-900-rgb: 15, 15, 15;
+    
     // Theme neutrals
     // --en-opacity: 1;
     --color-base-00: rgb(var(--grey-900-rgb)); // Main background
+    --color-base-05: rgb(var(--grey-875-rgb)); // Not used?
+    --color-base-10: rgb(var(--grey-850-rgb)); // Code blocks
     --color-base-20: rgb(var(--grey-800-rgb)); // Alt background
     --color-base-25: rgb(var(--grey-700-rgb)); // Text input
     --color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
-    --color-base-35: rgb(
-      var(--grey-500-rgb)
-    ); // Switch background, hovered buttons
+    --color-base-35: rgb(var(--grey-500-rgb)); // Hovered buttons
     --color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
+    --color-base-50: rgb(var(--grey-350-rgb)); // Headings, bullets, checked items
     --color-base-60: rgb(var(--grey-300-rgb)); // ?
     --color-base-70: rgb(var(--grey-200-rgb)); // Dim text
     --color-base-100: rgb(var(--grey-100-rgb)); // Text
@@ -43,33 +44,46 @@ body {
     --highlight-hue: 37;
 
     --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.2);
+    
+    &.encore-colors-colorful {
+      --highlight-hue: 30;
+      // --italic-color: #82c0e9;
+      // --bold-color: #fcfcfc;
+      
+      --h1-color: #975af2;
+      --h2-color: #d965e4;
+      --h3-color: #e05b9e;
+      --h4-color: #e96363;
+      --h5-color: #ee7e51;
+      --h6-color: #ecc68b;
+    }
   }
 
   // Sterling
-  &.theme-light {
+  &.theme-light {    
     --grey-50-rgb: 17, 24, 39;
     --grey-100-rgb: 31, 41, 55;
     --grey-200-rgb: 55, 65, 81;
     --grey-300-rgb: 75, 85, 99;
+    --grey-350-rgb: 90, 90, 90;
     --grey-400-rgb: 107, 114, 128;
     --grey-500-rgb: 156, 163, 175;
     --grey-600-rgb: 209, 213, 219;
     --grey-700-rgb: 228, 228, 231;
     --grey-800-rgb: 243, 244, 246;
+    --grey-850-rgb: 250, 250, 250;
+    --grey-875-rgb: 250, 250, 250;
     --grey-900-rgb: 255, 255, 255;
 
     --color-base-00: rgb(var(--grey-900-rgb)); // Main background
-    --color-base-10: rgb(var(--grey-900-rgb)); // Code blocks
+    --color-base-05: rgb(var(--grey-875-rgb)); // Main background
+    --color-base-10: rgb(var(--grey-850-rgb)); // Code blocks
     --color-base-20: rgb(var(--grey-800-rgb)); // Alt background
     --color-base-25: rgb(var(--grey-700-rgb)); // Text input
     --color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
-    --color-base-35: rgb(
-      var(--grey-500-rgb)
-    ); // Switch background, hovered buttons
+    --color-base-35: rgb(var(--grey-500-rgb)); // Hovered buttons
     --color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
-    --color-base-50: rgb(
-      var(--grey-300-rgb)
-    ); // Headings, bullets, checked items
+    --color-base-50: rgb(var(--grey-350-rgb)); // Headings, bullets, checked items
     --color-base-60: rgb(var(--grey-300-rgb)); // ?
     --color-base-70: rgb(var(--grey-200-rgb)); // Dim text
     --color-base-100: rgb(var(--grey-100-rgb)); // Text
@@ -99,109 +113,24 @@ body {
 // Theme engine
 
 body {
-  // Theme Default
   --italic-color: var(--text-color);
   --italic-weight: 600;
-}
-body.encore-italic-neutral {
-  --italic-color: var(--text-color) !important;
-}
-body.encore-italic-accent {
-  --italic-color: var(--color-accent-2) !important;
-}
-body.encore-italic-custom {
-  --italic-color: var(--encore-custom-italic) !important;
-}
-
-body {
-  // Theme Default
   --bold-color: var(--text-color);
   --bold-weight: 800;
-}
-body.encore-bold-neutral {
-  --bold-color: var(--text-color) !important;
-}
-body.encore-bold-accent {
-  --bold-color: var(--color-accent-2) !important;
-}
-body.encore-bold-custom {
-  --bold-color: var(--encore-custom-bold) !important;
-}
-
-body {
-  // Theme Default
   --inline-title-color: var(--color-accent-2);
   --h1-color: rgba(var(--grey-100-rgb), 0.9);
   --h2-color: rgba(var(--grey-100-rgb), 0.925);
   --h3-color: rgba(var(--grey-100-rgb), 0.95);
   --h4-color: rgba(var(--grey-100-rgb), 0.975);
 }
-body.encore-title-neutral {
-  --inline-title-color: var(--text-color) !important;
-}
-body.encore-title-accent {
-  --inline-title-color: var(--color-accent-2) !important;
-}
-body.encore-title-custom {
-  --inline-title-color: var(--encore-custom-title) !important;
-}
 
-body.encore-h1-neutral {
-  --h1-color: var(--text-color) !important;
-}
-body.encore-h1-accent {
-  --h1-color: var(--color-accent-2) !important;
-}
-body.encore-h1-custom {
+body.encore-colors-custom {
+  --italic-color: var(--encore-custom-italic) !important;
+  --bold-color: var(--encore-custom-bold) !important;
   --h1-color: var(--encore-custom-h1) !important;
-}
-
-body.encore-h2-neutral {
-  --h2-color: var(--text-color) !important;
-}
-body.encore-h2-accent {
-  --h2-color: var(--color-accent-2) !important;
-}
-body.encore-h2-custom {
   --h2-color: var(--encore-custom-h2) !important;
-}
-
-body.encore-h3-neutral {
-  --h3-color: var(--text-color) !important;
-}
-body.encore-h3-accent {
-  --h3-color: var(--color-accent-2) !important;
-}
-body.encore-h3-custom {
   --h3-color: var(--encore-custom-h3) !important;
-}
-
-body.encore-h4-neutral {
-  --h4-color: var(--text-color) !important;
-}
-body.encore-h4-accent {
-  --h4-color: var(--color-accent-2) !important;
-}
-body.encore-h4-custom {
   --h4-color: var(--encore-custom-h4) !important;
-}
-
-body.encore-h5-neutral {
-  --h5-color: var(--text-color) !important;
-}
-body.encore-h5-accent {
-  --h5-color: var(--color-accent-2) !important;
-}
-body.encore-h5-custom {
   --h5-color: var(--encore-custom-h5) !important;
-}
-
-body.encore-h6-neutral {
-  --h6-color: var(--text-color) !important;
-}
-body.encore-h6-accent {
-  --h6-color: var(--color-accent-2) !important;
-}
-body.encore-h6-custom {
   --h6-color: var(--encore-custom-h6) !important;
 }

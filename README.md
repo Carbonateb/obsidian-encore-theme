@@ -22,6 +22,11 @@ For an app focused around text, it is *critical* that typography is taken into c
 By default, Encore uses a color palette based on the official Obsidian website (*Obsidian Redux*), keeping things familiar yet fresh. Or, by using the **Style Settings plugin**, you can choose between a handful of color palettes I've put together.
 ## Obsidian Redux
 Encore's new default palette keeps things familiar yet fresh - a new take on the original color palette.
+
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
 ## Cobalt
 Encore's old default palette is swathed in a cold, metallic blue, with striking green accents. A staple of Encore's collection. Based on Tailwind's *Gray* color swatch.
 ![Cobalt theme](images/preview-encore.webp)
