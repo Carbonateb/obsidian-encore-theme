@@ -66,7 +66,7 @@ body.encore-blur-less {
   --en-modal-backdrop: blur(5px);
 }
 
-body.is-mobile,
+body.is-mobile:not(.encore-mobile-translucency),
 body.encore-blur-off {
   --en-acrylic: brightness(0.5);
   --en-acrylic-opacity: 0.9;

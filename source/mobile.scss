@@ -9,13 +9,15 @@ body.is-mobile {
 	}
 	
 	.workspace-drawer-inner {
-		background-color: var(--background-secondary);
+		background-color: var(--background-primary);
 		margin: 8px;
 		border-radius: 8px;
+		border: 1px solid var(--color-base-20);
+		border-top: 1px solid var(--color-base-25);
 	}
 	
 	.workspace-drawer-backdrop {
-		backdrop-filter: brightness(0.3);
+		backdrop-filter: brightness(0.75);
 		background: none;
 	}
 	
@@ -24,6 +26,8 @@ body.is-mobile {
 		background-color: var(--background-secondary-alt);
 		border-radius: 4px;
 		margin: 0 8px;
+		margin-top: 8px;
+		padding: 0.8rem 1rem;
 	}
 	
 	// Style option list like desktop version
@@ -31,10 +35,41 @@ body.is-mobile {
 		background-color: var(--background-secondary-alt);
 		border-radius: 4px;
 		margin: 8px;
-		padding: var(--size-4-3);
+		padding: 0.8rem 1rem;
 	}
 	
 	.workspace-drawer-header {
 		padding: 12px 12px 0;
+	}
+}
+
+.is-mobile.theme-dark {
+	--color-base-00: rgb(var(--grey-900-rgb)); // Main background
+	--color-base-10: rgb(var(--grey-850-rgb)); // Main background
+	--color-base-20: rgb(var(--grey-800-rgb)); // Main background
+	
+	&.encore-mobile-oled-mode {
+		.mod-root .workspace-tab-container .workspace-leaf-content {
+			background-color: black;
+		}
+	}
+}
+
+.encore-mobile-translucency.is-mobile {
+	--sidebar-filter: blur(16px);
+	
+	&.encore-blur-less {
+		--sidebar-filter: blur(8px);
+	}
+	
+	.workspace-drawer-inner {
+		background-color: rgba(var(--grey-900-rgb), 0.6);
+		backdrop-filter: var(--sidebar-filter);
+	}
+	
+	.mobile-navbar {
+		border-top: 1px solid var(--color-base-25);
+		background-color: rgba(var(--grey-900-rgb), 0.66);
+		backdrop-filter: var(--en-acrylic);
 	}
 }

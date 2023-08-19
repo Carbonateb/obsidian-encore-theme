@@ -170,6 +170,16 @@ settings:
     description: Make note contents flow under note view headers, with a nice blur effect. Disabled by default as it may cause issues with some plugins.
     type: class-toggle
   -
+    id: encore-mobile-oled-mode
+    title: OLED Mode For Mobile
+    description: Enables true black for any color theme in Encore. If you're looking for a true black theme for all devices, try the Blackout color theme in Encore!
+    type: class-toggle
+  -
+    id: encore-mobile-translucency
+    title: Mobile Translucency
+    description: Makes the mobile side panes ✨ fancy ✨ - disabled by default as it can hurt performance & battery life. Try decreasing blur amount to improve performance!
+    type: class-toggle
+  -
     id: encore-coloured-tooltip
     title: Coloured Tooltip
     description: Make tooltips stand out much more by applying your theme colour to the border
