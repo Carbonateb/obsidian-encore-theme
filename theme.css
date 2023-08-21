@@ -221,11 +221,6 @@ settings:
     level: 1
     collapsed: true
   -
-    id: encore-disable-typography-spacing
-    title: Disable Typography Spacing
-    description: Encore adds a lot of white space to your notes to make them easier to read. Disable if you don't like how your notes now look.
-    type: class-toggle
-  -
     id: encore-disable-grain
     title: Disable Grainy Background
     description: Encore adds a subtle grain effect around the main workspace
@@ -580,25 +575,8 @@ body {
   --link-unresolved-filter: contrast(0.3) brightness(120%);
 }
 
-body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line {
-  padding-bottom: 0.75em;
-}
-
 body {
   --list-marker-color: var(--color-base-40);
-}
-
-body:not(.encore-disable-typography-spacing) {
-  --list-spacing: 0.5em;
-}
-
-body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line {
-  padding-bottom: 0;
-}
-
-body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .HyperMD-list-line + .cm-line:not(.HyperMD-list-line),
-body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .HyperMD-list-line + .internal-embed.image-embed {
-  padding-top: 1.25em;
 }
 
 .markdown-rendered {
@@ -632,19 +610,10 @@ body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .Hype
   color: var(--inline-title-color);
 }
 
-body:not(.encore-disable-typography-spacing) .markdown-rendered .internal-embed:not(.image-embed) {
-  margin-top: 1.5em;
-}
-
 body {
   --h1-size: 2.25rem;
   --h1-line-height: 1.111;
   --h1-weight: 800;
-}
-
-body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-1 {
-  padding-top: 0.8em;
-  padding-bottom: 0.5em;
 }
 
 body {
@@ -653,36 +622,16 @@ body {
   --h2-weight: 700;
 }
 
-body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-2 {
-  padding-top: 0.8em;
-  padding-bottom: 0.5em;
-}
-
 body {
   --h3-size: 1.25rem;
   --h3-line-height: 1.6;
   --h3-weight: 600;
 }
 
-body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-3 {
-  padding-top: 0.8em;
-  padding-bottom: 0.5em;
-}
-
-body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .HyperMD-header + .cm-line.HyperMD-header,
-.HyperMD-header:first-child {
-  padding-top: 0 !important;
-}
-
 body {
   --h4-size: 1rem;
   --h4-line-height: 1.5;
   --h4-weight: 600;
-}
-
-body:not(.encore-disable-typography-spacing) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header.HyperMD-header-4 {
-  padding-top: 0.8em;
-  padding-bottom: 0.5em;
 }
 
 body {
@@ -728,10 +677,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-image: var(--obsidian-logo-small);
-}
-
-body:not(.encore-disable-typography-spacing) .markdown-rendered hr {
-  margin: 5em 0;
 }
 
 .markdown-source-view:not(.is-live-preview) .HyperMD-hr {

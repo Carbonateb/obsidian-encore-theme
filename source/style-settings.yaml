@@ -221,11 +221,6 @@ settings:
     level: 1
     collapsed: true
   -
-    id: encore-disable-typography-spacing
-    title: Disable Typography Spacing
-    description: Encore adds a lot of white space to your notes to make them easier to read. Disable if you don't like how your notes now look.
-    type: class-toggle
-  -
     id: encore-disable-grain
     title: Disable Grainy Background
     description: Encore adds a subtle grain effect around the main workspace

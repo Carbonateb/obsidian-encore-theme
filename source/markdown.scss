@@ -10,34 +10,10 @@ body {
   --link-unresolved-opacity: 1;
   --link-unresolved-filter: contrast(0.3) brightness(120%);
 }
-body:not(.encore-disable-typography-spacing)
-  .markdown-source-view.mod-cm6
-  .cm-line {
-  padding-bottom: 0.75em;
-}
 
 // Lists
 body {
 	--list-marker-color: var(--color-base-40);
-}
-body:not(.encore-disable-typography-spacing) {
-	--list-spacing: 0.5em;
-}
-body:not(.encore-disable-typography-spacing)
-  .markdown-source-view.mod-cm6
-  .cm-line.HyperMD-list-line {
-  padding-bottom: 0;
-}
-// Spacing of content text after list
-body:not(.encore-disable-typography-spacing)
-  .markdown-source-view.mod-cm6
-  .HyperMD-list-line
-  + .cm-line:not(.HyperMD-list-line),
-body:not(.encore-disable-typography-spacing)
-  .markdown-source-view.mod-cm6
-  .HyperMD-list-line
-  + .internal-embed.image-embed {
-  padding-top: 1.25em;
 }
 .markdown-rendered {
   --list-spacing: 0.1em;
@@ -69,23 +45,12 @@ body:not(.encore-disable-typography-spacing)
 .embed-title {
   color: var(--inline-title-color);
 }
-body:not(.encore-disable-typography-spacing)
-  .markdown-rendered
-  .internal-embed:not(.image-embed) {
-  margin-top: 1.5em;
-}
 
 // Header 1
 body {
   --h1-size: 2.25rem;
   --h1-line-height: 1.111;
   --h1-weight: 800;
-}
-body:not(.encore-disable-typography-spacing)
-  .markdown-source-view.mod-cm6
-  .cm-line.HyperMD-header.HyperMD-header-1 {
-  padding-top: 0.8em;
-  padding-bottom: 0.5em;
 }
 
 // Header 2
@@ -94,12 +59,6 @@ body {
   --h2-line-height: 1.333;
   --h2-weight: 700;
 }
-body:not(.encore-disable-typography-spacing)
-  .markdown-source-view.mod-cm6
-  .cm-line.HyperMD-header.HyperMD-header-2 {
-  padding-top: 0.8em;
-  padding-bottom: 0.5em;
-}
 
 // Header 3
 body {
@@ -107,36 +66,12 @@ body {
   --h3-line-height: 1.6;
   --h3-weight: 600;
 }
-body:not(.encore-disable-typography-spacing)
-  .markdown-source-view.mod-cm6
-  .cm-line.HyperMD-header.HyperMD-header-3 {
-  padding-top: 0.8em;
-  padding-bottom: 0.5em;
-}
-
-// MARGIN COLLAPSING!!1!
-// (but for padding)
-// Removes padding above headers when previous element is also a header
-// Or if header is at the very top of document
-body:not(.encore-disable-typography-spacing)
-  .markdown-source-view.mod-cm6
-  .HyperMD-header
-  + .cm-line.HyperMD-header,
-.HyperMD-header:first-child {
-  padding-top: 0 !important;
-}
 
 // Header 4
 body {
   --h4-size: 1rem;
   --h4-line-height: 1.5;
   --h4-weight: 600;
-}
-body:not(.encore-disable-typography-spacing)
-  .markdown-source-view.mod-cm6
-  .cm-line.HyperMD-header.HyperMD-header-4 {
-  padding-top: 0.8em;
-  padding-bottom: 0.5em;
 }
 
 // Header 5
@@ -197,9 +132,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-image: var(--obsidian-logo-small);
-}
-body:not(.encore-disable-typography-spacing) .markdown-rendered hr {
-  margin: 5em 0;
 }
 // Horizontal rule live preview tweak
 .markdown-source-view:not(.is-live-preview) .HyperMD-hr {
