@@ -26,6 +26,7 @@ body:not(.encore-no-makemd) {
 // Make the "Type '/' for commands" hint more subtle
 .cm-active.mk-placeholder:before {
 	opacity: 0.3;
+	cursor: text;
 }
 
 // Fix card view
@@ -33,12 +34,4 @@ body:not(.encore-no-makemd) {
 .mk-cards-container .mk-list-item {
 	background: var(--color-base-25);
 	box-shadow: none;
-}
-
-// Make card group title not respond to hover. May need to remove in future? (If they make the element actually do something)
-
-.mk-cell-option-item div {
-	&:hover {
-		background-color: unset;
-	}
 }

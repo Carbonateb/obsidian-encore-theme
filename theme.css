@@ -1017,15 +1017,12 @@ body:not(.encore-no-makemd) .mk-file-context-file {
 
 .cm-active.mk-placeholder:before {
   opacity: 0.3;
+  cursor: text;
 }
 
 .mk-cards-container .mk-list-item {
   background: var(--color-base-25);
   box-shadow: none;
-}
-
-.mk-cell-option-item div:hover {
-  background-color: unset;
 }
 
 body.theme-dark {
