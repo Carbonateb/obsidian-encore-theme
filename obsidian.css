@@ -1019,6 +1019,15 @@ body:not(.encore-no-makemd) .mk-file-context-file {
   opacity: 0.3;
 }
 
+.mk-cards-container .mk-list-item {
+  background: var(--color-base-25);
+  box-shadow: none;
+}
+
+.mk-cell-option-item div:hover {
+  background-color: unset;
+}
+
 body.theme-dark {
   --grey-50-rgb: 250, 250, 250;
   --grey-100-rgb: 245, 245, 245;

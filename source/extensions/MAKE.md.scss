@@ -27,3 +27,18 @@ body:not(.encore-no-makemd) {
 .cm-active.mk-placeholder:before {
 	opacity: 0.3;
 }
+
+// Fix card view
+
+.mk-cards-container .mk-list-item {
+	background: var(--color-base-25);
+	box-shadow: none;
+}
+
+// Make card group title not respond to hover. May need to remove in future? (If they make the element actually do something)
+
+.mk-cell-option-item div {
+	&:hover {
+		background-color: unset;
+	}
+}
