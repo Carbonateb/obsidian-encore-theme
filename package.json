@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "sass --watch --no-source-map source/main.scss .obsidian/snippets/encore-dev.css",
-    "build": "sass --no-source-map source/main.scss theme.css"
+    "build": "sass --no-source-map source/main.scss theme.css && node BuildScript.js"
   },
   "devDependencies": {
     "sass": "^1.53.0"
