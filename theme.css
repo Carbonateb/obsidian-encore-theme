@@ -1003,6 +1003,7 @@ body.encore-fancy-headers .excalidraw .layer-ui__wrapper .layer-ui__wrapper__foo
 body:not(.encore-no-makemd) .mk-note-header > img {
   height: 380px;
   display: block;
+  z-index: -1;
 }
 body:not(.encore-no-makemd) .mk-note-header:after {
   content: "";

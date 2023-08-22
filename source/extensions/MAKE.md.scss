@@ -4,6 +4,9 @@ body:not(.encore-no-makemd) {
 
 		// Gets rid of some spacing below the image
 		display: block;
+		
+		// Ensures it's behind everything
+		z-index: -1;
 	}
 
 	// Add a gradient to image
