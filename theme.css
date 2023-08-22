@@ -1000,10 +1000,12 @@ body.encore-fancy-headers .excalidraw .layer-ui__wrapper .layer-ui__wrapper__foo
   border-bottom: 1px solid rgba(var(--grey-700-rgb), var(--en-opacity));
 }
 
+body:not(.encore-no-makemd) .mk-note-header {
+  z-index: -1;
+}
 body:not(.encore-no-makemd) .mk-note-header > img {
   height: 380px;
   display: block;
-  z-index: -1;
 }
 body:not(.encore-no-makemd) .mk-note-header:after {
   content: "";

@@ -1,12 +1,14 @@
 body:not(.encore-no-makemd) {
+	.mk-note-header {
+		// Ensures it's behind everything
+		z-index: -1;
+	}
+	
 	.mk-note-header>img {
 		height: 380px;
 
 		// Gets rid of some spacing below the image
 		display: block;
-		
-		// Ensures it's behind everything
-		z-index: -1;
 	}
 
 	// Add a gradient to image
