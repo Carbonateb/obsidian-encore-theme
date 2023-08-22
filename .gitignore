@@ -18,3 +18,5 @@ package-lock.json
 .obsidian/plugins/**
 .obsidian/snippets/**
 .obsidian/workspace.json
+Context/spacesLastSync.log
+.obsidian/workspace-mobile.json

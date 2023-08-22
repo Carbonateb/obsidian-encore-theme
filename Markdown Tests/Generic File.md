@@ -1,6 +1,3 @@
----
-banner: Pasted image 20230802003837.png
----
 # A typical markdown file
 
 This file was designed as the *gold standard* markdown file. It is properly formatted according to [Google's Markdown style guide](https://google.github.io/styleguide/docguide/style.html). The most important part of the guide (for Encore) is where it says when blank lines should be used.
