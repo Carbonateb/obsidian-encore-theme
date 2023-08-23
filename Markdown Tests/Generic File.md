@@ -1,3 +1,7 @@
+---
+type: Basic
+---
+
 # A typical markdown file
 
 This file was designed as the *gold standard* markdown file. It is properly formatted according to [Google's Markdown style guide](https://google.github.io/styleguide/docguide/style.html). The most important part of the guide (for Encore) is where it says when blank lines should be used.
@@ -67,4 +71,18 @@ Here's some text to finish off the list
 # Horizontal Rule
 
 We just tested what a horizontal rule looks like when placed above a header 1. Nice!
+
+# Embedded Notes
+
+![[Dataview File]]
+
+Nice
+
+# Table
+
+| Month    | Savings |
+| -------- | ------- |
+| January  | $250    |
+| February | $80     |
+| March    | $420    |
 
