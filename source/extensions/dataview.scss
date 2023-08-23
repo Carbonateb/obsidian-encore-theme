@@ -1,0 +1,212 @@
+.block-language-dataview {
+  background-color: var(--color-base-05);
+  border-radius: 8px;
+  border-left: none;
+  // border: 1px solid var(--color-base-25);
+  // border-top-color: var(--color-base-30);
+}
+
+.dataview.table-view-table {
+  margin-bottom: 0;
+  table-layout: fixed;
+
+  --cell-padding-x: 1rem;
+  --cell-padding-y: 6px;
+
+  > thead {
+    padding-left: 1rem;
+  }
+
+  // Table Head
+  > thead > tr > th {
+    border-bottom: 1px solid var(--color-base-35);
+    padding: 1.2rem var(--cell-padding-x) 0.5rem;
+    background-color: var(--color-base-00);
+    font-size: small;
+    color: var(--color-base-70);
+    text-transform: capitalize;
+    cursor: default;
+
+    span {
+      cursor: text;
+    }
+
+    // Used for number of files indicator
+    > .dataview.small-text {
+      font-weight: normal;
+      color: inherit;
+      opacity: 0.5;
+      user-select: none;
+      cursor: default;
+
+      &::before {
+        content: unset;
+      }
+      &::after {
+        content: unset;
+      }
+    }
+  }
+
+  // Table body
+  > tbody > tr {
+    background-color: var(--color-base-10);
+    &:hover {
+      background-color: var(--color-base-10) !important;
+    }
+    &:hover:nth-child(2n),
+    &:nth-child(2n) {
+      background-color: var(--color-base-05) !important;
+    }
+
+    > td {
+      cursor: default;
+      padding: var(--cell-padding-y) var(--cell-padding-x);
+      > span {
+        cursor: text;
+      }
+    }
+  }
+
+  > tbody > tr:first-child > td {
+    padding-top: 12px;
+  }
+  > tbody > tr:last-child > td {
+    padding-bottom: 12px;
+  }
+}
+
+// Dataview Lists
+.dataview.list-view-ul {
+  margin: 0.4rem 1.75rem;
+  padding: 0;
+}
+
+// Checklists
+.dataview.dataview-container > .contains-task-list {
+  margin: 0.75em 0.5em 0.75em 1em;
+  padding-left: 0;
+  user-select: none;
+}
+
+// Nested Checklists
+.dataview .contains-task-list {
+  padding: 0 0 0 1.5em;
+  margin: 0;
+}
+
+// Checklist Items
+.dataview.task-list-item,
+.dataview.task-list-basic-item {
+  margin: 0;
+  transition: none;
+  text-decoration: none;
+  cursor: pointer;
+  
+  // Fix for long checklist items (only works when it has no sub-items)
+  &:not(:has(.contains-task-list)) {
+    display: flex;
+    
+    >input {
+      margin-top: 0.4rem;
+    }
+  }
+  
+  input {
+    margin-left: 0 !important;
+  }
+  
+  >.contains-task-list {
+    flex-grow: 1;
+  }
+}
+
+// Hovered checklist items
+.dataview.task-list-item:hover,
+.dataview.task-list-basic-item:hover {
+  box-shadow: none;
+  background-color: unset;
+
+  > span {
+    text-decoration: underline;
+  }
+}
+
+// Grouped lists
+.dataview-container {
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1rem 1rem 0.5rem;
+    font-size: small;
+    background: var(--color-base-00);
+    border-bottom: 1px solid var(--color-base-35);
+    color: var(--color-base-70);
+    
+    
+    >.dataview.small-text {
+      font-weight: normal;
+      color: inherit;
+      opacity: 0.5;
+      user-select: none;
+      cursor: default;
+
+      &::before {
+        content: unset;
+      }
+      &::after {
+        content: unset;
+      }
+    }
+  }
+}
+.dataview.result-group {
+  padding-left: 0;
+  padding: 0.5rem 0 0.5rem;
+  >.contains-task-list {
+    padding-left: 1rem;
+  }
+}
+
+// No results
+
+.dataview.dataview-error-box {
+  border: none;
+  --stripe-a: var(--color-base-00);
+  --stripe-b: var(--color-base-05);
+  background-image: radial-gradient(transparent, var(--color-base-00) 100%),
+    repeating-linear-gradient(
+      45deg,
+      var(--stripe-a) 0px,
+      var(--stripe-a) 10px,
+      var(--stripe-b) 10px,
+      var(--stripe-b) 20px
+    );
+  > .dataview-error-message {
+    font-weight: bold;
+    color: var(--color-base-40);
+    font-size: small;
+  }
+}
+
+.dataview.dataview-error {
+  --stripe-a: var(--color-base-00);
+  --stripe-b: var(--color-base-05);
+  background-image: linear-gradient(
+      to right,
+      var(--color-base-00) 40%,
+      transparent 120%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      var(--stripe-a) 0px,
+      var(--stripe-a) 10px,
+      var(--stripe-b) 10px,
+      var(--stripe-b) 20px
+    );
+
+  background-color: var(--color-base-00);
+  font-weight: bold;
+  color: var(--color-red);
+  font-size: small;
+}

@@ -12,6 +12,7 @@
 @use "extensions/kanban.scss";
 @use "extensions/projects.scss";
 @use "extensions/MAKE.md.scss";
+@use "extensions/dataview.scss";
 
 // Themes
 @use "themes/_default.scss";
@@ -301,6 +302,17 @@ body:not(.is-mobile) .prompt {
 
 .style-settings-container {
   padding-left: 20px !important;
+}
+
+// Remove hover indicator
+.markdown-source-view.mod-cm6 .cm-embed-block:hover {
+  box-shadow: unset;
+  border-radius: unset;
+}
+.markdown-source-view.mod-cm6 .edit-block-button {
+  transition: opacity 100ms;
+  color: var(--color-accent-2);
+  background-image: radial-gradient(circle closest-side, var(--color-accent) -300%, transparent);
 }
 
 
