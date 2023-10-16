@@ -58,7 +58,7 @@ body {
 }
 
 body.encore-bright-accent {
-    --text-on-accent: var(--color-base-00);
+  --text-on-accent: var(--color-base-00);
 }
 
 body.encore-blur-less {
@@ -312,9 +312,12 @@ body:not(.is-mobile) .prompt {
 .markdown-source-view.mod-cm6 .edit-block-button {
   transition: opacity 100ms;
   color: var(--color-accent-2);
-  background-image: radial-gradient(circle closest-side, var(--color-accent) -300%, transparent);
+  background-image: radial-gradient(
+    circle closest-side,
+    var(--color-accent) -300%,
+    transparent
+  );
 }
-
 
 // Icons
 body {
