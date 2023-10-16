@@ -231,6 +231,11 @@ settings:
     description: Encore makes it easier to click the edge of a document by adding some invisible padding. May cause issues if you have content that exceeds the width of your page. No effect on mobile version.
     type: class-toggle
   -
+    id: encore-disable-logo-on-hr
+    title: Disable Logo on Horizontal Rule
+    description: Encore adds the Obsidian logo to horizontal ruled lines "---". Turn this on to revert to a simple line
+    type: class-toggle
+  -
     id: encore-no-calendar
     title: Disable Calendar Integration
     description: Encore makes some changes to Calendar. Turn this on to keep the default look
@@ -655,18 +660,17 @@ body {
   border-bottom-right-radius: 8px;
 }
 
-.markdown-rendered hr,
-.cm-line.hr hr {
+body:not(.encore-disable-logo-on-hr) .markdown-rendered hr,
+body:not(.encore-disable-logo-on-hr) .cm-line.hr hr {
   height: 1px;
   background-image: linear-gradient(to right, transparent, var(--hr-color) 46.2%, transparent 46.2%, transparent 54%, var(--hr-color) 54%, transparent);
   border: none;
   position: relative;
   overflow: visible;
 }
-
-.markdown-source-view:not(.is-live-preview) .HyperMD-hr::after,
-.markdown-rendered hr::after,
-.cm-line.hr hr::after {
+body:not(.encore-disable-logo-on-hr) .markdown-source-view:not(.is-live-preview) .HyperMD-hr::after,
+body:not(.encore-disable-logo-on-hr) .markdown-rendered hr::after,
+body:not(.encore-disable-logo-on-hr) .cm-line.hr hr::after {
   content: "";
   position: absolute;
   top: -12px;
@@ -678,12 +682,10 @@ body {
   background-repeat: no-repeat;
   background-image: var(--obsidian-logo-small);
 }
-
-.markdown-source-view:not(.is-live-preview) .HyperMD-hr {
+body:not(.encore-disable-logo-on-hr) .markdown-source-view:not(.is-live-preview) .HyperMD-hr {
   position: relative;
 }
-
-.markdown-source-view:not(.is-live-preview) .HyperMD-hr::before {
+body:not(.encore-disable-logo-on-hr) .markdown-source-view:not(.is-live-preview) .HyperMD-hr::before {
   content: "";
   position: absolute;
   left: 0;
@@ -692,9 +694,15 @@ body {
   height: 1px;
   background-image: linear-gradient(to right, transparent 10%, var(--hr-color) 46.2%, transparent 46.2%, transparent 54%, var(--hr-color) 54%, transparent);
 }
-
-.markdown-source-view:not(.is-live-preview) .HyperMD-hr::after {
+body:not(.encore-disable-logo-on-hr) .markdown-source-view:not(.is-live-preview) .HyperMD-hr::after {
   top: 2px;
+}
+
+body.encore-disable-logo-on-hr .markdown-rendered hr,
+body.encore-disable-logo-on-hr .cm-line.hr hr {
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, var(--hr-color) 30%, var(--hr-color) 70%, transparent);
+  border: none;
 }
 
 .internal-embed.image-embed img {

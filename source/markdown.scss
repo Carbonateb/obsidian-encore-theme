@@ -13,7 +13,7 @@ body {
 
 // Lists
 body {
-	--list-marker-color: var(--color-base-40);
+  --list-marker-color: var(--color-base-40);
 }
 .markdown-rendered {
   --list-spacing: 0.1em;
@@ -88,7 +88,6 @@ body {
   --h6-weight: 600;
 }
 
-
 // Code block
 .markdown-source-view .cm-sizer {
   .HyperMD-codeblock-begin-bg {
@@ -103,59 +102,77 @@ body {
 }
 
 // Horizontal rule
-.markdown-rendered hr,
-.cm-line.hr hr {
-  height: 1px;
-  background-image: linear-gradient(
-    to right,
-    transparent,
-    var(--hr-color) 46.2%,
-    transparent 46.2%,
-    transparent 54%,
-    var(--hr-color) 54%,
-    transparent
-  );
-  border: none;
-  position: relative;
-  overflow: visible;
+body:not(.encore-disable-logo-on-hr) {
+  .markdown-rendered hr,
+  .cm-line.hr hr {
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      var(--hr-color) 46.2%,
+      transparent 46.2%,
+      transparent 54%,
+      var(--hr-color) 54%,
+      transparent
+    );
+    border: none;
+    position: relative;
+    overflow: visible;
+  }
+  .markdown-source-view:not(.is-live-preview) .HyperMD-hr::after,
+  .markdown-rendered hr::after,
+  .cm-line.hr hr::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: var(--obsidian-logo-small);
+  }
+  // Horizontal rule live preview tweak
+  .markdown-source-view:not(.is-live-preview) .HyperMD-hr {
+    position: relative;
+  }
+  .markdown-source-view:not(.is-live-preview) .HyperMD-hr::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13px;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      transparent 10%,
+      var(--hr-color) 46.2%,
+      transparent 46.2%,
+      transparent 54%,
+      var(--hr-color) 54%,
+      transparent
+    );
+  }
+  .markdown-source-view:not(.is-live-preview) .HyperMD-hr::after {
+    top: 2px;
+  }
 }
-.markdown-source-view:not(.is-live-preview) .HyperMD-hr::after,
-.markdown-rendered hr::after,
-.cm-line.hr hr::after {
-  content: "";
-  position: absolute;
-  top: -12px;
-  left: 0;
-  right: 0;
-  height: 24px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: var(--obsidian-logo-small);
-}
-// Horizontal rule live preview tweak
-.markdown-source-view:not(.is-live-preview) .HyperMD-hr {
-  position: relative;
-}
-.markdown-source-view:not(.is-live-preview) .HyperMD-hr::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 13px;
-  height: 1px;
-  background-image: linear-gradient(
-    to right,
-    transparent 10%,
-    var(--hr-color) 46.2%,
-    transparent 46.2%,
-    transparent 54%,
-    var(--hr-color) 54%,
-    transparent
-  );
-}
-.markdown-source-view:not(.is-live-preview) .HyperMD-hr::after {
-  top: 2px;
+
+// Simple HR style
+body.encore-disable-logo-on-hr {
+  .markdown-rendered hr,
+  .cm-line.hr hr {
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      var(--hr-color) 30%,
+      var(--hr-color) 70%,
+      transparent
+    );
+    border: none;
+  }
 }
 
 // Images

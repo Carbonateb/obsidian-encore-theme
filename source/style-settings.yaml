@@ -231,6 +231,11 @@ settings:
     description: Encore makes it easier to click the edge of a document by adding some invisible padding. May cause issues if you have content that exceeds the width of your page. No effect on mobile version.
     type: class-toggle
   -
+    id: encore-disable-logo-on-hr
+    title: Disable Logo on Horizontal Rule
+    description: Encore adds the Obsidian logo to horizontal ruled lines "---". Turn this on to revert to a simple line
+    type: class-toggle
+  -
     id: encore-no-calendar
     title: Disable Calendar Integration
     description: Encore makes some changes to Calendar. Turn this on to keep the default look
