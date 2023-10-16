@@ -252,7 +252,6 @@ settings:
     type: class-toggle
 */
 
-@charset "UTF-8";
 .view-content,
 .view-header,
 .workspace,
@@ -1814,7 +1813,7 @@ body:not(.is-mobile):not(.encore-disable-clickability-fix) .markdown-source-view
   margin-right: -4rem;
   padding-right: 4rem;
 }
-body:not(.is-mobile):not(.encore-disable-clickability-fix) .ͼ1 .cm-scroller {
+body:not(.is-mobile):not(.encore-disable-clickability-fix) .cm-scroller {
   overflow-x: hidden;
 }
 
