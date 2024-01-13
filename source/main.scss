@@ -77,7 +77,12 @@ body.encore-blur-off {
 // Better clickability fix
 body:not(.is-mobile):not(.encore-disable-clickability-fix) {
   $oversize: 4rem;
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+  .markdown-source-view.mod-cm6.is-readable-line-width
+    > .cm-editor
+    > .cm-scroller
+    > .cm-sizer
+    > .cm-contentContainer
+    > .cm-content {
     max-width: unset;
     margin-left: -$oversize;
     padding-left: $oversize;

@@ -1806,7 +1806,7 @@ body.encore-blur-off {
   --en-modal-backdrop: brightness(0.5);
 }
 
-body:not(.is-mobile):not(.encore-disable-clickability-fix) .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+body:not(.is-mobile):not(.encore-disable-clickability-fix) .markdown-source-view.mod-cm6.is-readable-line-width > .cm-editor > .cm-scroller > .cm-sizer > .cm-contentContainer > .cm-content {
   max-width: unset;
   margin-left: -4rem;
   padding-left: 4rem;
