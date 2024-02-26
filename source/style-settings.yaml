@@ -44,6 +44,9 @@ settings:
       - 
         label: Material Ocean
         value: encore-theme-dark-materialocean
+      - 
+        label: Flexoki
+        value: encore-theme-dark-flexoki
   -
     id: theme-light
     title: 🌞 Theme • Light Mode

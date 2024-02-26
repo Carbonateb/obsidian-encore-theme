@@ -26,6 +26,7 @@
 @use "themes/obsidian.scss";
 @use "themes/rgb.scss";
 @use "themes/material-ocean.scss";
+@use "themes/flexoki.scss";
 @use "themes/sterling.scss";
 
 @import "variables.scss";
@@ -270,11 +271,11 @@ body:not(.is-mobile) .prompt {
 // Modals
 .modal {
   border: none;
-  background-color: $grey-800;
+  background-color: rgb(var(--grey-850-rgb));
   --en-opacity: 1;
 
   .vertical-tab-header {
-    background-color: $grey-700;
+    background-color: rgb(var(--grey-700-rgb));
     border-right: none !important;
 
     .vertical-tab-header-group-title {

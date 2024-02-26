@@ -17,7 +17,7 @@ body {
     --grey-850-rgb: 27, 27, 27;
     --grey-875-rgb: 22, 22, 22;
     --grey-900-rgb: 15, 15, 15;
-    
+
     // Theme neutrals
     // --en-opacity: 1;
     --color-base-00: rgb(var(--grey-900-rgb)); // Main background
@@ -28,7 +28,9 @@ body {
     --color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
     --color-base-35: rgb(var(--grey-500-rgb)); // Hovered buttons
     --color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
-    --color-base-50: rgb(var(--grey-350-rgb)); // Headings, bullets, checked items
+    --color-base-50: rgb(
+      var(--grey-350-rgb)
+    ); // Headings, bullets, checked items
     --color-base-60: rgb(var(--grey-300-rgb)); // ?
     --color-base-70: rgb(var(--grey-200-rgb)); // Dim text
     --color-base-100: rgb(var(--grey-100-rgb)); // Text
@@ -44,12 +46,12 @@ body {
     --highlight-hue: 37;
 
     --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.2);
-    
+
     &.encore-colors-colorful {
       --highlight-hue: 30;
       // --italic-color: #82c0e9;
       // --bold-color: #fcfcfc;
-      
+
       --h1-color: #975af2;
       --h2-color: #d965e4;
       --h3-color: #e05b9e;
@@ -60,7 +62,7 @@ body {
   }
 
   // Sterling
-  &.theme-light {    
+  &.theme-light {
     --grey-50-rgb: 17, 24, 39;
     --grey-100-rgb: 31, 41, 55;
     --grey-200-rgb: 55, 65, 81;
@@ -83,7 +85,9 @@ body {
     --color-base-30: rgb(var(--grey-600-rgb)); // Lines and buttons
     --color-base-35: rgb(var(--grey-500-rgb)); // Hovered buttons
     --color-base-40: rgb(var(--grey-400-rgb)); // Modal & selection outline
-    --color-base-50: rgb(var(--grey-350-rgb)); // Headings, bullets, checked items
+    --color-base-50: rgb(
+      var(--grey-350-rgb)
+    ); // Headings, bullets, checked items
     --color-base-60: rgb(var(--grey-300-rgb)); // ?
     --color-base-70: rgb(var(--grey-200-rgb)); // Dim text
     --color-base-100: rgb(var(--grey-100-rgb)); // Text
@@ -114,7 +118,6 @@ body {
 
 body {
   --italic-color: var(--text-color);
-  --italic-weight: 600;
   --bold-color: var(--text-color);
   --bold-weight: 800;
   --inline-title-color: var(--color-accent-2);
