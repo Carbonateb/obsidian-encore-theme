@@ -88,5 +88,5 @@ Encore's light theme for flashbang enjoyers.
 ---
 
 # Dev Setup
-1. Run `npm i` and `npm run dev` to get started
+1. Run `pnpm i` and `pnpm run dev` to get started
 2. Open up this repository as an obsidian vault
