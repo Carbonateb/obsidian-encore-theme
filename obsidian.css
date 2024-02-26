@@ -442,7 +442,7 @@ body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .vi
   background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
   backdrop-filter: var(--en-acrylic);
 }
-body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .view-content .cm-scroller {
+body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .view-content > div > div > .cm-scroller {
   padding-top: calc(var(--header-height) + 32px);
 }
 body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .view-content > iframe {
