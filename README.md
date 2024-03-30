@@ -8,7 +8,7 @@ _**Customized Encore.** Read on to learn more_
 
 > [!NOTE]
 >
-> ## **Encore** _[ahn-kohr]_
+> ### **Encore** _[ahn-kohr]_
 >
 > _Adverb (French)_  
 > Means "again"
