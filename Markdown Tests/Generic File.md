@@ -24,7 +24,7 @@ While this theme will focus on Google's standard, where a single newline is inse
 
 Now it's time to just write a bunch of crap to test all edge cases. For example, in this block, we tested what a horizontal rule looks like when surrounded by text. Later on, we'll test a horizontal rule that have other elements around, such as headers.
 
-# Header 1 • Let the Dogfood Begin
+# Header 1
 
 ## Header 2
 

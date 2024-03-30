@@ -3,6 +3,7 @@
 @use "resize-handle.scss";
 @use "workspace.scss";
 @use "markdown.scss";
+@use "encore-translucency.scss";
 @use "mobile.scss";
 
 // Extensions
@@ -27,6 +28,7 @@
 @use "themes/rgb.scss";
 @use "themes/material-ocean.scss";
 @use "themes/flexoki.scss";
+@use "themes/glass-royale.scss";
 @use "themes/sterling.scss";
 
 @import "variables.scss";

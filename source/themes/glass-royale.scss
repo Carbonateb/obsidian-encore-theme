@@ -1,0 +1,83 @@
+@import "../variables.scss";
+
+body.encore-theme-dark-glass-royale {
+  &.theme-dark {
+    --grey-50-rgb: 225, 227, 233;
+    --grey-100-rgb: 222, 227, 241;
+    --grey-200-rgb: 173, 181, 200;
+    --grey-300-rgb: 162, 165, 186;
+    --grey-350-rgb: 126, 128, 148;
+    --grey-400-rgb: 97, 97, 115;
+    --grey-500-rgb: 40, 40, 48;
+    --grey-600-rgb: 26, 26, 32;
+    --grey-700-rgb: 20, 20, 25;
+    --grey-800-rgb: 11, 11, 12;
+    --grey-850-rgb: 8, 8, 8;
+    --grey-875-rgb: 6, 6, 6;
+    --grey-900-rgb: 0, 0, 0;
+
+    // Default accent colour
+    --accent-h: 203;
+    --accent-s: 66%;
+    --accent-l: 54%;
+
+    --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.4);
+
+    &.encore-colors-colorful {
+      --highlight-hue: 30;
+      --bold-color: var(--color-green);
+      --italic-color: var(--color-red);
+
+      --h1-color: #5af273;
+      --h2-color: #65e4de;
+      --h3-color: #e755db;
+      --h4-color: #e9ca63;
+      --h5-color: #9dee51;
+      --h6-color: #8badec;
+    }
+
+    // Main workspace area
+
+    // Side tabs
+    .mod-left-split
+      .workspace-tabs:not(.mod-top)
+      .workspace-tab-header-container,
+    .mod-right-split
+      .workspace-tabs:not(.mod-top)
+      .workspace-tab-header-container {
+      background-color: #ffffff10;
+      backdrop-filter: blur(20px) saturate(1.8);
+      .workspace-tab-header-container-inner .workspace-tab-header.is-active {
+        background-color: #ffffff30;
+      }
+    }
+
+    // Main tabs
+    .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
+      background-color: #ffffff30;
+      backdrop-filter: blur(50px) saturate(1.5);
+    }
+
+    .mod-root .workspace-tab-container .workspace-leaf-content {
+      --en-opacity: 0.75;
+      background-image: radial-gradient(#00000000, #00000040),
+        linear-gradient(#ffffff08, #ffffff02);
+      backdrop-filter: blur(32px) saturate(2);
+
+      // Canvas
+      .canvas-wrapper {
+        .canvas-background {
+          background-color: transparent;
+          --canvas-dot-pattern: #ffffff15;
+        }
+      }
+    }
+  }
+}
+body.encore-theme-dark-glass-royale.theme-dark.encore-fancy-headers
+  .workspace-tab-container
+  .workspace-leaf-content
+  > .view-header {
+  background-color: #00000000;
+  backdrop-filter: var(--en-acrylic);
+}

@@ -47,6 +47,9 @@ settings:
       - 
         label: Flexoki
         value: encore-theme-dark-flexoki
+      - 
+        label: Glass Royale
+        value: encore-theme-dark-glass-royale
   -
     id: theme-light
     title: 🌞 Theme • Light Mode
@@ -81,6 +84,81 @@ settings:
       - 
         label: Custom
         value: encore-colors-custom
+  -
+    id: encore-translucency
+    title: 👑 Encore Translucency
+    description: Get that translucent aesthetic back in your vault.
+    type: class-toggle
+  - 
+    id: encore-translucency-category
+    title: 🖼️ Translucency Background
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: encore-translucency-description
+    title: About
+    type: info-text
+    description: "Make sure you've enabled **👑 Encore Translucency** above. Check out the **Glass Royale** theme (dark mode only) for some translucent workspaces!"
+    markdown: true
+  -
+    id: encore-translucency-strength
+    title: Translucency Strength
+    description: Adjusts how visible the background is
+    type: variable-number-slider
+    default: 0.25
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: encore-translucency-background
+    title: Translucency Background
+    description: Pick a background to use in translucent mode.
+    type: class-select
+    allowEmpty: false
+    default: encore-bg-image
+    options:
+      - 
+        label: Custom Image
+        value: encore-bg-image
+      - 
+        label: Emerald
+        value: encore-bg-emerald
+      - 
+        label: Sapphire
+        value: encore-bg-sapphire
+      - 
+        label: 🎦 Frosty
+        value: encore-bg-frosty
+      - 
+        label: 🎦 Lava
+        value: encore-bg-lava
+      - 
+        label: 🎦 Dawn
+        value: encore-bg-dawn
+      - 
+        label: 🎦 Chromatic
+        value: encore-bg-chromatic
+      - 
+        label: 🎦 Prismatic
+        value: encore-bg-prismatic
+  -
+    id: encore-translucency-image
+    title: Background Image
+    description: Used when "Translucency Background" is set to "Custom Image". Must be formatted as url("YOUR URL HERE")
+    type: variable-text
+    quotes: false
+    default: url("https://images.unsplash.com/photo-1707494966495-a2cc8c1dac1f?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+  -
+    id: encore-translucency-blur-amount
+    title: Image Blur Amount
+    description: Adjust how strong the blur is on images
+    type: variable-number-slider
+    default: 10
+    min: 0
+    max: 20
+    step: 1
+
   
   #########################################################
   # Custom Colours

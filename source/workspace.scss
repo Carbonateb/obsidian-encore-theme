@@ -26,6 +26,7 @@ body.theme-light {
 
   // Canvas
   .canvas-wrapper {
+    background-color: transparent;
     .canvas-background {
       background-color: $grey-800;
       --canvas-dot-pattern: var(--color-base-35);
@@ -41,6 +42,7 @@ body.theme-light {
 
     // Canvas
     .canvas-wrapper {
+      background-color: transparent;
       .canvas-background {
         background-color: $grey-900;
       }

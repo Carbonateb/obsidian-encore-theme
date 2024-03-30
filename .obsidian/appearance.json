@@ -13,5 +13,6 @@
   "showViewHeader": true,
   "interfaceFontFamily": "Rubik",
   "textFontFamily": "Rubik",
-  "nativeMenus": false
+  "nativeMenus": false,
+  "baseFontSize": 16
 }

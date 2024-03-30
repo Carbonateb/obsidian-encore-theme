@@ -47,6 +47,9 @@ settings:
       - 
         label: Flexoki
         value: encore-theme-dark-flexoki
+      - 
+        label: Glass Royale
+        value: encore-theme-dark-glass-royale
   -
     id: theme-light
     title: 🌞 Theme • Light Mode
@@ -81,6 +84,81 @@ settings:
       - 
         label: Custom
         value: encore-colors-custom
+  -
+    id: encore-translucency
+    title: 👑 Encore Translucency
+    description: Get that translucent aesthetic back in your vault.
+    type: class-toggle
+  - 
+    id: encore-translucency-category
+    title: 🖼️ Translucency Background
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: encore-translucency-description
+    title: About
+    type: info-text
+    description: "Make sure you've enabled **👑 Encore Translucency** above. Check out the **Glass Royale** theme (dark mode only) for some translucent workspaces!"
+    markdown: true
+  -
+    id: encore-translucency-strength
+    title: Translucency Strength
+    description: Adjusts how visible the background is
+    type: variable-number-slider
+    default: 0.25
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: encore-translucency-background
+    title: Translucency Background
+    description: Pick a background to use in translucent mode.
+    type: class-select
+    allowEmpty: false
+    default: encore-bg-image
+    options:
+      - 
+        label: Custom Image
+        value: encore-bg-image
+      - 
+        label: Emerald
+        value: encore-bg-emerald
+      - 
+        label: Sapphire
+        value: encore-bg-sapphire
+      - 
+        label: 🎦 Frosty
+        value: encore-bg-frosty
+      - 
+        label: 🎦 Lava
+        value: encore-bg-lava
+      - 
+        label: 🎦 Dawn
+        value: encore-bg-dawn
+      - 
+        label: 🎦 Chromatic
+        value: encore-bg-chromatic
+      - 
+        label: 🎦 Prismatic
+        value: encore-bg-prismatic
+  -
+    id: encore-translucency-image
+    title: Background Image
+    description: Used when "Translucency Background" is set to "Custom Image". Must be formatted as url("YOUR URL HERE")
+    type: variable-text
+    quotes: false
+    default: url("https://images.unsplash.com/photo-1707494966495-a2cc8c1dac1f?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+  -
+    id: encore-translucency-blur-amount
+    title: Image Blur Amount
+    description: Adjust how strong the blur is on images
+    type: variable-number-slider
+    default: 10
+    min: 0
+    max: 20
+    step: 1
+
   
   #########################################################
   # Custom Colours
@@ -420,6 +498,9 @@ body.theme-light.is-translucent:not(.is-fullscreen) {
   background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
   border-radius: var(--tab-radius);
 }
+.mod-root .workspace-tab-container .workspace-leaf-content .canvas-wrapper {
+  background-color: transparent;
+}
 .mod-root .workspace-tab-container .workspace-leaf-content .canvas-wrapper .canvas-background {
   background-color: rgba(var(--grey-800-rgb), var(--en-opacity));
   --canvas-dot-pattern: var(--color-base-35);
@@ -429,6 +510,9 @@ body.theme-light .mod-root .workspace-tab-container .workspace-leaf-content {
   --en-opacity: 1;
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
   border-radius: var(--tab-radius);
+}
+body.theme-light .mod-root .workspace-tab-container .workspace-leaf-content .canvas-wrapper {
+  background-color: transparent;
 }
 body.theme-light .mod-root .workspace-tab-container .workspace-leaf-content .canvas-wrapper .canvas-background {
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
@@ -715,6 +799,102 @@ body.encore-disable-logo-on-hr .cm-line.hr hr {
   border-radius: 4px;
 }
 
+body.encore-translucency.encore-bg-image .app-container {
+  background-image: var(--encore-translucency-image);
+  background-size: cover;
+}
+body.encore-translucency.encore-bg-image .app-container::before {
+  position: fixed;
+  inset: 0;
+  content: "";
+  background: transparent;
+  backdrop-filter: blur(calc(1px * pow(var(--encore-translucency-blur-amount, 10), 2)));
+}
+body.encore-translucency.encore-bg-frosty {
+  background-image: linear-gradient(rgb(12, 136, 126), rgb(78, 4, 250));
+}
+body.encore-translucency.encore-bg-frosty .app-container {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1920 3240' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3C/defs%3E%3Cellipse style='filter: blur(200px); fill: rgb(38, 214, 255);' cx='465.54' cy='549.634' rx='559.232' ry='230.137'%3E%3C/ellipse%3E%3Cellipse style='filter: blur(200px); fill: rgb(59, 55, 212);' cx='1461.894' cy='749.77' rx='559.232' ry='338.301'%3E%3C/ellipse%3E%3Cellipse style='filter: blur(200px); fill: rgb(123, 130, 208);' cx='398.22' cy='1237.125' rx='559.232' ry='338.301'%3E%3C/ellipse%3E%3Cellipse style='filter: blur(200px); fill: rgb(17, 197, 255);' cx='1546.62' cy='1737.081' rx='603.713' ry='357.778'%3E%3C/ellipse%3E%3Cellipse style='filter: blur(200px); fill: rgb(185, 185, 185);' cx='981.906' cy='1520.478' rx='371.639' ry='230.137'%3E%3C/ellipse%3E%3Cellipse style='filter: blur(200px); fill: rgb(35, 30, 204);' cx='549.068' cy='2325.941' rx='721.684' ry='405.989'%3E%3C/ellipse%3E%3Cellipse style='filter: blur(200px); fill: rgb(148, 19, 172);' cx='1338.121' cy='2790.09' rx='721.684' ry='405.989'%3E%3C/ellipse%3E%3Cellipse style='filter: blur(200px); fill: rgb(148, 19, 172);' cx='1297.975' cy='-434.34' rx='721.684' ry='405.989'%3E%3C/ellipse%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: mirror;
+  animation: scroll-up infinite 120s linear;
+}
+body.encore-translucency.encore-bg-chromatic {
+  background-image: repeating-linear-gradient(45deg, rgb(15, 245, 254), rgb(111, 0, 255), rgb(255, 0, 0), rgb(255, 222, 0), rgb(167, 255, 0), rgb(0, 255, 136), rgb(15, 245, 254), rgb(111, 0, 255), rgb(253, 0, 0), rgb(255, 222, 0), rgb(167, 255, 0), rgb(0, 255, 136), rgb(15, 245, 254), rgb(111, 0, 255));
+  background-size: 100% 800vh;
+  animation: scroll-up-down infinite 180s ease-in-out alternate-reverse;
+}
+body.encore-translucency.encore-bg-chromatic::before {
+  position: fixed;
+  inset: 0;
+  content: "";
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.9411764706));
+}
+body.encore-translucency.encore-bg-prismatic {
+  background-image: repeating-linear-gradient(45deg, rgb(0, 4, 255), rgb(107, 15, 254), rgb(153, 0, 255), rgb(255, 0, 242), rgb(255, 0, 170), rgb(255, 0, 242), rgb(153, 0, 255), rgb(107, 15, 254), rgb(0, 4, 255), rgb(107, 15, 254), rgb(153, 0, 255), rgb(255, 0, 242));
+  background-size: 100% 400vh;
+  animation: scroll-up infinite 30s linear;
+}
+body.encore-translucency.encore-bg-prismatic::before {
+  position: fixed;
+  inset: 0;
+  content: "";
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.9411764706));
+}
+body.encore-translucency.encore-bg-dawn {
+  background-image: radial-gradient(transparent, rgba(1, 2, 36, 0.4784313725)), linear-gradient(to bottom, rgba(222, 244, 255, 0.11), transparent), linear-gradient(to bottom left, #0036e6, #400dcc);
+}
+body.encore-translucency.encore-bg-dawn::before {
+  position: fixed;
+  inset: 0;
+  content: "";
+  animation: fade-in 60s linear infinite alternate;
+  background-image: radial-gradient(transparent, rgba(1, 2, 36, 0.5764705882)), linear-gradient(to bottom, rgba(222, 244, 255, 0.1568627451), transparent), linear-gradient(to bottom left, #ee8d4d, rgba(0, 18, 182, 0.7058823529));
+}
+body.encore-translucency.encore-bg-lava {
+  background-image: radial-gradient(transparent, #360700), linear-gradient(to top, #d86800, transparent), linear-gradient(to bottom left, #b43900, #1a0101);
+}
+body.encore-translucency.encore-bg-lava::before {
+  position: fixed;
+  inset: 0;
+  content: "";
+  animation: fade-in 60s linear infinite alternate;
+  background-image: radial-gradient(transparent, #360700), linear-gradient(to top, #f5e498, transparent), linear-gradient(to bottom left, #ff0000, #ff0000);
+}
+body.encore-translucency.encore-bg-emerald {
+  background-image: radial-gradient(transparent, #071400), linear-gradient(to top, #54f1d7, transparent), linear-gradient(to bottom left, #55df00, #1b4900);
+}
+body.encore-translucency.encore-bg-sapphire {
+  background-image: radial-gradient(transparent, #000018), linear-gradient(to top, #5871ff, transparent), linear-gradient(to bottom left, #0400ff, #0084ff);
+}
+body.encore-translucency .horizontal-main-container {
+  background-color: rgba(var(--grey-900-rgb), calc(1 - var(--encore-translucency-strength)));
+}
+
+@keyframes scroll-up {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 calc(100% - 100vh);
+  }
+}
+@keyframes scroll-up-down {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body.is-mobile .workspace-drawer {
   background: none;
 }
@@ -771,15 +951,15 @@ body.is-mobile .workspace-drawer-header {
   backdrop-filter: var(--en-acrylic);
 }
 
-body:not(.encore-disable-grain)::before {
+body:not(.encore-disable-grain) .workspace::before {
   content: "";
   position: fixed;
   inset: 0;
   background-image: var(--grain);
-  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.06));
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.05));
 }
 
-body.theme-light:not(.encore-disable-grain)::before {
+body.theme-light:not(.encore-disable-grain) .workspace::before {
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
 }
 
@@ -1786,6 +1966,64 @@ body.encore-theme-dark-flexoki.theme-dark .mk-note-header:after {
 body.encore-theme-dark-flexoki.theme-dark.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .view-header {
   --en-opacity: 0.66;
   background-color: rgb(var(--grey-900-rgb));
+  backdrop-filter: var(--en-acrylic);
+}
+
+body.encore-theme-dark-glass-royale.theme-dark {
+  --grey-50-rgb: 225, 227, 233;
+  --grey-100-rgb: 222, 227, 241;
+  --grey-200-rgb: 173, 181, 200;
+  --grey-300-rgb: 162, 165, 186;
+  --grey-350-rgb: 126, 128, 148;
+  --grey-400-rgb: 97, 97, 115;
+  --grey-500-rgb: 40, 40, 48;
+  --grey-600-rgb: 26, 26, 32;
+  --grey-700-rgb: 20, 20, 25;
+  --grey-800-rgb: 11, 11, 12;
+  --grey-850-rgb: 8, 8, 8;
+  --grey-875-rgb: 6, 6, 6;
+  --grey-900-rgb: 0, 0, 0;
+  --accent-h: 203;
+  --accent-s: 66%;
+  --accent-l: 54%;
+  --workspace-background-translucent: rgba(var(--grey-900-rgb), 0.4);
+}
+body.encore-theme-dark-glass-royale.theme-dark.encore-colors-colorful {
+  --highlight-hue: 30;
+  --bold-color: var(--color-green);
+  --italic-color: var(--color-red);
+  --h1-color: #5af273;
+  --h2-color: #65e4de;
+  --h3-color: #e755db;
+  --h4-color: #e9ca63;
+  --h5-color: #9dee51;
+  --h6-color: #8badec;
+}
+body.encore-theme-dark-glass-royale.theme-dark .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
+body.encore-theme-dark-glass-royale.theme-dark .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  background-color: rgba(255, 255, 255, 0.062745098);
+  backdrop-filter: blur(20px) saturate(1.8);
+}
+body.encore-theme-dark-glass-royale.theme-dark .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active,
+body.encore-theme-dark-glass-royale.theme-dark .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active {
+  background-color: rgba(255, 255, 255, 0.1882352941);
+}
+body.encore-theme-dark-glass-royale.theme-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  backdrop-filter: blur(50px) saturate(1.5);
+}
+body.encore-theme-dark-glass-royale.theme-dark .mod-root .workspace-tab-container .workspace-leaf-content {
+  --en-opacity: 0.75;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2509803922)), linear-gradient(rgba(255, 255, 255, 0.031372549), rgba(255, 255, 255, 0.0078431373));
+  backdrop-filter: blur(32px) saturate(2);
+}
+body.encore-theme-dark-glass-royale.theme-dark .mod-root .workspace-tab-container .workspace-leaf-content .canvas-wrapper .canvas-background {
+  background-color: transparent;
+  --canvas-dot-pattern: #ffffff15;
+}
+
+body.encore-theme-dark-glass-royale.theme-dark.encore-fancy-headers .workspace-tab-container .workspace-leaf-content > .view-header {
+  background-color: rgba(0, 0, 0, 0);
   backdrop-filter: var(--en-acrylic);
 }
 

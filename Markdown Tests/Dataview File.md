@@ -1,9 +1,6 @@
 ---
 type: Dataview
 ---
-
-# Dataview Test
-
 ## Table
 ```dataview
 table type
@@ -30,10 +27,6 @@ GROUP BY type
 
 ```dataview
 table from "Unknown Folder"
-```
-
-```dataview
-list from "Unknown Folder"
 ```
 
 # Parse Error
