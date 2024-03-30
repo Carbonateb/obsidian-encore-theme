@@ -4,6 +4,7 @@
   "enabledCssSnippets": [
     "encore-dev-settings",
     "encore-settings",
+    "settings",
     "encore-dev"
   ],
   "baseFontSizeAction": true,

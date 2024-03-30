@@ -194,11 +194,23 @@ body.encore-coloured-tooltip > .tooltip {
 .cm-s-obsidian span.cm-formatting-highlight,
 .cm-s-obsidian span.cm-highlight,
 .search-result-file-matched-text {
-  background-color: hsla(var(--highlight-hue), 100%, 50%, 0.2);
-  outline: 1px solid hsla(var(--highlight-hue), 90%, 50%, 0.85);
-  padding: 0 0.15em;
-  border-radius: 3px;
-  box-shadow: 0 0 10px hsla(var(--highlight-hue), 90%, 50%, 0.75);
+  background-color: hsla(var(--highlight-hue), 100%, 30%, 0.5);
+  border-top: 1px solid hsla(var(--highlight-hue), 100%, 60%, 0.15);
+  border-bottom: 1px solid hsla(var(--highlight-hue), 100%, 20%, 1);
+  color: hsla(var(--highlight-hue), 100%, 92%, 1);
+}
+
+body.encore-highlight-border {
+  .markdown-rendered mark,
+  .cm-s-obsidian span.cm-formatting-highlight,
+  .cm-s-obsidian span.cm-highlight,
+  .search-result-file-matched-text {
+    outline: 1px solid hsla(var(--highlight-hue), 90%, 50%, 0.85);
+    box-shadow: 0 0 10px hsla(var(--highlight-hue), 90%, 50%, 0.75);
+    padding: 0 0.15em;
+    border-radius: 0.2em;
+    border: none;
+  }
 }
 
 // Prompts

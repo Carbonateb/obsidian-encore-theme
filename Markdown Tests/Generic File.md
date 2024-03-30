@@ -8,9 +8,9 @@ This file was designed as the *gold standard* markdown file. It is properly form
 
 ## The Blank Line Problem
 
-**Spacing between paragraphs** is very important for making a nice looking document. In the rendered view, this is easy to achieve as we can simply look at what the user intended to do and apply our own spacing, disregarding how many newlines the user actually entered. However, in Obsidian's source view, we are forced to render all empty lines, which means we need to take into consideration the spacing added by blank lines.
+**Spacing between paragraphs** is very important for making a nice looking document. In the rendered view, this is easy to achieve as we can simply look at what the user intended to do and apply our own spacing, disregarding how many newlines the user actually entered. However, in Obsidian's source view, ==we are forced to render all empty lines==, which means we need to take into consideration the spacing added by blank lines.
 
-My first, naïve attempt at this assumed that the user would put as few blank lines as possible, making the markdown file super compact. This worked, and for notes created with this system in place, *it actually looked pretty good*. The issue was that most markdown files have much more spacing in them, causing them to look really bad. And, files created with this system in mind also looked bad when viewed from other editors.
+My first, naïve attempt at this assumed that the user would put as few blank lines as possible, making the markdown file super compact. ==This worked==, and for notes created with this system in place, *it actually looked pretty good*. ==The issue== was that most markdown files have much more spacing in them, causing them to look really bad. And, files created with this system in mind also looked bad when viewed from other editors.
 
 ### The Solution: Respect Standards
 
@@ -55,7 +55,7 @@ Now let's imagine we have a paragraph before the bullet list
 	1. So this isn't really an issue
 3. Hopefully this looks good
 
-Here's some text to finish off the list
+Here's **some** text to finish off the list
 
 ## Variation: ==Checklist==
 

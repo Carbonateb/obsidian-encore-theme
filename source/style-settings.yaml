@@ -187,7 +187,11 @@ settings:
     title: Coloured Tooltip
     description: Make tooltips stand out much more by applying your theme colour to the border
     type: class-toggle
-  - 
+  -
+    id: encore-highlight-border
+    title: Highlighted Text Border
+    description: Make highlighted text stand out even more with a glowing border
+    type: class-toggle
   -
     id: encore-bright-accent
     title: Use Bright Accent Colour
