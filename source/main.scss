@@ -60,6 +60,11 @@ body {
   }
 }
 
+:root {
+  --encore-translucency-strength: 0.25;
+  --encore-translucency-image: url("https://images.unsplash.com/photo-1707494966495-a2cc8c1dac1f?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
 body.encore-bright-accent {
   --text-on-accent: var(--color-base-00);
 }
