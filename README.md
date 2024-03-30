@@ -8,14 +8,14 @@ _**Customized Encore.** Read on to learn more_
 
 > [!NOTE]
 >
-> ## **Encore**
+> ## **Encore** _[ahn-kohr]_
 >
 > _Adverb (French)_  
-> It means "again"
+> Means "again"
 >
-> I named the theme like this as my goal was to redo the default theme.
+> I chose this name for the theme as my goal was to refresh and refine the default Obsidian experience - an encore of the default theme.
 
-Unlike most other themes, when you first install Encore you'll notice that the colours are nearly identical. Instead, this theme aims to **clean up** the UI and **typography** of Obsidian, tweak the **visual hierarchy** and sprinkle little bits of **delightful** elements across the interface. Encore makes _no changes_ to the layout of the app, to keep your muscle memory intact.
+Unlike most themes, Encore's initial visual impact is subtle. Its focus is on **cleaning up** the UI, **refining typography**, and enhancing the **visual hierarchy** of Obsidian. This creates a more streamlined and intuitive experience. You'll also find subtle, **delightful** design elements sprinkled throughout. Encore makes no changes to the app's core layout, ensuring your workflow remains familiar.
 
 Encore also supports a number of popular plugins
 
