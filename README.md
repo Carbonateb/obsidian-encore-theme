@@ -1,8 +1,8 @@
 ![Default Encore](<images/Pasted image 20240331001404.png>)
-**\*Default Encore.** Font: [Rubik](https://fonts.google.com/specimen/Rubik) (not included)\*
+_**Default Encore.** Font: [Rubik](https://fonts.google.com/specimen/Rubik) (not included)_
 
 ![Customized Encore](<images/Pasted image 20240331001906.png>)
-**\*Customized Encore.** Read on to learn more\*
+_**Customized Encore.** Read on to learn more_
 
 # Encore • Obsidian Remade
 
@@ -10,7 +10,7 @@
 >
 > ## **Encore**
 >
-> _Adverb (French)_
+> _Adverb (French)_  
 > It means "again"
 >
 > I named the theme like this as my goal was to redo the default theme.
@@ -42,8 +42,6 @@ With the removal of translucency mode from Windows, I have added an alternative 
 
 There are more options available than the ones shown above
 
----
-
 ## Standard Colour Themes
 
 ![](<images/Pasted image 20240331001305.png>)
@@ -53,8 +51,6 @@ There are more options available than the ones shown above
 ![](<images/Pasted image 20240331001513.png>)
 
 More available in Style Settings.
-
----
 
 ## Some More Features
 
