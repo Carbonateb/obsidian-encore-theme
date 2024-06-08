@@ -479,6 +479,7 @@ body {
 
 body {
   background-color: rgba(var(--grey-900-rgb), var(--en-opacity));
+  --tab-container-background: transparent;
 }
 body.is-translucent:not(.is-fullscreen) {
   --en-opacity: 0.5;
@@ -575,6 +576,11 @@ body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content[data-
   gap: 4px;
 }
 
+.workspace-tab-header-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .mod-root .workspace-tabs .workspace-tab-header-container-inner {
   gap: 4px;
   padding: 4px 0;
@@ -660,6 +666,11 @@ body.theme-light .mod-root .workspace-tab-header.is-active .workspace-tab-header
 
 .is-translucent:not(.is-fullscreen) .workspace-tab-header-container-inner {
   overflow: auto;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  background-color: transparent;
+  border: none;
 }
 
 body {

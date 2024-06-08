@@ -4,6 +4,8 @@
 body {
   background-color: $grey-900;
 
+  --tab-container-background: transparent;
+
   &.is-translucent:not(.is-fullscreen) {
     --en-opacity: 0.5;
     background-color: $grey-900 !important;
@@ -138,6 +140,10 @@ body.encore-fancy-headers .workspace-tab-container .workspace-leaf-content {
 }
 
 // Tabs
+.workspace-tab-header-container {
+  padding-left: 0;
+  padding-right: 0;
+}
 .mod-root .workspace-tabs .workspace-tab-header-container-inner {
   gap: 4px;
   padding: 4px 0;
@@ -230,4 +236,12 @@ body.theme-light {
 
 .is-translucent:not(.is-fullscreen) .workspace-tab-header-container-inner {
   overflow: auto;
+}
+
+// Vault switcher
+body:not(.is-mobile)
+  .workspace-split.mod-left-split
+  .workspace-sidedock-vault-profile {
+  background-color: transparent;
+  border: none;
 }
